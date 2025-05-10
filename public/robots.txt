@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zennith.cl/sitemap.xml
+Sitemap: https://www.zennith.cl/sitemap.xml
