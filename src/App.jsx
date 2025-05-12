@@ -251,14 +251,41 @@ function App() {
           >
             Contáctanos
           </motion.h3>
-          <form className="max-w-2xl mx-auto space-y-4">
-            <input name="nombre" type="text" required placeholder="Nombre" className="w-full p-3 rounded bg-[#0f1c2e] text-white" />
-            <input name="correo" type="email" required placeholder="Correo" className="w-full p-3 rounded bg-[#0f1c2e] text-white" />
-            <textarea name="mensaje" rows="4" required placeholder="Mensaje" className="w-full p-3 rounded bg-[#0f1c2e] text-white"></textarea>
-            <button type="submit" className="bg-[#1de9b6] text-black px-10 py-3 rounded-full font-semibold hover:scale-105 transition-transform">
-              Enviar mensaje
-            </button>
-          </form>
+          
+<form
+  action="https://formspree.io/f/mblozapl"
+  method="POST"
+  className="max-w-2xl mx-auto space-y-4"
+>
+  <input
+    name="nombre"
+    type="text"
+    required
+    placeholder="Nombre"
+    className="w-full p-3 rounded bg-[#0f1c2e] text-white"
+  />
+  <input
+    name="email"  // <- importante: Formspree espera "email", no "correo"
+    type="email"
+    required
+    placeholder="Correo"
+    className="w-full p-3 rounded bg-[#0f1c2e] text-white"
+  />
+  <textarea
+    name="mensaje"
+    rows="4"
+    required
+    placeholder="Mensaje"
+    className="w-full p-3 rounded bg-[#0f1c2e] text-white"
+  ></textarea>
+  <button
+    type="submit"
+    className="bg-[#1de9b6] text-black px-10 py-3 rounded-full font-semibold hover:scale-105 transition-transform"
+  >
+    Enviar mensaje
+  </button>
+</form>
+
         </section>
 
         {/* Footer y botón flotante puedes dejarlos igual, solo asegúrate de mantener los alt y aria-label bien puestos */}
