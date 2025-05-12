@@ -9,17 +9,13 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [formSent, setFormSent] = useState(false);
-
   const [activeSection, setActiveSection] = useState("hero");
-
-  
-
+  const [status, setStatus] = useState(null); // null | "success" | "error"
+  const formRef = useRef(null);
 
   const particlesInit = async (main) => {
     await loadFull(main);
   };
-
-  
 
   const particlesOptions = {
     fullScreen: { enable: false },
@@ -32,6 +28,39 @@ function App() {
       size: { value: 2 },
     },
     detectRetina: true,
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(formRef.current);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mblozapl", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setStatus("success");
+        formRef.current.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
+  const scrollToContacto = () => {
+    const contacto = document.getElementById("contacto");
+    if (contacto) {
+      contacto.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
@@ -57,6 +86,12 @@ function App() {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
+  useEffect(() => {
+    if (status) {
+      const timeout = setTimeout(() => setStatus(null), 5000);
+      return () => clearTimeout(timeout);
+    }
+  }, [status]);
 
   if (loading) {
     return (
@@ -72,52 +107,6 @@ function App() {
       </div>
     );
   }
-
-
-
-    const [status, setStatus] = useState(null); // null | "success" | "error"
-    const formRef = useRef(null);
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      const formData = new FormData(formRef.current);
-  
-      try {
-        const res = await fetch("https://formspree.io/f/mblozapl", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-          },
-          body: formData,
-        });
-  
-        const data = await res.json();
-  
-        if (res.ok) {
-          setStatus("success");
-          formRef.current.reset();
-        } else {
-          setStatus("error");
-        }
-      } catch (error) {
-        setStatus("error");
-      }
-    };
-    
-    useEffect(() => {
-      if (status) {
-        const timeout = setTimeout(() => setStatus(null), 5000);
-        return () => clearTimeout(timeout);
-      }
-    }, [status]);
-
-    const scrollToContacto = () => {
-      const contacto = document.getElementById("contacto");
-      if (contacto) {
-        contacto.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-    
     
 
   return (
