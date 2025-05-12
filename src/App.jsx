@@ -174,58 +174,69 @@ function App() {
 
 
         {/* Hero */}
-        <section id="hero" aria-label="Sección principal Zennith" className="flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-24 py-24 gap-16 z-10 relative">
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-xl text-center lg:text-left"
-          >
-            <h2 className="text-5xl font-extrabold leading-tight mb-6">
-              Soluciones digitales <br className="hidden lg:block" /> inteligentes
-            </h2>
-            <p className="text-white text-lg mb-10 leading-relaxed">
-              Desarrollamos software, brindamos soporte técnico y potenciamos tu negocio con tecnología.
-            </p>
-            <motion.button
-  whileHover={{ scale: 1.08, boxShadow: "0px 0px 15px #1de9b6" }}
-  className="bg-[#1de9b6] text-black px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300"
-  onClick={scrollToContacto}
+<section
+  id="hero"
+  aria-label="Sección principal Zennith"
+  className="flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-24 py-24 gap-16 z-10 relative"
 >
-  Solicita tu asesoría
-</motion.button>
+  <motion.div
+    initial={{ x: -100, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+    className="max-w-xl text-center lg:text-left"
+  >
+    <h2 className="text-5xl font-extrabold leading-tight mb-6 text-white">
+      Soluciones digitales <br className="hidden lg:block" />
+      <span className="text-[#1de9b6]">inteligentes</span>
+    </h2>
+    <p className="text-gray-300 text-lg mb-10 leading-relaxed">
+      Desarrollamos software a medida, brindamos soporte técnico y potenciamos tu negocio con tecnología.
+    </p>
+    <motion.button
+      whileHover={{ scale: 1.08, boxShadow: "0px 0px 15px #1de9b6" }}
+      className="bg-[#1de9b6] text-black px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300"
+      onClick={scrollToContacto}
+    >
+      Solicita tu asesoría
+    </motion.button>
+  </motion.div>
 
-          </motion.div>
+  <motion.div
+    initial={{ x: 100, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+    whileHover={{ scale: 1.02 }}
+    className="w-full max-w-4xl"
+  >
+    <img
+      src="/pc.png"
+      alt="Mockup Zennith mostrando software"
+      className="w-full object-contain rounded-2xl shadow-2xl transition-transform duration-300"
+    />
+  </motion.div>
+</section>
 
-          <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="w-full max-w-5xl"
-          >
-            <img
-              src="/pc.png"
-              alt="Mockup Zennith mostrando software"
-              className="w-xxl object-contain rounded-xl shadow-[#1de9b633]"
-            />
-          </motion.div>
-        </section>
 
         
-        <section id="servicios" aria-label="Nuestros Servicios" className="px-6 lg:px-24 py-16 z-10 relative">
+{/* Servicios */}
+<section id="servicios" aria-label="Nuestros Servicios" className="px-6 lg:px-24 py-12 z-10 relative">
   <motion.h3
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
-    className="text-3xl font-bold text-center mb-10 text-[#1de9b6]"
+    className="text-4xl font-bold text-center mb-10 text-[#1de9b6]"
   >
     Nuestros Servicios
   </motion.h3>
+
   <div className="grid md:grid-cols-3 gap-10">
     {[
-      { titulo: "Desarrollo Web", desc: "Sitios modernos, rápidos y responsivos." },
+      { titulo: "Desarrollo Web", desc: "Sitios modernos, rápidos y eficientes." },
       { titulo: "Soporte Técnico", desc: "Asistencia rápida y eficaz para tus sistemas." },
       { titulo: "Automatización", desc: "Soluciones para mejorar la eficiencia de tu negocio." },
+      { titulo: "Integración de APIs", desc: "Conectamos tus herramientas para que trabajen juntas de forma inteligente." },
+      { titulo: "Mantenimiento Web", desc: "Actualización y monitoreo continuo para que tu sitio esté siempre online." },
+      { titulo: "Consultoría Tecnológica", desc: "Te ayudamos a tomar decisiones estratégicas para escalar tu negocio con tecnología." }
     ].map((servicio, i) => (
       <motion.div
         key={i}
@@ -242,19 +253,29 @@ function App() {
   </div>
 </section>
 
-<section id="nosotros" aria-label="Sobre Nosotros" className="px-6 lg:px-24 py-16 z-10 relative text-center">
-  <motion.h3
-    initial={{ opacity: 0, y: 20 }}
+{/* Sobre Nosotros */}
+<section id="nosotros" className="px-6 lg:px-24 py-12 text-center z-10 relative">
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
-    className="text-3xl font-bold mb-6 text-[#1de9b6]"
+    viewport={{ once: true }}
   >
-    Sobre Nosotros
-  </motion.h3>
-  <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-    En Zennith combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos un equipo apasionado por la tecnología y comprometido con tus resultados.
-  </p>
+    <h3 className="text-4xl font-bold text-[#1de9b6] mb-6">Sobre Nosotros</h3>
+
+    <div className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
+      <p>
+        En <span className="text-white font-semibold">Zennith</span> combinamos innovación y experiencia para llevar tu negocio al siguiente nivel.
+        Fundada en <span className="text-white font-semibold">2025</span> en <span className="text-white font-semibold">Santiago de Chile</span>,
+        somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.
+      </p>
+      <p>
+        Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación.
+      </p>
+    </div>
+  </motion.div>
 </section>
+
 
 <section aria-label="Testimonios de Clientes" className="px-6 lg:px-24 py-16 z-10 relative">
   <motion.h3
@@ -267,8 +288,8 @@ function App() {
   </motion.h3>
   <div className="grid md:grid-cols-2 gap-10">
     {[
-      { nombre: "Ana Itzel", texto: "Está muy bonito el zorro unicornio" },
-      { nombre: "Carlos Vega", texto: "Rápidos, profesionales y confiables. 100% recomendados." },
+      { nombre: "Loreto C. | Avícola Pichiarauco", texto: "Zennith me orientó para poder desarrollar el enfoque de mi negocio" },
+      { nombre: "Ana L. | AILV Clothes", texto: "Con la ayuda de Zennith pude potenciar mis ventas y mejorar mi imagen digital" },
     ].map((testimonio, i) => (
       <motion.div
         key={i}
@@ -355,12 +376,32 @@ function App() {
         <footer className="bg-[#0f1c2e] py-10 px-6 lg:px-24 mt-10 z-10 relative" aria-label="Pie de página">
   <div className="flex flex-col md:flex-row justify-between items-center gap-4">
     <div className="flex items-center gap-2">
-      <img src="/logo.png" alt="Logo pequeño de Zennith" className="h-8 w-8" />
+      <img src="/logo.png" alt="Logo pequeño de Zennith" className="h-12 w-12" />
       <span className="text-[#1de9b6] font-semibold">ZENNITH</span>
     </div>
-    <p className="text-gray-500 text-sm">© 2025 Zennith. Todos los derechos reservados.</p>
+    <p className="text-gray-500 text-sm">© 2025 Zennith SpA. Todos los derechos reservados.</p>
   </div>
 </footer>
+
+
+<a
+  href="https://wa.me/56962341655" // Reemplaza con tu número real
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-5 right-5 z-50 bg-[#25D366] hover:bg-[#1de9b6] p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+  aria-label="Chatea por WhatsApp"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 32 32"
+    fill="white"
+  >
+    <path d="M16.004 2.403c-7.45 0-13.515 6.062-13.515 13.515 0 2.384.627 4.707 1.816 6.75l-1.917 7.004 7.178-1.883a13.447 13.447 0 006.438 1.605c7.45 0 13.514-6.063 13.514-13.514S23.455 2.403 16.004 2.403zm0 24.724a11.13 11.13 0 01-5.658-1.545l-.405-.24-4.261 1.116 1.137-4.152-.265-.425a11.132 11.132 0 01-1.74-6.004c0-6.135 4.996-11.13 11.13-11.13 6.135 0 11.13 4.995 11.13 11.13s-4.996 11.13-11.13 11.13zm6.086-8.275c-.332-.168-1.961-.969-2.266-1.08-.305-.112-.527-.168-.75.169-.224.336-.861 1.08-1.055 1.304-.194.224-.388.25-.72.084-.332-.169-1.403-.516-2.67-1.645-.986-.88-1.65-1.969-1.843-2.3-.194-.336-.021-.517.147-.686.15-.148.336-.388.504-.582.167-.194.224-.336.336-.56.111-.224.056-.42-.028-.583-.083-.168-.749-1.804-1.027-2.47-.27-.648-.544-.56-.748-.56-.194 0-.416-.028-.639-.028-.224 0-.583.084-.889.42s-1.167 1.14-1.167 2.773c0 1.633 1.194 3.208 1.361 3.431.167.224 2.349 3.58 5.694 5.021.796.343 1.416.547 1.899.7.797.252 1.521.216 2.091.131.637-.095 1.961-.799 2.238-1.569.278-.77.278-1.429.194-1.57-.083-.14-.305-.223-.637-.391z" />
+  </svg>
+</a>
+
 
       </main>
     </motion.div>
