@@ -82,11 +82,12 @@ function App() {
 
       <main>
      
-     {/* Navbar */}
+     {/* Navbar color unicornio #3ce0cb */}
 <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-10 relative">
   <div className="flex items-center gap-3">
     <img src="/logo.png" alt="Zennith Logo" className="h-14 w-auto" />
     <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
+   
   </div>
 
   <div className="lg:hidden">
@@ -223,7 +224,7 @@ function App() {
   </motion.h3>
   <div className="grid md:grid-cols-2 gap-10">
     {[
-      { nombre: "Ana Torres", texto: "Zennith potenció nuestro sistema. ¡Servicio 10/10!" },
+      { nombre: "Ana Itzel", texto: "Está muy bonito el zorro unicornio" },
       { nombre: "Carlos Vega", texto: "Rápidos, profesionales y confiables. 100% recomendados." },
     ].map((testimonio, i) => (
       <motion.div
@@ -239,19 +240,6 @@ function App() {
     ))}
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         {/* Contacto */}
         <section id="contacto" aria-label="Formulario de contacto" className="px-6 lg:px-24 py-16 z-10 relative text-center">
