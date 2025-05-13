@@ -1,12 +1,15 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
 import "../i18n";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
+import { loadSlim } from "tsparticles-slim";
+
+
+
 
 
 
@@ -37,9 +40,11 @@ const toggleLanguage = () => {
     }, [lang, i18n]);
   
     // Inicialización de partículas
-    const particlesInit = async (main) => {
-      await loadFull(main);
-    };
+    const particlesInit = async (engine) => {
+        await loadSlim(engine);
+      };
+      
+      
   
     // Configuración de partículas animadas (fondo)
     const particlesOptions = {
