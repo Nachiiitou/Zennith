@@ -16,7 +16,6 @@ import { loadSlim } from "tsparticles-slim";
 
 function Home({ lang }) {
     // Estados de control generales
-    const [menuOpen, setMenuOpen] = useState(false); // Control del menú mobile
     const [loading, setLoading] = useState(true); // Carga inicial
     const [formSent, setFormSent] = useState(false); // Control de envío de formulario
     const [activeSection, setActiveSection] = useState("hero"); // Sección activa para scrollspy
@@ -187,33 +186,28 @@ useEffect(() => {
             <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
           </div>
   
-          <div className="lg:hidden">
-            <button onClick={() => setMenuOpen(!menuOpen)}>
-              <svg className="w-6 h-6 fill-[#1de9b6]" viewBox="0 0 24 24">
-                <path d="M4 5h16M4 12h16M4 19h16" />
-              </svg>
-            </button>
-          </div>
+      
   
-          <ul className="hidden lg:flex gap-10 text-base">
-                    {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => (
-            <li
-                key={idx}
-                className={`cursor-pointer transition hover:scale-105 duration-200 ${
-                activeSection === item ? "text-[#1de9b6] font-semibold" : "text-white"
-                }`}
-            >
-                <a href={`#${item}`}>
-                {t(`nav.${item}`)}
-                </a>
-            </li>
-            ))}
-                        
+         <ul className="hidden lg:flex gap-10 text-base">
+  {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => (
+    <li
+      key={idx}
+      className={`cursor-pointer transition hover:scale-105 duration-200 ${
+        activeSection === item ? "text-[#1de9b6] font-semibold" : "text-white"
+      }`}
+    >
+      <button
+        onClick={() => {
+          document.getElementById(item)?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="bg-transparent border-none p-0 m-0 text-inherit font-inherit cursor-pointer"
+      >
+        {t(`nav.${item}`)}
+      </button>
+    </li>
+  ))}
+</ul>
 
-
-
-
-          </ul>
 
           <button
   onClick={toggleLanguage}
@@ -223,22 +217,11 @@ useEffect(() => {
 </button>
 
   
-          {menuOpen && (
-            <div className="absolute top-full left-0 w-full bg-[#0f1c2e] flex flex-col items-center py-4 lg:hidden z-20">
-              {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => (
-                <a
-                  key={idx}
-                  href={`#${item}`}
-                  className="py-2 text-white hover:text-[#1de9b6] transition"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {t(`nav.${item}`)}
-                </a>
-              ))}
-            </div>
-          )}
         </nav>
         
+
+
+
   
         {/* Sección Hero */}
         <section
@@ -349,11 +332,19 @@ useEffect(() => {
   >
     <h3 className="text-4xl font-bold text-[#1de9b6] mb-6">{t("tituloNosotros")}</h3>
     <div className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
-      <p>{t("textoNosotros1")}</p>
-      <p>{t("textoNosotros2")}</p>
+      <p>
+  {t("nosotros1_parte1")}
+  <span className="text-[rgb(255,255,255)] font-semibold">{t("nosotros1_zennith")}</span>
+  {t("nosotros1_parte2")}
+</p>
+      <p>{t("nosotros2_texto")}</p>
     </div>
   </motion.div>
 </section>
+
+
+
+
 
 {/* Sección de Testimonios */}
 <section aria-label={t("tituloTestimonios")} className="px-6 lg:px-24 py-16 z-10 relative">

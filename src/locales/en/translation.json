@@ -48,9 +48,10 @@
         "detalle": "We help define a tech strategy aligned with your business goals. We evaluate your current and future needs, propose scalable solutions, and assist in adopting tools that drive your digital growth."
       }
     },
-    "tituloNosotros": "About Us",
-    "textoNosotros1": "At Zennith, we combine innovation and experience to take your business to the next level. We specialize in web development, process automation, and digital solutions.",
-    "textoNosotros2": "We are passionate about technology and committed to transforming your ideas into functional, fast, and modern products, working alongside you with focus and dedication.",
+    
+    
+
+    
     "tituloTestimonios": "What our clients say",
     "testimonios": {
       "loreto": {
@@ -61,6 +62,8 @@
         "nombre": "Ana L. | AILV Clothes",
         "texto": "With Zennith’s help I was able to boost my sales and improve my digital image"
       }
+
+
     },
     "tituloContacto": "Contact Us",
     "placeholders": {
@@ -71,5 +74,16 @@
     "botonEnviar": "Send message",
     "mensajeExito": "Message sent successfully!",
     "mensajeError": "An error occurred. Please try again.",
-    "footer": "© 2025 Zennith SpA. All rights reserved."
+    "footer": "© 2025 Zennith SpA. All rights reserved.",
+
+    
+  "tituloNosotros": "About Us",
+  "nosotros1_parte1": "At ",
+  "nosotros1_zennith": "Zennith",
+  "nosotros1_parte2": ", we combine innovation and experience to take your business to the next level. We are a company focused on web development, process automation, and digital solutions.",
+  "nosotros2_texto": "We are passionate about technology and committed to turning your ideas into functional, fast, and modern products, working by your side with focus and dedication."
+
+
   }
+
+  

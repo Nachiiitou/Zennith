@@ -47,9 +47,7 @@
         "detalle": "Te ayudamos a definir una estrategia tecnológica alineada con tus objetivos de negocio. Evaluamos tus necesidades actuales y futuras, proponemos soluciones escalables y te acompañamos en la adopción de herramientas que impulsen tu crecimiento digital."
       }
     },
-    "tituloNosotros": "Sobre Nosotros",
-    "textoNosotros1": "En Zennith combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.",
-    "textoNosotros2": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación.",
+  
     "tituloTestimonios": "Lo que dicen nuestros clientes",
     "testimonios": {
       "loreto": {
@@ -70,6 +68,15 @@
     "botonEnviar": "Enviar mensaje",
     "mensajeExito": "¡Mensaje enviado con éxito!",
     "mensajeError": "Ocurrió un error. Inténtalo nuevamente.",
-    "footer": "© 2025 Zennith SpA. Todos los derechos reservados."
+    "footer": "© 2025 Zennith SpA. Todos los derechos reservados.",
+
+    
+  "tituloNosotros": "Sobre Nosotros",
+  "nosotros1_parte1": "En ",
+  "nosotros1_zennith": "Zennith",
+  "nosotros1_parte2": " combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.",
+  "nosotros2_texto": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación."
+
+
   }
 
