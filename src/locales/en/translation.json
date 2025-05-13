@@ -1,0 +1,75 @@
+{
+  "meta": {
+  "title": "Zennith - IT Consulting and Web Development in Chile",
+  "description": "Zennith is a Chilean tech company offering web development, automation, and digital solutions.",
+  "ogTitle": "Zennith - Digital Solutions for Modern Businesses",
+  "ogDescription": "We create smart digital solutions to help companies thrive in the digital world."
+},
+    "nav": {
+        "hero": "Home",
+        "servicios": "Services",
+        "nosotros": "About",
+        "contacto": "Contact"
+      },
+  "tituloHero": "Smart digital solutions",
+    "subtituloHero": "We develop custom software, provide technical support, and empower your business with technology.",
+    "botonHero": "Request your consultation",
+    "tituloServicios": "Our Services",
+    "servicios": {
+      "desarrolloWeb": {
+        "titulo": "Web Development",
+        "desc": "We create modern, efficient, and customized websites.",
+        "detalle": "We design and develop responsive websites that load fast, look amazing on any device and are optimized for performance. We use technologies like React, TailwindCSS and Next.js to build custom solutions that reflect your brand identity and build trust with your customers."
+      },
+
+      "soporteTecnico": {
+        "titulo": "Technical Support",
+        "desc": "Quick solutions to keep your operation running smoothly.",
+        "detalle": "We provide specialized technical support, both remote and on-site, to resolve issues with your systems, networks, or digital platforms. Our preventive approach ensures your tools are always available, updated, and working optimally."
+      },
+      "automatizacion": {
+        "titulo": "Process Automation",
+        "desc": "Optimize repetitive tasks and free up valuable time.",
+        "detalle": "We identify opportunities to automate workflows in your business. Whether through scripts, platform integrations, or custom tools, we reduce human errors, speed up processes, and help you scale operations with less effort."
+      },
+      "integracionApis": {
+        "titulo": "API Integration",
+        "desc": "Make your platforms work together intelligently.",
+        "detalle": "We integrate external services like CRMs, ERPs, payment gateways, marketing tools, and more so your entire digital ecosystem works in sync. We connect systems that used to work separately, improving efficiency and user experience."
+      },
+      "mantenimientoWeb": {
+        "titulo": "Website Maintenance",
+        "desc": "Your site always secure, updated, and in top condition.",
+        "detalle": "We take care of your website’s technical maintenance so you don’t have to worry about anything. We perform automatic backups, security updates, performance improvements, and monthly support to solve any issues that arise."
+      },
+      "consultoria": {
+        "titulo": "Technology Consulting",
+        "desc": "We guide you in making impactful digital decisions.",
+        "detalle": "We help define a tech strategy aligned with your business goals. We evaluate your current and future needs, propose scalable solutions, and assist in adopting tools that drive your digital growth."
+      }
+    },
+    "tituloNosotros": "About Us",
+    "textoNosotros1": "At Zennith, we combine innovation and experience to take your business to the next level. We specialize in web development, process automation, and digital solutions.",
+    "textoNosotros2": "We are passionate about technology and committed to transforming your ideas into functional, fast, and modern products, working alongside you with focus and dedication.",
+    "tituloTestimonios": "What our clients say",
+    "testimonios": {
+      "loreto": {
+        "nombre": "Loreto C. | Avícola Pichiarauco",
+        "texto": "Zennith guided me to develop the focus of my business"
+      },
+      "ana": {
+        "nombre": "Ana L. | AILV Clothes",
+        "texto": "With Zennith’s help I was able to boost my sales and improve my digital image"
+      }
+    },
+    "tituloContacto": "Contact Us",
+    "placeholders": {
+      "nombre": "Name",
+      "correo": "Email",
+      "mensaje": "Message"
+    },
+    "botonEnviar": "Send message",
+    "mensajeExito": "Message sent successfully!",
+    "mensajeError": "An error occurred. Please try again.",
+    "footer": "© 2025 Zennith SpA. All rights reserved."
+  }
