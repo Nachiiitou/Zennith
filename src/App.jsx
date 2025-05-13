@@ -290,8 +290,8 @@ function App() {
     <div className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
       <p>
         En <span className="text-white font-semibold">Zennith</span> combinamos innovación y experiencia para llevar tu negocio al siguiente nivel.
-        Fundada en <span className="text-white font-semibold">2025</span> en <span className="text-white font-semibold">Santiago de Chile</span>,
-        somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.
+      
+        Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.
       </p>
       <p>
         Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación.
