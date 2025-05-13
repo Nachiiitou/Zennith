@@ -29,17 +29,6 @@ const toggleLanguage = () => {
   const newLang = lang === "es" ? "en" : "es";
   navigate(`/${newLang}`);
 };
-
-<Helmet>
-<title>{t("meta.title")}</title>
-<meta name="description" content={t("meta.description")} />
-<link rel="canonical" href={`https://www.zennith.cl/${lang}`} />
-<meta property="og:title" content={t("meta.ogTitle")} />
-<meta property="og:description" content={t("meta.ogDescription")} />
-<meta property="og:image" content="https://www.zennith.cl/logo-preview.png" />
-<meta property="og:url" content={`https://www.zennith.cl/${lang}`} />
-<meta name="language" content={lang} />
-</Helmet>
   
     useEffect(() => {
       if (lang && i18n.language !== lang) {
