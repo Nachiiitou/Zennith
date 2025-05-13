@@ -18,7 +18,6 @@
     "lucide-react": "^0.510.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-helmet-async": "^2.0.5",
     "react-i18next": "^15.5.1",
     "react-router-dom": "^7.6.0",
     "react-tsparticles": "^2.12.2",
