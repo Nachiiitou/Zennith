@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Particles from "react-tsparticles";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
 import "../i18n";
@@ -46,19 +45,7 @@ const toggleLanguage = () => {
       
       
   
-    // Configuración de partículas animadas (fondo)
-    const particlesOptions = {
-      fullScreen: { enable: false },
-      background: { color: "#02070f" },
-      particles: {
-        number: { value: 50 },
-        color: { value: "#1de9b6" },
-        links: { enable: true, color: "#1de9b6", distance: 150 },
-        move: { enable: true, speed: 2 },
-        size: { value: 2 },
-      },
-      detectRetina: true,
-    };
+  
   
     // Envío de formulario (con Formspree)
     const handleSubmit = async (e) => {
@@ -186,11 +173,9 @@ useEffect(() => {
       transition={{ duration: 1 }}
       className="relative bg-[#02070f] text-white min-h-screen font-sans overflow-x-hidden scroll-smooth"
     >
-      {/* Fondo animado */}
-      <div className="absolute inset-0 -z-10">
-        <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
-      </div>
-  
+     
+
+
       <main>
        
        
