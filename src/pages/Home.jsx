@@ -154,7 +154,7 @@ useEffect(() => {
     return (
       <div className="flex items-center justify-center min-h-screen bg-[#02070f]">
         <motion.img
-          src="/logo.png"
+          src="/Logo.svg"
           alt="Logo de carga Zennith"
           initial={{ scale: 0 }}
           animate={{ scale: 1.1 }}
@@ -182,7 +182,7 @@ useEffect(() => {
         {/* Navbar */}
         <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-10 relative">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Zennith Logo" className="h-14 w-auto" />
+            <img src="/Logo.svg" alt="Zennith Logo" className="h-10 w-auto" />
             <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
           </div>
   
@@ -430,7 +430,7 @@ useEffect(() => {
   <div className="hidden md:flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500">
     {/* Logo izquierdo */}
     <div className="flex items-center gap-3">
-      <img src="/logo.png" alt="Logo pequeño de Zennith" className="h-20 w-20" />
+      <img src="/Logo.svg" alt="Logo pequeño de Zennith" className="h-8 w-8" />
       <span className="text-[#1de9b6] font-semibold text-xl">ZENNITH</span>
     </div>
 
@@ -471,7 +471,7 @@ useEffect(() => {
   <div className="block md:hidden text-center flex flex-col items-center gap-6 text-gray-500">
     {/* Logo centrado */}
     <div className="flex items-center gap-3 justify-center">
-      <img src="/logo.png" alt="Logo pequeño de Zennith" className="h-20 w-20" />
+      <img src="/Logo.svg" alt="Logo pequeño de Zennith" className="h-10 w-10" />
     </div>
 
     {/* Redes sociales */}
