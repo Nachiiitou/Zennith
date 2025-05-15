@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="411.01648mm"
+   height="500.04077mm"
+   viewBox="0 0 411.01648 500.04077"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1"><linearGradient
+       id="linearGradient74"><stop
+         style="stop-color:#1de9b6;stop-opacity:0.99630994;"
+         offset="0"
+         id="stop74" /><stop
+         style="stop-color:#05f9ac;stop-opacity:0.98892987;"
+         offset="1"
+         id="stop75" /></linearGradient><linearGradient
+       id="swatch69"><stop
+         style="stop-color:#009e73;stop-opacity:0.97416973;"
+         offset="0"
+         id="stop69" /></linearGradient><linearGradient
+       xlink:href="#linearGradient74"
+       id="linearGradient75"
+       x1="-605.08325"
+       y1="-1228.9952"
+       x2="-437.19778"
+       y2="-1228.9952"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.84531419,0,0,0.88348732,787.78178,1197.6004)" /></defs><g
+     id="layer1"
+     transform="translate(183.91936,283.19279)"><g
+       id="g1"
+       transform="translate(-183.91936,-283.19279)"><path
+         style="opacity:1;mix-blend-mode:normal;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.265;stroke-opacity:1;stroke-dasharray:none"
+         d="m 30.97316,13.1592 c 0,0 164.54307,157.4553 175.34066,163.2306 4.89989,2.6208 145.5424,65.1259 145.5424,65.1259 -3.2802,15.1983 -15.07227,125.08329 46.86239,212.79204 6.24535,8.84435 -64.53346,71.51691 -103.07362,33.71904 C 263.74862,456.74473 154.25513,340.4582 0,340.2342 c 0,0 59.67779,-57.3397 58.78933,-63.1824 C 57.65509,269.5927 30.97316,13.1592 30.97316,13.1592 Z"
+         id="path60" /><path
+         style="opacity:1;fill:url(#linearGradient75);stroke-width:0.241125"
+         d="M 411.01648,0 257.53992,156.9803 362.3344,200.1922 Z"
+         id="path62" /><path
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.277183"
+         d="m 176.78622,267.5338 120.91193,87.75233 c -2.45119,-26.26643 -6.83385,-62.51003 -31.7647,-79.36533 -25.31258,-17.1133 -60.38373,-10.0126 -89.14723,-8.387 z"
+         id="path75" /></g></g></svg>
