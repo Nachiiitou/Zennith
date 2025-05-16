@@ -9,11 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Suspense
-        fallback={
-          <div className="min-h-screen flex items-center justify-center bg-[#02070f] text-white">
-            Cargando...
-          </div>
-        }
+      
       >
         <Routes>
           <Route path="/" element={<Navigate to="/es" />} />

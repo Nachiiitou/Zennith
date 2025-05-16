@@ -266,20 +266,20 @@ useEffect(() => {
           >
             <picture>
             <source
-              srcSet="/pc-400.webp 400w, /pc-800.webp 800w, /pc.webp 1200w"
-              sizes="(max-width: 768px) 90vw, 50vw"
+              srcSet="/pc-400.webp 400w, /pc-800.webp 800w, /pc-1200.webp 1200w"
               type="image/webp"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 50vw"
             />
             <img
-              src="/pc-800.webp" 
+              src="/pc-800.webp"
               alt="Mockup Zennith mostrando software"
               width="1200"
               height="800"
-              loading="lazy"
               decoding="async"
               className="w-full object-contain rounded-2xl transition-transform duration-300"
             />
           </picture>
+
 
 
           </motion.div>
@@ -479,7 +479,7 @@ useEffect(() => {
   </div>
 
   {/* Versión para móviles */}
-  <div className="block md:hidden text-center flex flex-col items-center gap-6 text-[#e0e0e0]">
+  <div className="block md:hidden text-center flex flex-col items-center gap-6 text-[#404040]">
    
    
     {/* Logo centrado */}
@@ -517,7 +517,7 @@ useEffect(() => {
     </div>
 
     {/* Derechos reservados */}
-    <p className="text-sm text-[#cf0707]">{t("footer")}</p>
+    <p className="text-sm text-white">{t("footer")}</p>
   </div>
 </footer>
 
