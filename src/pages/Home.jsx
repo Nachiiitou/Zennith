@@ -170,7 +170,17 @@ useEffect(() => {
         {/* Navbar */}
         <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-10 relative">
           <div className="flex items-center gap-3">
-            <img src="/Logo.svg" alt="Zennith Logo" className="h-10 w-auto" />
+            <img
+            src="/Logo.svg"
+            alt="Zennith Logo"
+            width="40"
+            height="40"
+            class="h-10 w-auto"
+          />
+
+
+
+
             <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
           </div>
   
@@ -257,18 +267,20 @@ useEffect(() => {
             <picture>
             <source
               srcSet="/pc-400.webp 400w, /pc-800.webp 800w, /pc.webp 1200w"
-              type="image/webp"
               sizes="(max-width: 768px) 90vw, 50vw"
+              type="image/webp"
             />
             <img
-              src="/pc.png"
+              src="/pc-800.webp" 
               alt="Mockup Zennith mostrando software"
               width="1200"
               height="800"
               loading="lazy"
+              decoding="async"
               className="w-full object-contain rounded-2xl transition-transform duration-300"
             />
           </picture>
+
 
           </motion.div>
         </section>

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze": "source-map-explorer dist/assets/index-*.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.5",
@@ -35,6 +36,12 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "source-map-explorer": "^2.5.3",
+    "terser": "^5.39.2",
     "vite": "^6.3.5"
-  }
+  },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "not IE 11"
+  ]
 }
