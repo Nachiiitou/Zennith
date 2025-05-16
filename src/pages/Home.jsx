@@ -1,23 +1,16 @@
-import React, { useEffect, useState, useRef, useMemo } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
 import "../i18n";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-import { loadSlim } from "tsparticles-slim";
-
-
-
-
-
 
 
 
 function Home({ lang }) {
     // Estados de control generales
     const [loading, setLoading] = useState(true); // Carga inicial
-    const [formSent, setFormSent] = useState(false); // Control de envío de formulario
     const [activeSection, setActiveSection] = useState("hero"); // Sección activa para scrollspy
     const [status, setStatus] = useState(null); // Estado del formulario: null | "success" | "error"
     const formRef = useRef(null); // Referencia al formulario
@@ -37,15 +30,7 @@ const toggleLanguage = () => {
       }
     }, [lang, i18n]);
   
-    // Inicialización de partículas
-    const particlesInit = async (engine) => {
-        await loadSlim(engine);
-      };
-      
-      
-  
-  
-  
+
     // Envío de formulario (con Formspree)
     const handleSubmit = async (e) => {
       e.preventDefault();
@@ -123,6 +108,9 @@ useEffect(() => {
     return () => clearTimeout(timer);
   }, []);
   
+
+
+
   // Observador para detectar la sección visible (scrollspy)
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -252,7 +240,7 @@ useEffect(() => {
   
             <motion.button
               whileHover={{ scale: 1.08, boxShadow: "0px 0px 15px #1de9b6" }}
-              className="bg-[#1de9b6] text-black px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300"
+            className="bg-[#1de9b6] text-[#0a0a0a] px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300"
               onClick={scrollToContacto}
             >
               {t("botonHero")}
@@ -266,11 +254,22 @@ useEffect(() => {
             whileHover={{ scale: 1.02 }}
             className="w-full max-w-4xl"
           >
+            <picture>
+            <source
+              srcSet="/pc-400.webp 400w, /pc-800.webp 800w, /pc.webp 1200w"
+              type="image/webp"
+              sizes="(max-width: 768px) 90vw, 50vw"
+            />
             <img
               src="/pc.png"
               alt="Mockup Zennith mostrando software"
+              width="1200"
+              height="800"
+              loading="lazy"
               className="w-full object-contain rounded-2xl transition-transform duration-300"
             />
+          </picture>
+
           </motion.div>
         </section>
 
@@ -299,7 +298,7 @@ useEffect(() => {
         onClick={() => setActivo(activo === i ? null : i)}
       >
         {/* Título y descripción del servicio */}
-        <h4 className="text-xl font-semibold mb-2 text-[#1de9b6]">{servicio.titulo}</h4>
+        <h4 className="text-xl font-semibold mb-2 text-[#00ffc3]">{servicio.titulo}</h4>
         <p className="text-white">{servicio.desc}</p>
 
         {/* Detalle expandible al hacer clic */}
@@ -464,11 +463,13 @@ useEffect(() => {
     </div>
 
     {/* Derechos reservados */}
-    <p className="text-sm text-right">{t("footer")}</p>
+    <p className="text-sm text-right text-white">{t("footer")}</p>
   </div>
 
   {/* Versión para móviles */}
-  <div className="block md:hidden text-center flex flex-col items-center gap-6 text-gray-500">
+  <div className="block md:hidden text-center flex flex-col items-center gap-6 text-[#e0e0e0]">
+   
+   
     {/* Logo centrado */}
     <div className="flex items-center gap-3 justify-center">
       <img src="/Logo.svg" alt="Logo pequeño de Zennith" className="h-10 w-10" />
@@ -504,7 +505,7 @@ useEffect(() => {
     </div>
 
     {/* Derechos reservados */}
-    <p className="text-sm text-gray-400">{t("footer")}</p>
+    <p className="text-sm text-[#cf0707]">{t("footer")}</p>
   </div>
 </footer>
 
