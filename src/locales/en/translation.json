@@ -1,89 +1,118 @@
 {
   "meta": {
-  "title": "Zennith - IT Consulting and Web Development in Chile",
-  "description": "Zennith is a Chilean tech company offering web development, automation, and digital solutions.",
-  "ogTitle": "Zennith - Digital Solutions for Modern Businesses",
-  "ogDescription": "We create smart digital solutions to help companies thrive in the digital world."
-},
-    "nav": {
-        "hero": "Home",
-        "servicios": "Services",
-        "nosotros": "About",
-        "contacto": "Contact"
-      },
+    "title": "Zennith - IT Consulting and Web Development in Chile",
+    "description": "Zennith is a Chilean tech company offering web development, automation, and digital solutions.",
+    "ogTitle": "Zennith - Consulting and Digital Solutions",
+    "ogDescription": "We develop technology solutions for companies that want to stand out in the digital world."
+  },
+
+  "_comment_nav": "Main navigation",
+  "nav": {
+    "hero": "Home",
+    "servicios": "Services",
+    "nosotros": "About Us",
+    "contacto": "Contact"
+  },
+
+  "_comment_hero": "Hero section",
   "tituloHero": "Smart digital solutions",
-    "subtituloHero": "We develop custom software, provide technical support, and empower your business with technology.",
-    "botonHero": "Request your consultation",
-    "tituloServicios": "Our Services",
-    "servicios": {
-      "desarrolloWeb": {
-        "titulo": "Web Development",
-        "desc": "We create modern, efficient, and customized websites.",
-        "detalle": "We design and develop responsive websites that load fast, look amazing on any device and are optimized for performance. We use technologies like React, TailwindCSS and Next.js to build custom solutions that reflect your brand identity and build trust with your customers."
-      },
+  "subtituloHero": "We develop custom software, provide technical support, and boost your business through technology.",
+  "botonHero": "Request your consultation",
 
-      "soporteTecnico": {
-        "titulo": "Technical Support",
-        "desc": "Quick solutions to keep your operation running smoothly.",
-        "detalle": "We provide specialized technical support, both remote and on-site, to resolve issues with your systems, networks, or digital platforms. Our preventive approach ensures your tools are always available, updated, and working optimally."
+  "_comment_services": "Individual services",
+  "tituloServicios": "Our Services",
+  "servicios": {
+    "desarrolloWeb": {
+      "titulo": "Web Development",
+      "desc": "We create modern, efficient, and customized websites.",
+      "detalle": "We design and build responsive websites that load fast, look great on any device, and are optimized for performance. We use technologies like React, TailwindCSS, and Next.js to create custom solutions that reflect your brand and build trust with your clients."
+    },
+    "soporteTecnico": {
+      "titulo": "Technical Support",
+      "desc": "Quick solutions to keep your business running smoothly.",
+      "detalle": "We provide specialized technical assistance, both remote and on-site, to solve problems with your systems, networks, or digital platforms. Our preventive approach ensures your tools are always available, up-to-date, and working optimally."
+    },
+    "automatizacion": {
+      "titulo": "Process Automation",
+      "desc": "Optimize repetitive tasks and save valuable time.",
+      "detalle": "We identify opportunities to automate workflows in your business. Whether through scripts, integrations, or custom tools, we reduce human error, accelerate processes, and help you scale operations with less effort."
+    },
+    "integracionApis": {
+      "titulo": "API Integration",
+      "desc": "Make your platforms work together intelligently.",
+      "detalle": "We integrate external services like CRMs, ERPs, payment gateways, marketing tools, and more so that your digital ecosystem works in sync. We connect previously isolated systems, improving efficiency and user experience."
+    },
+    "mantenimientoWeb": {
+      "titulo": "Web Maintenance",
+      "desc": "Keep your site secure, up-to-date, and running smoothly.",
+      "detalle": "We handle the technical maintenance of your website so you don’t have to worry. We run automatic backups, apply security updates, boost performance, and provide monthly support to resolve any issues."
+    },
+    "consultoria": {
+      "titulo": "Technology Consulting",
+      "desc": "We guide you in making digital decisions with real impact.",
+      "detalle": "We help you define a tech strategy aligned with your business goals. We evaluate your current and future needs, propose scalable solutions, and assist you in adopting tools that drive digital growth."
+    }
+  },
+
+  "_comment_packs": "Plans and packages",
+  "packs": {
+    "titulo": "Plans & Packages",
+    "botonSolicitar": "Request this pack",
+    "lista": [
+      {
+        "nombre": "Startup Pack",
+        "descripcion": "Ideal for newly launched businesses.",
+        "incluye": [
+          "Basic website",
+          "1 month of support",
+          "Initial training"
+        ],
+        "precio": "$250.000 CLP"
       },
-      "automatizacion": {
-        "titulo": "Process Automation",
-        "desc": "Optimize repetitive tasks and free up valuable time.",
-        "detalle": "We identify opportunities to automate workflows in your business. Whether through scripts, platform integrations, or custom tools, we reduce human errors, speed up processes, and help you scale operations with less effort."
-      },
-      "integracionApis": {
-        "titulo": "API Integration",
-        "desc": "Make your platforms work together intelligently.",
-        "detalle": "We integrate external services like CRMs, ERPs, payment gateways, marketing tools, and more so your entire digital ecosystem works in sync. We connect systems that used to work separately, improving efficiency and user experience."
-      },
-      "mantenimientoWeb": {
-        "titulo": "Website Maintenance",
-        "desc": "Your site always secure, updated, and in top condition.",
-        "detalle": "We take care of your website’s technical maintenance so you don’t have to worry about anything. We perform automatic backups, security updates, performance improvements, and monthly support to solve any issues that arise."
-      },
-      "consultoria": {
-        "titulo": "Technology Consulting",
-        "desc": "We guide you in making impactful digital decisions.",
-        "detalle": "We help define a tech strategy aligned with your business goals. We evaluate your current and future needs, propose scalable solutions, and assist in adopting tools that drive your digital growth."
+      {
+        "nombre": "SMB Pack",
+        "descripcion": "For growing companies.",
+        "incluye": [
+          "Custom web system",
+          "3 months of support",
+          "Basic integrations"
+        ],
+        "precio": "$450.000 CLP"
       }
+    ]
+  },
+
+  "_comment_testimonials": "Client testimonials",
+  "tituloTestimonios": "What our clients say",
+  "testimonios": {
+    "loreto": {
+      "nombre": "Loreto C. | Avícola Pichiarauco",
+      "texto": "Zennith guided me in developing the focus of my business"
     },
-    
-    
+    "ana": {
+      "nombre": "Ana L. | AILV Clothes",
+      "texto": "With Zennith's help I was able to boost my sales and improve my digital image"
+    }
+  },
 
-    
-    "tituloTestimonios": "What our clients say",
-    "testimonios": {
-      "loreto": {
-        "nombre": "Loreto C. | Avícola Pichiarauco",
-        "texto": "Zennith guided me to develop the focus of my business"
-      },
-      "ana": {
-        "nombre": "Ana L. | AILV Clothes",
-        "texto": "With Zennith’s help I was able to boost my sales and improve my digital image"
-      }
+  "_comment_contact": "Contact form",
+  "tituloContacto": "Contact Us",
+  "placeholders": {
+    "nombre": "Name",
+    "correo": "Email",
+    "mensaje": "Message"
+  },
+  "botonEnviar": "Send message",
+  "mensajeExito": "Message sent successfully!",
+  "mensajeError": "An error occurred. Please try again.",
 
+  "_comment_footer": "Footer",
+  "footer": "© 2025 Zennith SpA. All rights reserved.",
 
-    },
-    "tituloContacto": "Contact Us",
-    "placeholders": {
-      "nombre": "Name",
-      "correo": "Email",
-      "mensaje": "Message"
-    },
-    "botonEnviar": "Send message",
-    "mensajeExito": "Message sent successfully!",
-    "mensajeError": "An error occurred. Please try again.",
-    "footer": "© 2025 Zennith SpA. All rights reserved.",
-
-    
+  "_comment_about": "About Us section",
   "tituloNosotros": "About Us",
   "nosotros1_parte1": "At ",
   "nosotros1_zennith": "Zennith",
-  "nosotros1_parte2": ", we combine innovation and experience to take your business to the next level. We are a company focused on web development, process automation, and digital solutions.",
-  "nosotros2_texto": "We are passionate about technology and committed to turning your ideas into functional, fast, and modern products, working by your side with focus and dedication."
-
-
-  }
-
-  
+  "nosotros1_parte2": " we combine innovation and experience to take your business to the next level. We specialize in web development, process automation, and digital solutions.",
+  "nosotros2_texto": "We are passionate about technology and committed to turning your ideas into functional, fast, and modern products—working alongside you with focus and dedication."
+}

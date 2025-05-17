@@ -1,82 +1,118 @@
-{"meta": {
-  "title": "Zennith - Consultoría Informática y Desarrollo Web en Chile",
-  "description": "Zennith es una empresa chilena de tecnología que ofrece desarrollo web, automatización y soluciones digitales.",
-  "ogTitle": "Zennith - Consultoría y Soluciones Digitales",
-  "ogDescription": "Desarrollamos soluciones tecnológicas para empresas que quieren destacar en el mundo digital."
-}
-,
-  "nav": {
-      "hero": "Inicio",
-      "servicios": "Servicios",
-      "nosotros": "Nosotros",
-      "contacto": "Contacto"
-    },
-    "tituloHero": "Soluciones digitales inteligentes",
-    "subtituloHero": "Desarrollamos software a medida, brindamos soporte técnico y potenciamos tu negocio con tecnología.",
-    "botonHero": "Solicita tu asesoría",
-    "tituloServicios": "Nuestros Servicios",
-    "servicios": {
-      "desarrolloWeb": {
-        "titulo": "Desarrollo Web",
-        "desc": "Creamos sitios modernos, eficientes y personalizados.",
-        "detalle": "Diseñamos y desarrollamos páginas web responsivas que cargan rápido, se ven increíbles en cualquier dispositivo y están optimizadas para el rendimiento. Utilizamos tecnologías como React, TailwindCSS y Next.js para construir soluciones a medida que reflejan la identidad de tu marca y generan confianza en tus clientes."
-      },
-      "soporteTecnico": {
-        "titulo": "Soporte Técnico",
-        "desc": "Soluciones rápidas para mantener tu operación sin interrupciones.",
-        "detalle": "Brindamos asistencia técnica especializada, tanto remota como presencial, para resolver problemas con tus sistemas, redes o plataformas digitales. Nuestro enfoque preventivo asegura que tus herramientas estén siempre disponibles, actualizadas y funcionando de manera óptima."
-      },
-      "automatizacion": {
-        "titulo": "Automatización de Procesos",
-        "desc": "Optimiza tareas repetitivas y libera tiempo valioso.",
-        "detalle": "Identificamos oportunidades para automatizar flujos de trabajo en tu negocio. Ya sea mediante scripts, integraciones entre plataformas o herramientas personalizadas, reducimos errores humanos, aceleramos procesos y te ayudamos a escalar tu operación con menos esfuerzo."
-      },
-      "integracionApis": {
-        "titulo": "Integración de APIs",
-        "desc": "Haz que tus plataformas trabajen juntas de forma inteligente.",
-        "detalle": "Integramos servicios externos como CRMs, ERPs, pasarelas de pago, herramientas de marketing y más, para que todo tu ecosistema digital funcione de manera sincronizada. Conectamos sistemas que antes trabajaban por separado, mejorando la eficiencia y experiencia del usuario."
-      },
-      "mantenimientoWeb": {
-        "titulo": "Mantenimiento Web",
-        "desc": "Tu sitio siempre seguro, actualizado y en óptimas condiciones.",
-        "detalle": "Nos encargamos del mantenimiento técnico de tu página web para que no tengas que preocuparte por nada. Realizamos backups automáticos, actualizaciones de seguridad, mejoras de rendimiento y soporte mensual para resolver cualquier problema que surja."
-      },
-      "consultoria": {
-        "titulo": "Consultoría Tecnológica",
-        "desc": "Te guiamos para tomar decisiones digitales con impacto real.",
-        "detalle": "Te ayudamos a definir una estrategia tecnológica alineada con tus objetivos de negocio. Evaluamos tus necesidades actuales y futuras, proponemos soluciones escalables y te acompañamos en la adopción de herramientas que impulsen tu crecimiento digital."
-      }
-    },
-  
-    "tituloTestimonios": "Lo que dicen nuestros clientes",
-    "testimonios": {
-      "loreto": {
-        "nombre": "Loreto C. | Avícola Pichiarauco",
-        "texto": "Zennith me orientó para poder desarrollar el enfoque de mi negocio"
-      },
-      "ana": {
-        "nombre": "Ana L. | AILV Clothes",
-        "texto": "Con la ayuda de Zennith pude potenciar mis ventas y mejorar mi imagen digital"
-      }
-    },
-    "tituloContacto": "Contáctanos",
-    "placeholders": {
-      "nombre": "Nombre",
-      "correo": "Correo",
-      "mensaje": "Mensaje"
-    },
-    "botonEnviar": "Enviar mensaje",
-    "mensajeExito": "¡Mensaje enviado con éxito!",
-    "mensajeError": "Ocurrió un error. Inténtalo nuevamente.",
-    "footer": "© 2025 Zennith SpA. Todos los derechos reservados.",
+{
+  "meta": {
+    "title": "Zennith - Consultoría Informática y Desarrollo Web en Chile",
+    "description": "Zennith es una empresa chilena de tecnología que ofrece desarrollo web, automatización y soluciones digitales.",
+    "ogTitle": "Zennith - Consultoría y Soluciones Digitales",
+    "ogDescription": "Desarrollamos soluciones tecnológicas para empresas que quieren destacar en el mundo digital."
+  },
 
-    
+  "_comentario_nav": "Navegación principal",
+  "nav": {
+    "hero": "Inicio",
+    "servicios": "Servicios",
+    "nosotros": "Nosotros",
+    "contacto": "Contacto"
+  },
+
+  "_comentario_hero": "Sección principal / Hero",
+  "tituloHero": "Soluciones digitales inteligentes",
+  "subtituloHero": "Desarrollamos software a medida, brindamos soporte técnico y potenciamos tu negocio con tecnología.",
+  "botonHero": "Solicita tu asesoría",
+
+  "_comentario_servicios": "Servicios individuales",
+  "tituloServicios": "Nuestros Servicios",
+  "servicios": {
+    "desarrolloWeb": {
+      "titulo": "Desarrollo Web",
+      "desc": "Creamos sitios modernos, eficientes y personalizados.",
+      "detalle": "Diseñamos y desarrollamos páginas web responsivas que cargan rápido, se ven increíbles en cualquier dispositivo y están optimizadas para el rendimiento. Utilizamos tecnologías como React, TailwindCSS y Next.js para construir soluciones a medida que reflejan la identidad de tu marca y generan confianza en tus clientes."
+    },
+    "soporteTecnico": {
+      "titulo": "Soporte Técnico",
+      "desc": "Soluciones rápidas para mantener tu operación sin interrupciones.",
+      "detalle": "Brindamos asistencia técnica especializada, tanto remota como presencial, para resolver problemas con tus sistemas, redes o plataformas digitales. Nuestro enfoque preventivo asegura que tus herramientas estén siempre disponibles, actualizadas y funcionando de manera óptima."
+    },
+    "automatizacion": {
+      "titulo": "Automatización de Procesos",
+      "desc": "Optimiza tareas repetitivas y libera tiempo valioso.",
+      "detalle": "Identificamos oportunidades para automatizar flujos de trabajo en tu negocio. Ya sea mediante scripts, integraciones entre plataformas o herramientas personalizadas, reducimos errores humanos, aceleramos procesos y te ayudamos a escalar tu operación con menos esfuerzo."
+    },
+    "integracionApis": {
+      "titulo": "Integración de APIs",
+      "desc": "Haz que tus plataformas trabajen juntas de forma inteligente.",
+      "detalle": "Integramos servicios externos como CRMs, ERPs, pasarelas de pago, herramientas de marketing y más, para que todo tu ecosistema digital funcione de manera sincronizada. Conectamos sistemas que antes trabajaban por separado, mejorando la eficiencia y experiencia del usuario."
+    },
+    "mantenimientoWeb": {
+      "titulo": "Mantenimiento Web",
+      "desc": "Tu sitio siempre seguro, actualizado y en óptimas condiciones.",
+      "detalle": "Nos encargamos del mantenimiento técnico de tu página web para que no tengas que preocuparte por nada. Realizamos backups automáticos, actualizaciones de seguridad, mejoras de rendimiento y soporte mensual para resolver cualquier problema que surja."
+    },
+    "consultoria": {
+      "titulo": "Consultoría Tecnológica",
+      "desc": "Te guiamos para tomar decisiones digitales con impacto real.",
+      "detalle": "Te ayudamos a definir una estrategia tecnológica alineada con tus objetivos de negocio. Evaluamos tus necesidades actuales y futuras, proponemos soluciones escalables y te acompañamos en la adopción de herramientas que impulsen tu crecimiento digital."
+    }
+  },
+
+  "_comentario_packs": "Planes y Packs",
+  "packs": {
+    "titulo": "Planes y Packs",
+    "botonSolicitar": "Solicitar este pack",
+    "lista": [
+      {
+        "nombre": "Pack Emprende",
+        "descripcion": "Ideal para negocios que recién comienzan.",
+        "incluye": [
+          "Sitio web básico",
+          "Soporte 1 mes",
+          "Capacitación inicial"
+        ],
+        "precio": "$250.000 CLP"
+      },
+      {
+        "nombre": "Pack Pyme",
+        "descripcion": "Para empresas en crecimiento.",
+        "incluye": [
+          "Sistema web a medida",
+          "Soporte 3 meses",
+          "Integraciones básicas"
+        ],
+        "precio": "$450.000 CLP"
+      }
+    ]
+  },
+
+  "_comentario_testimonios": "Testimonios de clientes",
+  "tituloTestimonios": "Lo que dicen nuestros clientes",
+  "testimonios": {
+    "loreto": {
+      "nombre": "Loreto C. | Avícola Pichiarauco",
+      "texto": "Zennith me orientó para poder desarrollar el enfoque de mi negocio"
+    },
+    "ana": {
+      "nombre": "Ana L. | AILV Clothes",
+      "texto": "Con la ayuda de Zennith pude potenciar mis ventas y mejorar mi imagen digital"
+    }
+  },
+
+  "_comentario_contacto": "Formulario de contacto",
+  "tituloContacto": "Contáctanos",
+  "placeholders": {
+    "nombre": "Nombre",
+    "correo": "Correo",
+    "mensaje": "Mensaje"
+  },
+  "botonEnviar": "Enviar mensaje",
+  "mensajeExito": "¡Mensaje enviado con éxito!",
+  "mensajeError": "Ocurrió un error. Inténtalo nuevamente.",
+
+  "_comentario_footer": "Pie de página",
+  "footer": "© 2025 Zennith SpA. Todos los derechos reservados.",
+
+  "_comentario_nosotros": "Sección Nosotros",
   "tituloNosotros": "Sobre Nosotros",
   "nosotros1_parte1": "En ",
   "nosotros1_zennith": "Zennith",
   "nosotros1_parte2": " combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.",
   "nosotros2_texto": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación."
-
-
-  }
-
+}
