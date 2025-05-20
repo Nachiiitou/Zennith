@@ -5,19 +5,18 @@ import React, {
   lazy,
   Suspense
 } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../i18n";
 
 // Componentes críticos
 import SplashScreen from "../components/home/SplashScreen";
-import Navbar from "../components/home/Navbar";
+import Navbar from "../components/global/Navbar";
 import Hero from "../components/home/Hero";
-import Footer from "../components/home/Footer";
+import Footer from "../components/global/Footer";
 import WhatsAppButton from "../components/global/WhatsAppButton";
 
 // Componentes diferidos (lazy load)
@@ -27,7 +26,14 @@ const Testimonios = lazy(() => import("../components/home/Testimonios"));
 const Contacto = lazy(() => import("../components/home/Contacto"));
 
 function Home({ lang }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    const wasHereBefore = sessionStorage.getItem("visited");
+    const isReload = window.performance.navigation.type === 1;
+
+    // Mostrar splash si es primera vez o recarga
+    return !wasHereBefore || isReload;
+  });
+
   const [activeSection, setActiveSection] = useState("hero");
   const [status, setStatus] = useState(null);
   const [hideButton, setHideButton] = useState(false);
@@ -36,6 +42,7 @@ function Home({ lang }) {
 
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleLanguage = () => {
     navigate(`/${lang === "es" ? "en" : "es"}`);
@@ -48,10 +55,17 @@ function Home({ lang }) {
   }, [lang, i18n]);
 
   useEffect(() => {
+    if (!loading) return;
+
     AOS.init({ once: true });
-    const timer = setTimeout(() => setLoading(false), 1500);
+
+    const timer = setTimeout(() => {
+      sessionStorage.setItem("visited", "true");
+      setLoading(false);
+    }, 1500);
+
     return () => clearTimeout(timer);
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -132,12 +146,7 @@ function Home({ lang }) {
         <meta property="og:locale" content={lang === "es" ? "es_CL" : "en_US"} />
       </Helmet>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="relative bg-[#02070f] text-white min-h-screen font-sans overflow-x-hidden scroll-smooth"
-      >
+      <div className="relative bg-[#02070f] text-white min-h-screen font-sans overflow-x-hidden scroll-smooth">
         <Navbar
           activeSection={activeSection}
           toggleLanguage={toggleLanguage}
@@ -158,7 +167,7 @@ function Home({ lang }) {
           <Footer />
           <WhatsAppButton hide={hideButton} />
         </main>
-      </motion.div>
+      </div>
     </>
   );
 }

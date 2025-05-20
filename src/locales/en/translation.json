@@ -25,32 +25,38 @@
     "desarrolloWeb": {
       "titulo": "Web Development",
       "desc": "We create modern, efficient, and customized websites.",
-      "detalle": "We design and build responsive websites that load fast, look great on any device, and are optimized for performance. We use technologies like React, TailwindCSS, and Next.js to create custom solutions that reflect your brand and build trust with your clients."
+      "detalle": "We design and build responsive websites that load fast, look great on any device, and are optimized for performance. We use technologies like React, TailwindCSS, and Next.js to create custom solutions that reflect your brand and build trust with your clients.",
+      "imagen": "/assets/servicios/desarrollo.jpg"
     },
     "soporteTecnico": {
       "titulo": "Technical Support",
       "desc": "Quick solutions to keep your business running smoothly.",
-      "detalle": "We provide specialized technical assistance, both remote and on-site, to solve problems with your systems, networks, or digital platforms. Our preventive approach ensures your tools are always available, up-to-date, and working optimally."
+      "detalle": "We provide specialized technical assistance, both remote and on-site, to solve problems with your systems, networks, or digital platforms. Our preventive approach ensures your tools are always available, up-to-date, and working optimally.",
+      "imagen": "/assets/servicios/soporte.jpg"
     },
     "automatizacion": {
       "titulo": "Process Automation",
       "desc": "Optimize repetitive tasks and save valuable time.",
-      "detalle": "We identify opportunities to automate workflows in your business. Whether through scripts, integrations, or custom tools, we reduce human error, accelerate processes, and help you scale operations with less effort."
+      "detalle": "We identify opportunities to automate workflows in your business. Whether through scripts, integrations, or custom tools, we reduce human error, accelerate processes, and help you scale operations with less effort.",
+      "imagen": "/assets/servicios/automatizacion.jpg"
     },
     "integracionApis": {
       "titulo": "API Integration",
       "desc": "Make your platforms work together intelligently.",
-      "detalle": "We integrate external services like CRMs, ERPs, payment gateways, marketing tools, and more so that your digital ecosystem works in sync. We connect previously isolated systems, improving efficiency and user experience."
+      "detalle": "We integrate external services like CRMs, ERPs, payment gateways, marketing tools, and more so that your digital ecosystem works in sync. We connect previously isolated systems, improving efficiency and user experience.",
+      "imagen": "/assets/servicios/integracion.jpg"
     },
     "mantenimientoWeb": {
       "titulo": "Web Maintenance",
       "desc": "Keep your site secure, up-to-date, and running smoothly.",
-      "detalle": "We handle the technical maintenance of your website so you don’t have to worry. We run automatic backups, apply security updates, boost performance, and provide monthly support to resolve any issues."
+      "detalle": "We handle the technical maintenance of your website so you don’t have to worry. We run automatic backups, apply security updates, boost performance, and provide monthly support to resolve any issues.",
+      "imagen": "/assets/servicios/mantenimiento.jpg"
     },
     "consultoria": {
       "titulo": "Technology Consulting",
       "desc": "We guide you in making digital decisions with real impact.",
-      "detalle": "We help you define a tech strategy aligned with your business goals. We evaluate your current and future needs, propose scalable solutions, and assist you in adopting tools that drive digital growth."
+      "detalle": "We help you define a tech strategy aligned with your business goals. We evaluate your current and future needs, propose scalable solutions, and assist you in adopting tools that drive digital growth.",
+      "imagen": "/assets/servicios/consultoria.jpg"
     }
   },
 
@@ -114,5 +120,7 @@
   "nosotros1_parte1": "At ",
   "nosotros1_zennith": "Zennith",
   "nosotros1_parte2": " we combine innovation and experience to take your business to the next level. We specialize in web development, process automation, and digital solutions.",
-  "nosotros2_texto": "We are passionate about technology and committed to turning your ideas into functional, fast, and modern products—working alongside you with focus and dedication."
+  "nosotros2_texto": "We are passionate about technology and committed to turning your ideas into functional, fast, and modern products—working alongside you with focus and dedication.",
+
+  "verMas": "Read more"
 }

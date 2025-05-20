@@ -1,49 +1,55 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import ServicioCard from "../components/servicios/ServicioCard";
+import Navbar from "../components/global/Navbar";
+import Footer from "../components/global/Footer";
 
-const Servicios = () => {
+function Servicios() {
   const { t } = useTranslation();
+  const { lang } = useParams();
 
   const servicios = t("servicios", { returnObjects: true });
-  const packs = t("packs.lista", { returnObjects: true });
+  const keys = Object.keys(servicios);
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
-      {/* Título principal */}
-      <h1 className="text-3xl font-bold mb-6">{t("tituloServicios")}</h1>
+    <>
+      <Navbar lang={lang} />
+      <section className="px-6 lg:px-24 py-16 bg-[#02070f] text-white">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold text-[#1de9b6] mb-12 text-center"
+        >
+          {t("tituloServicios")}
+        </motion.h2>
 
-      {/* Servicios individuales */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        {Object.entries(servicios).map(([key, servicio]) => (
-          <div key={key} className="border p-5 rounded-xl shadow-md bg-white">
-            <h2 className="text-xl font-semibold mb-2">{servicio.titulo}</h2>
-            <p className="text-sm text-gray-600 mb-2">{servicio.desc}</p>
-            <p className="text-sm text-gray-700">{servicio.detalle}</p>
-          </div>
-        ))}
-      </div>
+        {/* Fila 1: Servicios fundamentales */}
+        <div className="grid md:grid-cols-3 gap-10 mb-16">
+          {keys.slice(0, 3).map((key, i) => (
+            <ServicioCard key={key} index={i} id={key} lang={lang} />
+          ))}
+        </div>
 
-      {/* Planes y packs */}
-      <h2 className="text-2xl font-bold mb-6">{t("packs.titulo")}</h2>
-      <div className="grid md:grid-cols-2 gap-6">
-        {packs.map((pack, idx) => (
-          <div key={idx} className="border p-5 rounded-xl shadow-md bg-white">
-            <h3 className="text-lg font-bold mb-2">{pack.nombre}</h3>
-            <p className="text-sm text-gray-600 mb-2">{pack.descripcion}</p>
-            <ul className="list-disc list-inside text-sm text-gray-700 mb-3">
-              {pack.incluye.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-            <p className="font-bold text-blue-700 mb-2">{pack.precio}</p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-              {t("packs.botonSolicitar")}
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
+        {/* Fila 2: Automatización y conectividad */}
+        <div className="grid md:grid-cols-3 gap-10 mb-16">
+          {keys.slice(3, 6).map((key, i) => (
+            <ServicioCard key={key} index={i + 3} id={key} lang={lang} />
+          ))}
+        </div>
+
+        {/* Fila 3: Innovación y tecnología avanzada */}
+        <div className="grid md:grid-cols-3 gap-10">
+          {keys.slice(6, 9).map((key, i) => (
+            <ServicioCard key={key} index={i + 6} id={key} lang={lang} />
+          ))}
+        </div>
+      </section>
+      <Footer />
+    </>
   );
-};
+}
 
 export default Servicios;

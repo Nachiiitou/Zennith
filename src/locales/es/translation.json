@@ -5,7 +5,6 @@
     "ogTitle": "Zennith - Consultoría y Soluciones Digitales",
     "ogDescription": "Desarrollamos soluciones tecnológicas para empresas que quieren destacar en el mundo digital."
   },
-
   "_comentario_nav": "Navegación principal",
   "nav": {
     "hero": "Inicio",
@@ -13,75 +12,231 @@
     "nosotros": "Nosotros",
     "contacto": "Contacto"
   },
-
   "_comentario_hero": "Sección principal / Hero",
   "tituloHero": "Soluciones digitales inteligentes",
   "subtituloHero": "Desarrollamos software a medida, brindamos soporte técnico y potenciamos tu negocio con tecnología.",
   "botonHero": "Solicita tu asesoría",
-
   "_comentario_servicios": "Servicios individuales",
   "tituloServicios": "Nuestros Servicios",
   "servicios": {
-    "desarrolloWeb": {
-      "titulo": "Desarrollo Web",
-      "desc": "Creamos sitios modernos, eficientes y personalizados.",
-      "detalle": "Diseñamos y desarrollamos páginas web responsivas que cargan rápido, se ven increíbles en cualquier dispositivo y están optimizadas para el rendimiento. Utilizamos tecnologías como React, TailwindCSS y Next.js para construir soluciones a medida que reflejan la identidad de tu marca y generan confianza en tus clientes."
-    },
-    "soporteTecnico": {
-      "titulo": "Soporte Técnico",
-      "desc": "Soluciones rápidas para mantener tu operación sin interrupciones.",
-      "detalle": "Brindamos asistencia técnica especializada, tanto remota como presencial, para resolver problemas con tus sistemas, redes o plataformas digitales. Nuestro enfoque preventivo asegura que tus herramientas estén siempre disponibles, actualizadas y funcionando de manera óptima."
-    },
     "automatizacion": {
-      "titulo": "Automatización de Procesos",
-      "desc": "Optimiza tareas repetitivas y libera tiempo valioso.",
-      "detalle": "Identificamos oportunidades para automatizar flujos de trabajo en tu negocio. Ya sea mediante scripts, integraciones entre plataformas o herramientas personalizadas, reducimos errores humanos, aceleramos procesos y te ayudamos a escalar tu operación con menos esfuerzo."
+  "slug": "automatizacion",
+  "titulo": "Automatización de Procesos",
+  "desc": "Transforma tareas repetitivas en eficiencia operativa real.",
+  "detalle": "En Zennith, entendemos que el tiempo y la eficiencia no son solo recursos: son activos estratégicos para el crecimiento de cualquier negocio.\n\nLa automatización de procesos permite identificar tareas repetitivas, manuales o propensas a errores, y transformarlas en flujos automáticos que se ejecutan sin intervención humana. Esto puede lograrse mediante scripts, integraciones entre plataformas o herramientas personalizadas, siempre adaptadas a las necesidades específicas de tu operación.\n\nNuestro objetivo es liberar a tu equipo de labores mecánicas para que puedan enfocarse en lo verdaderamente importante: el crecimiento, la innovación y la toma de decisiones estratégicas.\n\nAutomatizar no solo optimiza tu operación: te permite ser más competitivo, ágil y enfocado en lo que realmente genera valor.",
+  "beneficios": [
+    "Reducción de errores humanos.",
+    "Mejora en los tiempos de respuesta.",
+    "Incremento en la productividad general.",
+    "Escalabilidad operativa sin aumentar la carga administrativa."
+  ],
+  "ejemplos": [
+    "Integración de sistemas que no se comunican entre sí.",
+    "Generación de reportes automáticos.",
+    "Envío de notificaciones o tareas programadas.",
+    "Creación de flujos internos con un solo clic."
+  ],
+  "imagen": "/assets/servicios/automatizacion.png",
+  "caso": {
+    "titulo": "Cómo ayudamos a una clínica a ahorrar 40 horas al mes",
+    "contenido": "Uno de nuestros clientes, una clínica con alto volumen de pacientes, tenía a su equipo copiando manualmente datos desde la plataforma de reservas al sistema contable.\n\nAutomatizamos este proceso mediante una integración directa entre ambas plataformas, eliminando por completo la intervención manual. El resultado: más de 40 horas mensuales liberadas para enfocarse en tareas clínicas.\n\nAdemás, se redujeron los errores y se mejoró la trazabilidad de la información."
+  }
+}
+,
+    "soporte-tecnico": {
+  "slug": "soporte-tecnico",
+  "titulo": "Soporte Técnico",
+  "desc": "Soluciones rápidas para mantener tu operación sin interrupciones.",
+  "detalle": "Sabemos lo frustrante que es cuando la tecnología falla en momentos críticos. Por eso, en Zennith ofrecemos soporte técnico ágil y confiable, para que tu operación nunca se detenga.\n\nNuestro equipo entrega asistencia tanto remota como presencial, resolviendo problemas relacionados con redes, hardware, software o sistemas internos. Aplicamos un enfoque preventivo y correctivo para que tus herramientas estén siempre disponibles, actualizadas y funcionando de manera óptima.\n\nNos convertimos en el aliado tecnológico de tu empresa, brindando respuestas rápidas y seguimiento profesional, con soluciones personalizadas según tu tipo de negocio.",
+  "beneficios": [
+    "Reducción de tiempos muertos por fallas técnicas.",
+    "Asistencia remota inmediata y presencial cuando se requiere.",
+    "Prevención de problemas antes de que ocurran.",
+    "Mejora en la estabilidad de sistemas y redes internas."
+  ],
+  "ejemplos": [
+    "Soporte por escritorio remoto para resolver errores de software.",
+    "Diagnóstico y reparación de redes lentas o inestables.",
+    "Instalación y configuración de equipos nuevos.",
+    "Mantenimiento y optimización de servidores y PCs."
+  ],
+  "imagen": "/assets/servicios/soporte.png",
+  "caso": {
+    "titulo": "Cómo ayudamos a una pyme a evitar pérdidas por caídas de red",
+    "contenido": "Una empresa de ventas online nos contactó debido a caídas constantes en su red, lo que les impedía procesar pedidos a tiempo.\n\nRealizamos un diagnóstico completo, reconfiguramos su red local y estandarizamos sus estaciones de trabajo. Resultado: una operación estable y sin interrupciones en más de 6 meses.\n\nAdemás, incorporamos monitoreo preventivo y soporte remoto inmediato, reduciendo drásticamente los tiempos de respuesta ante cualquier incidente."
+  }
     },
-    "integracionApis": {
-      "titulo": "Integración de APIs",
-      "desc": "Haz que tus plataformas trabajen juntas de forma inteligente.",
-      "detalle": "Integramos servicios externos como CRMs, ERPs, pasarelas de pago, herramientas de marketing y más, para que todo tu ecosistema digital funcione de manera sincronizada. Conectamos sistemas que antes trabajaban por separado, mejorando la eficiencia y experiencia del usuario."
-    },
-    "mantenimientoWeb": {
-      "titulo": "Mantenimiento Web",
-      "desc": "Tu sitio siempre seguro, actualizado y en óptimas condiciones.",
-      "detalle": "Nos encargamos del mantenimiento técnico de tu página web para que no tengas que preocuparte por nada. Realizamos backups automáticos, actualizaciones de seguridad, mejoras de rendimiento y soporte mensual para resolver cualquier problema que surja."
-    },
-    "consultoria": {
-      "titulo": "Consultoría Tecnológica",
-      "desc": "Te guiamos para tomar decisiones digitales con impacto real.",
-      "detalle": "Te ayudamos a definir una estrategia tecnológica alineada con tus objetivos de negocio. Evaluamos tus necesidades actuales y futuras, proponemos soluciones escalables y te acompañamos en la adopción de herramientas que impulsen tu crecimiento digital."
-    }
-  },
 
-  "_comentario_packs": "Planes y Packs",
-  "packs": {
-    "titulo": "Planes y Packs",
-    "botonSolicitar": "Solicitar este pack",
-    "lista": [
-      {
-        "nombre": "Pack Emprende",
-        "descripcion": "Ideal para negocios que recién comienzan.",
-        "incluye": [
-          "Sitio web básico",
-          "Soporte 1 mes",
-          "Capacitación inicial"
-        ],
-        "precio": "$250.000 CLP"
-      },
-      {
-        "nombre": "Pack Pyme",
-        "descripcion": "Para empresas en crecimiento.",
-        "incluye": [
-          "Sistema web a medida",
-          "Soporte 3 meses",
-          "Integraciones básicas"
-        ],
-        "precio": "$450.000 CLP"
-      }
-    ]
-  },
 
+    "desarrollo-web": {
+  "slug": "desarrollo-web",
+  "titulo": "Desarrollo Web",
+  "desc": "Creamos sitios modernos, eficientes y personalizados.",
+  "detalle": "Diseñamos y desarrollamos páginas web responsivas que cargan rápido, se ven increíbles en cualquier dispositivo y están optimizadas para el rendimiento.\n\nUtilizamos tecnologías como React, TailwindCSS y Next.js para construir soluciones a medida que reflejan la identidad de tu marca y generan confianza en tus clientes.\n\nDesde landing pages hasta plataformas personalizadas, nos aseguramos de que cada línea de código tenga un propósito: ayudar a tu negocio a crecer online.",
+  "beneficios": [
+    "Diseño profesional y adaptado a tu marca.",
+    "Sitios rápidos, seguros y optimizados para SEO.",
+    "Experiencia responsive para móviles y tablets.",
+    "Integraciones con herramientas de marketing o gestión."
+  ],
+  "ejemplos": [
+    "Landing pages para campañas publicitarias.",
+    "Sitios institucionales modernos y autoadministrables.",
+    "Plataformas web personalizadas para reservas, ventas u operaciones.",
+    "Reestructuración de sitios lentos o desactualizados."
+  ],
+  "imagen": "/assets/servicios/desarrollo.png",
+  "caso": {
+    "titulo": "Cómo modernizamos el sitio de una empresa regional",
+    "contenido": "Una pyme del rubro agrícola nos pidió renovar su página web, que era antigua, lenta y no se adaptaba a móviles.\n\nCreamos un sitio moderno, optimizado para buscadores y con un panel autoadministrable. En solo 2 semanas aumentaron su tasa de contacto y mejoraron su imagen frente a clientes y proveedores.\n\nDesde entonces, su presencia digital es una herramienta activa para cerrar negocios."
+  }
+}
+,
+   "mantenimiento-web": {
+  "slug": "mantenimiento-web",
+  "titulo": "Mantenimiento Web",
+  "desc": "Tu sitio siempre seguro, actualizado y en óptimas condiciones.",
+  "detalle": "Nos encargamos del mantenimiento técnico de tu página web para que no tengas que preocuparte por nada.\n\nRealizamos backups automáticos, actualizaciones de seguridad, mejoras de rendimiento y soporte mensual para resolver cualquier problema que surja.\n\nEste servicio está pensado para empresas que quieren asegurar la estabilidad y continuidad de su presencia digital sin perder tiempo en tareas técnicas.",
+  "beneficios": [
+    "Mayor seguridad ante vulnerabilidades o ataques.",
+    "Mejoras continuas en velocidad y rendimiento.",
+    "Corrección de errores técnicos sin que te enteres.",
+    "Soporte técnico disponible mes a mes según tus necesidades."
+  ],
+  "ejemplos": [
+    "Actualización de plugins, CMS o frameworks.",
+    "Optimización de imágenes y tiempos de carga.",
+    "Revisión mensual de enlaces rotos y formularios.",
+    "Restauración del sitio en caso de fallos o errores graves."
+  ],
+  "imagen": "/assets/servicios/mantenimiento.png",
+  "caso": {
+    "titulo": "Cómo protegimos un sitio ante un ciberataque",
+    "contenido": "Un cliente nos contactó luego de que su sitio WordPress fuera hackeado y redirigiera a páginas maliciosas.\n\nRestauramos una copia de seguridad, reforzamos la seguridad del servidor y migramos el sitio a una estructura más estable y segura.\n\nDesde entonces, realizamos mantenimiento mensual y el sitio ha permanecido protegido, rápido y sin interrupciones."
+  }
+}
+,
+    "consultoria-tecnologica": {
+  "slug": "consultoria-tecnologica",
+  "titulo": "Consultoría Tecnológica",
+  "desc": "Te guiamos para tomar decisiones digitales con impacto real.",
+  "detalle": "Te ayudamos a definir una estrategia tecnológica alineada con tus objetivos de negocio.\n\nEvaluamos tus necesidades actuales y futuras, proponemos soluciones escalables y te acompañamos en la adopción de herramientas que impulsen tu crecimiento digital.\n\nNuestro enfoque combina visión estratégica con conocimientos técnicos para que no inviertas de más, ni adoptes soluciones que no necesitas. La tecnología debe estar a tu servicio, no al revés.",
+  "beneficios": [
+    "Evitas inversiones innecesarias o mal enfocadas.",
+    "Tomas decisiones con respaldo técnico y estratégico.",
+    "Accedes a una visión externa, actualizada y profesional.",
+    "Alineas la tecnología con los objetivos reales de tu negocio."
+  ],
+  "ejemplos": [
+    "Asesoría para elegir entre distintos softwares o proveedores.",
+    "Evaluación del estado actual de tu infraestructura digital.",
+    "Diseño de un roadmap tecnológico para tu empresa.",
+    "Acompañamiento en procesos de transformación digital."
+  ],
+  "imagen": "/assets/servicios/consultoria.png",
+  "caso": {
+    "titulo": "Cómo ayudamos a un equipo comercial a digitalizar sus procesos",
+    "contenido": "Una empresa de distribución necesitaba organizar mejor su flujo de pedidos y seguimiento de clientes, que se hacía manualmente.\n\nLuego de sesiones de consultoría, implementamos un CRM personalizado, automatizamos tareas repetitivas y capacitamos al equipo para sacarle provecho a la herramienta.\n\nEl resultado fue una operación más ordenada, con mejor visibilidad y menos errores humanos."
+  }
+}
+,
+   "integracion-apis": {
+  "slug": "integracion-apis",
+  "titulo": "Integración de APIs",
+  "desc": "Haz que tus plataformas trabajen juntas de forma inteligente.",
+  "detalle": "Integramos servicios externos como CRMs, ERPs, pasarelas de pago, herramientas de marketing y más, para que todo tu ecosistema digital funcione de manera sincronizada.\n\nConectamos sistemas que antes trabajaban por separado, mejorando la eficiencia, reduciendo errores y permitiendo que tus datos fluyan automáticamente entre plataformas.",
+  "beneficios": [
+    "Evita ingreso manual de datos entre sistemas.",
+    "Mejora la trazabilidad y coherencia de la información.",
+    "Automatiza flujos entre plataformas externas e internas.",
+    "Optimiza procesos operativos y administrativos."
+  ],
+  "ejemplos": [
+    "Integración entre plataforma de ventas y sistema contable.",
+    "Conexión entre CRM y herramientas de email marketing.",
+    "Automatización de reportes desde múltiples fuentes.",
+    "Sincronización de inventario entre sistemas distintos."
+  ],
+  "imagen": "/assets/servicios/integracion.png",
+  "caso": {
+    "titulo": "Cómo conectamos el e-commerce con la facturación automática",
+    "contenido": "Un cliente con tienda online debía emitir manualmente cada factura desde su sistema tributario.\n\nCreamos una integración entre el e-commerce y su sistema de facturación para que, al recibir un pedido pagado, se generara automáticamente la factura y se enviara al cliente.\n\nEsto eliminó errores, ahorró horas al equipo y aceleró la entrega al cliente final."
+  }
+}
+,
+   "agentes-ia": {
+  "slug": "agentes-ia",
+  "titulo": "Agentes de IA Personalizados",
+  "desc": "Asistentes inteligentes entrenados con tu información para automatizar tareas o responder preguntas.",
+  "detalle": "Desarrollamos agentes capaces de interactuar con tus clientes o equipo, con memoria contextual, acceso a documentos y ejecución de tareas.\n\nPodemos integrarlos a tus flujos existentes, entrenarlos con tu base de conocimientos y personalizarlos con tu marca y tono de comunicación.\n\nYa sea para atención al cliente, soporte interno, onboarding o automatización de procesos, los agentes con IA son un paso adelante hacia la eficiencia inteligente.",
+  "beneficios": [
+    "Atención disponible 24/7 sin interrupciones.",
+    "Respuestas rápidas, personalizadas y contextuales.",
+    "Ahorro de tiempo en soporte, ventas o capacitación.",
+    "Escalabilidad sin aumentar personal."
+  ],
+  "ejemplos": [
+    "Agente que responde preguntas frecuentes desde tu web o WhatsApp.",
+    "Asistente interno para responder dudas del equipo usando tu documentación.",
+    "IA que automatiza procesos simples como agendar reuniones o enviar recordatorios.",
+    "Agente integrado a tu CRM para consultar datos de clientes."
+  ],
+  "imagen": "/assets/servicios/agentes.png",
+  "caso": {
+    "titulo": "Cómo un chatbot con IA redujo el 60% de las consultas repetidas",
+    "contenido": "Un cliente con alto volumen de preguntas repetitivas en su ecommerce necesitaba liberar al equipo de soporte.\n\nCreamos un agente personalizado entrenado con sus preguntas frecuentes y políticas internas. Lo conectamos a su sitio web y WhatsApp.\n\nEn un mes, redujo en un 60% los tickets entrantes, permitiendo al equipo enfocarse en casos más complejos y en mejorar la experiencia de cliente."
+  }
+},
+    "business-intelligence": {
+  "slug": "business-intelligence",
+  "titulo": "Business Intelligence & Dashboards",
+  "desc": "Toma decisiones con paneles interactivos diseñados para visualizar tus datos clave.",
+  "detalle": "Creamos dashboards conectados a tus fuentes de datos (Excel, APIs, Google Sheets, CRMs, etc.) con visualización personalizada para mejorar tu toma de decisiones.\n\nIdentificamos las métricas que realmente importan y las presentamos en un formato claro, útil y disponible en tiempo real. Así puedes actuar con información confiable y actualizada.",
+  "beneficios": [
+    "Mayor visibilidad de tus KPIs y métricas críticas.",
+    "Toma de decisiones basadas en datos reales.",
+    "Visualización accesible desde cualquier dispositivo.",
+    "Automatización de reportes y seguimiento en tiempo real."
+  ],
+  "ejemplos": [
+    "Dashboard de ventas conectado a tu CRM.",
+    "Panel financiero integrado con tu sistema contable.",
+    "Tablero de operaciones logísticas con alarmas visuales.",
+    "Reportes automáticos mensuales para tus inversionistas."
+  ],
+  "imagen": "/assets/servicios/dashboards.png",
+  "caso": {
+    "titulo": "Cómo ayudamos a una empresa a visualizar sus métricas en tiempo real",
+    "contenido": "Una pyme comercializadora registraba sus ventas en planillas sueltas sin consolidación.\n\nCreamos un dashboard conectado a Google Sheets que cruza ventas, costos, márgenes y proyecciones. Hoy pueden ver en segundos cómo van sus resultados diarios y tomar decisiones basadas en datos.\n\nEl equipo ahora trabaja alineado y con foco en resultados."
+  }
+}
+,
+   "chatbots": {
+  "slug": "chatbots",
+  "titulo": "Creación de Chatbots",
+  "desc": "Automatiza la atención al cliente con asistentes conversacionales para web y WhatsApp.",
+  "detalle": "Creamos chatbots personalizados que resuelven dudas, generan leads o automatizan procesos usando flujos conversacionales eficientes.\n\nPueden operar en tu sitio web, redes sociales o WhatsApp, con respuestas rápidas, integraciones útiles y una experiencia amigable. Además, si lo necesitas, pueden estar potenciados con inteligencia artificial.",
+  "beneficios": [
+    "Disponibilidad 24/7 sin costo humano adicional.",
+    "Reducción del volumen de preguntas repetitivas.",
+    "Mejor experiencia de usuario en atención digital.",
+    "Automatización de tareas simples como reservas o formularios."
+  ],
+  "ejemplos": [
+    "Chatbot de atención en sitio web para resolver dudas frecuentes.",
+    "Asistente conversacional en WhatsApp para generar prospectos.",
+    "Bot que guía al usuario paso a paso para agendar una cita.",
+    "Integración con herramientas externas para consultar datos o enviar correos."
+  ],
+  "imagen": "/assets/servicios/chatbots.png",
+  "caso": {
+    "titulo": "Cómo un chatbot ayudó a triplicar los contactos desde la web",
+    "contenido": "Una tienda de productos naturales no daba abasto con las consultas en redes sociales y sitio web.\n\nCreamos un chatbot que atiende automáticamente, responde preguntas frecuentes y toma datos de contacto de interesados.\n\nEl resultado fue un aumento del 300% en solicitudes, mayor satisfacción de clientes y menos carga para el equipo humano."
+  }
+}
+
+},
+  
   "_comentario_testimonios": "Testimonios de clientes",
   "tituloTestimonios": "Lo que dicen nuestros clientes",
   "testimonios": {
@@ -94,7 +249,6 @@
       "texto": "Con la ayuda de Zennith pude potenciar mis ventas y mejorar mi imagen digital"
     }
   },
-
   "_comentario_contacto": "Formulario de contacto",
   "tituloContacto": "Contáctanos",
   "placeholders": {
@@ -105,14 +259,13 @@
   "botonEnviar": "Enviar mensaje",
   "mensajeExito": "¡Mensaje enviado con éxito!",
   "mensajeError": "Ocurrió un error. Inténtalo nuevamente.",
-
   "_comentario_footer": "Pie de página",
   "footer": "© 2025 Zennith SpA. Todos los derechos reservados.",
-
   "_comentario_nosotros": "Sección Nosotros",
   "tituloNosotros": "Sobre Nosotros",
   "nosotros1_parte1": "En ",
   "nosotros1_zennith": "Zennith",
   "nosotros1_parte2": " combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.",
-  "nosotros2_texto": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación."
+  "nosotros2_texto": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación.",
+  "verMas": "Ver más"
 }

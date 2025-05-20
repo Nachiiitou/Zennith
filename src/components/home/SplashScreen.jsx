@@ -11,6 +11,7 @@ const SplashScreen = () => {
         transition={{ repeat: Infinity, duration: 0.9, repeatType: "reverse" }}
         className="h-60 w-auto"
       />
+      
     </div>
   );
 };
