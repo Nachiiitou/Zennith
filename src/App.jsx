@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./i18n";
+import ScrollToTop from "./components/global/ScrollToTop";
+
 
 // Páginas principales
 const Home = lazy(() => import("./pages/Home"));
@@ -63,24 +65,27 @@ function AppWrapper() {
   const location = useLocation();
 
   return (
-    <Suspense fallback={<div />}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Navigate to={`/${initialLang}`} replace />} />
-        <Route path="/:lang" element={<Wrapper Component={Home} />} />
-        <Route path="/:lang/servicios" element={<Wrapper Component={Servicios} />} />
+   <>
+      <ScrollToTop /> {/* 👈 Esto se asegura de hacer scroll al top en cada ruta */}
+      <Suspense fallback={<div />}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Navigate to={`/${initialLang}`} replace />} />
+          <Route path="/:lang" element={<Wrapper Component={Home} />} />
+          <Route path="/:lang/servicios" element={<Wrapper Component={Servicios} />} />
 
-        {/* Rutas individuales para cada servicio */}
-        <Route path="/:lang/servicios/automatizacion" element={<Wrapper Component={Automatizacion} />} />
-        <Route path="/:lang/servicios/soporte-tecnico" element={<Wrapper Component={SoporteTecnico} />} />
-        <Route path="/:lang/servicios/desarrollo-web" element={<Wrapper Component={DesarrolloWeb} />} />
-        <Route path="/:lang/servicios/mantenimiento-web" element={<Wrapper Component={MantenimientoWeb} />} />
-        <Route path="/:lang/servicios/consultoria-tecnologica" element={<Wrapper Component={ConsultoriaTecnologica} />} />
-        <Route path="/:lang/servicios/integracion-apis" element={<Wrapper Component={IntegracionApis} />} />
-        <Route path="/:lang/servicios/agentes-ia" element={<Wrapper Component={AgentesIA} />} />
-        <Route path="/:lang/servicios/business-intelligence" element={<Wrapper Component={BusinessIntelligence} />} />
-        <Route path="/:lang/servicios/chatbots" element={<Wrapper Component={Chatbots} />} />
-      </Routes>
-    </Suspense>
+          {/* Rutas individuales para cada servicio */}
+          <Route path="/:lang/servicios/automatizacion" element={<Wrapper Component={Automatizacion} />} />
+          <Route path="/:lang/servicios/soporte-tecnico" element={<Wrapper Component={SoporteTecnico} />} />
+          <Route path="/:lang/servicios/desarrollo-web" element={<Wrapper Component={DesarrolloWeb} />} />
+          <Route path="/:lang/servicios/mantenimiento-web" element={<Wrapper Component={MantenimientoWeb} />} />
+          <Route path="/:lang/servicios/consultoria-tecnologica" element={<Wrapper Component={ConsultoriaTecnologica} />} />
+          <Route path="/:lang/servicios/integracion-apis" element={<Wrapper Component={IntegracionApis} />} />
+          <Route path="/:lang/servicios/agentes-ia" element={<Wrapper Component={AgentesIA} />} />
+          <Route path="/:lang/servicios/business-intelligence" element={<Wrapper Component={BusinessIntelligence} />} />
+          <Route path="/:lang/servicios/chatbots" element={<Wrapper Component={Chatbots} />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 }
 

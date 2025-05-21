@@ -20,7 +20,7 @@ function ServicioCard({ id, index, lang }) {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-[#101b26] rounded-xl p-6 shadow-md shadow-[#1de9b633]"
+      className="bg-[#101b26] rounded-xl p-6 shadow-md shadow-[#1de9b633] z-0"
     >
       {imagen && (
         <div className="w-full aspect-[16/9] mb-4 rounded-lg overflow-hidden">

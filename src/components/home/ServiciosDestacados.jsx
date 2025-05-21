@@ -1,27 +1,34 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const ServiciosDestacados = ({ activo, setActivo }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
 
-  const servicios = [
-    "desarrolloWeb",
-    "soporteTecnico",
+  const servicioKeys = [
     "automatizacion",
-    "integracionApis",
-    "mantenimientoWeb",
-    "consultoria",
-  ].map((key) => ({
+    "soporte-tecnico",
+    "desarrollo-web",
+    "mantenimiento-web",
+    "consultoria-tecnologica",
+    "integracion-apis",
+    "agentes-ia",
+    "business-intelligence",
+    "chatbots"
+  ];
+
+  const servicios = servicioKeys.map((key) => ({
     titulo: t(`servicios.${key}.titulo`),
     desc: t(`servicios.${key}.desc`),
-    detalle: t(`servicios.${key}.detalle`),
+    resumen: t(`servicios.${key}.resumen`)
   }));
 
   return (
     <section
       id="servicios"
       aria-label={t("tituloServicios")}
-      className="px-6 lg:px-24 py-12 z-10 relative"
+      className="px-6 lg:px-24 py-12 z-10 relative scroll-mt-2000000"
     >
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
@@ -58,12 +65,21 @@ const ServiciosDestacados = ({ activo, setActivo }) => {
                   transition={{ duration: 0.4, ease: "easeInOut" }}
                   className="overflow-hidden text-sm text-gray-300"
                 >
-                  <div>{servicio.detalle}</div>
+                  <div>{servicio.resumen}</div>
                 </motion.div>
               )}
             </AnimatePresence>
           </motion.div>
         ))}
+      </div>
+
+      <div className="text-center mt-12">
+        <Link
+          to={`/${lang}/servicios`}
+          className="inline-block bg-[#1de9b6] text-black font-semibold py-3 px-6 rounded-full hover:bg-[#14cba1] transition"
+        >
+          Conoce todos nuestros servicios
+        </Link>
       </div>
     </section>
   );

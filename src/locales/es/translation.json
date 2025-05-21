@@ -18,11 +18,19 @@
   "botonHero": "Solicita tu asesoría",
   "_comentario_servicios": "Servicios individuales",
   "tituloServicios": "Nuestros Servicios",
+  "tabs": {
+  "servicios": "Servicios",
+  "packs": "Packs & Ofertas"
+}
+,
   "servicios": {
+
+    
     "automatizacion": {
   "slug": "automatizacion",
   "titulo": "Automatización de Procesos",
   "desc": "Transforma tareas repetitivas en eficiencia operativa real.",
+  "resumen": "Identificamos tareas repetitivas y las automatizamos para que tu equipo se enfoque en lo estratégico.",
   "detalle": "En Zennith, entendemos que el tiempo y la eficiencia no son solo recursos: son activos estratégicos para el crecimiento de cualquier negocio.\n\nLa automatización de procesos permite identificar tareas repetitivas, manuales o propensas a errores, y transformarlas en flujos automáticos que se ejecutan sin intervención humana. Esto puede lograrse mediante scripts, integraciones entre plataformas o herramientas personalizadas, siempre adaptadas a las necesidades específicas de tu operación.\n\nNuestro objetivo es liberar a tu equipo de labores mecánicas para que puedan enfocarse en lo verdaderamente importante: el crecimiento, la innovación y la toma de decisiones estratégicas.\n\nAutomatizar no solo optimiza tu operación: te permite ser más competitivo, ágil y enfocado en lo que realmente genera valor.",
   "beneficios": [
     "Reducción de errores humanos.",
@@ -47,6 +55,7 @@
   "slug": "soporte-tecnico",
   "titulo": "Soporte Técnico",
   "desc": "Soluciones rápidas para mantener tu operación sin interrupciones.",
+  "resumen": "Soporte técnico inmediato y confiable para resolver problemas y mantener tus sistemas funcionando.",
   "detalle": "Sabemos lo frustrante que es cuando la tecnología falla en momentos críticos. Por eso, en Zennith ofrecemos soporte técnico ágil y confiable, para que tu operación nunca se detenga.\n\nNuestro equipo entrega asistencia tanto remota como presencial, resolviendo problemas relacionados con redes, hardware, software o sistemas internos. Aplicamos un enfoque preventivo y correctivo para que tus herramientas estén siempre disponibles, actualizadas y funcionando de manera óptima.\n\nNos convertimos en el aliado tecnológico de tu empresa, brindando respuestas rápidas y seguimiento profesional, con soluciones personalizadas según tu tipo de negocio.",
   "beneficios": [
     "Reducción de tiempos muertos por fallas técnicas.",
@@ -72,6 +81,7 @@
   "slug": "desarrollo-web",
   "titulo": "Desarrollo Web",
   "desc": "Creamos sitios modernos, eficientes y personalizados.",
+  "resumen": "Desarrollamos sitios web rápidos, adaptables y optimizados para mejorar tu presencia digital.",
   "detalle": "Diseñamos y desarrollamos páginas web responsivas que cargan rápido, se ven increíbles en cualquier dispositivo y están optimizadas para el rendimiento.\n\nUtilizamos tecnologías como React, TailwindCSS y Next.js para construir soluciones a medida que reflejan la identidad de tu marca y generan confianza en tus clientes.\n\nDesde landing pages hasta plataformas personalizadas, nos aseguramos de que cada línea de código tenga un propósito: ayudar a tu negocio a crecer online.",
   "beneficios": [
     "Diseño profesional y adaptado a tu marca.",
@@ -96,6 +106,7 @@
   "slug": "mantenimiento-web",
   "titulo": "Mantenimiento Web",
   "desc": "Tu sitio siempre seguro, actualizado y en óptimas condiciones.",
+  "resumen": "Mantenemos tu web segura, actualizada y sin interrupciones con soporte técnico mensual.",
   "detalle": "Nos encargamos del mantenimiento técnico de tu página web para que no tengas que preocuparte por nada.\n\nRealizamos backups automáticos, actualizaciones de seguridad, mejoras de rendimiento y soporte mensual para resolver cualquier problema que surja.\n\nEste servicio está pensado para empresas que quieren asegurar la estabilidad y continuidad de su presencia digital sin perder tiempo en tareas técnicas.",
   "beneficios": [
     "Mayor seguridad ante vulnerabilidades o ataques.",
@@ -120,6 +131,7 @@
   "slug": "consultoria-tecnologica",
   "titulo": "Consultoría Tecnológica",
   "desc": "Te guiamos para tomar decisiones digitales con impacto real.",
+  "resumen": "Te asesoramos para tomar decisiones tecnológicas acertadas que impulsen tu negocio.",
   "detalle": "Te ayudamos a definir una estrategia tecnológica alineada con tus objetivos de negocio.\n\nEvaluamos tus necesidades actuales y futuras, proponemos soluciones escalables y te acompañamos en la adopción de herramientas que impulsen tu crecimiento digital.\n\nNuestro enfoque combina visión estratégica con conocimientos técnicos para que no inviertas de más, ni adoptes soluciones que no necesitas. La tecnología debe estar a tu servicio, no al revés.",
   "beneficios": [
     "Evitas inversiones innecesarias o mal enfocadas.",
@@ -144,6 +156,7 @@
   "slug": "integracion-apis",
   "titulo": "Integración de APIs",
   "desc": "Haz que tus plataformas trabajen juntas de forma inteligente.",
+  "resumen": "Conectamos tus plataformas para que trabajen juntas y automaticen procesos clave.",
   "detalle": "Integramos servicios externos como CRMs, ERPs, pasarelas de pago, herramientas de marketing y más, para que todo tu ecosistema digital funcione de manera sincronizada.\n\nConectamos sistemas que antes trabajaban por separado, mejorando la eficiencia, reduciendo errores y permitiendo que tus datos fluyan automáticamente entre plataformas.",
   "beneficios": [
     "Evita ingreso manual de datos entre sistemas.",
@@ -168,6 +181,7 @@
   "slug": "agentes-ia",
   "titulo": "Agentes de IA Personalizados",
   "desc": "Asistentes inteligentes entrenados con tu información para automatizar tareas o responder preguntas.",
+  "resumen": "Creamos agentes inteligentes que responden, automatizan tareas y aprenden de tus datos.",
   "detalle": "Desarrollamos agentes capaces de interactuar con tus clientes o equipo, con memoria contextual, acceso a documentos y ejecución de tareas.\n\nPodemos integrarlos a tus flujos existentes, entrenarlos con tu base de conocimientos y personalizarlos con tu marca y tono de comunicación.\n\nYa sea para atención al cliente, soporte interno, onboarding o automatización de procesos, los agentes con IA son un paso adelante hacia la eficiencia inteligente.",
   "beneficios": [
     "Atención disponible 24/7 sin interrupciones.",
@@ -191,6 +205,7 @@
   "slug": "business-intelligence",
   "titulo": "Business Intelligence & Dashboards",
   "desc": "Toma decisiones con paneles interactivos diseñados para visualizar tus datos clave.",
+  "resumen": "Paneles interactivos para visualizar tus datos y tomar mejores decisiones en tiempo real.",
   "detalle": "Creamos dashboards conectados a tus fuentes de datos (Excel, APIs, Google Sheets, CRMs, etc.) con visualización personalizada para mejorar tu toma de decisiones.\n\nIdentificamos las métricas que realmente importan y las presentamos en un formato claro, útil y disponible en tiempo real. Así puedes actuar con información confiable y actualizada.",
   "beneficios": [
     "Mayor visibilidad de tus KPIs y métricas críticas.",
@@ -215,6 +230,7 @@
   "slug": "chatbots",
   "titulo": "Creación de Chatbots",
   "desc": "Automatiza la atención al cliente con asistentes conversacionales para web y WhatsApp.",
+  "resumen": "Desarrollamos chatbots para web o WhatsApp que automatizan la atención al cliente 24/7.",
   "detalle": "Creamos chatbots personalizados que resuelven dudas, generan leads o automatizan procesos usando flujos conversacionales eficientes.\n\nPueden operar en tu sitio web, redes sociales o WhatsApp, con respuestas rápidas, integraciones útiles y una experiencia amigable. Además, si lo necesitas, pueden estar potenciados con inteligencia artificial.",
   "beneficios": [
     "Disponibilidad 24/7 sin costo humano adicional.",
@@ -267,5 +283,24 @@
   "nosotros1_zennith": "Zennith",
   "nosotros1_parte2": " combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.",
   "nosotros2_texto": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación.",
-  "verMas": "Ver más"
+  "verMas": "Ver más",
+  
+  "packs": {
+  "pack1": {
+    "nombre": "Pack Inicial",
+    "descripcion": "Ideal para pequeñas empresas que inician su transformación digital.",
+    "precio": "$250.000 CLP"
+  },
+  "pack2": {
+    "nombre": "Pack Profesional",
+    "descripcion": "Incluye sitio web, automatización básica y analítica.",
+    "precio": "$480.000 CLP"
+  },
+  "pack3": {
+    "nombre": "Pack Full",
+    "descripcion": "Solución integral: web + automatización + CRM + soporte mensual.",
+    "precio": "$750.000 CLP"
+  }
+}
+
 }
