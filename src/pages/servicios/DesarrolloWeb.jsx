@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams, Link } from "react-router-dom";
-import Navbar from "../../components/global/Navbar";
-import Footer from "../../components/global/Footer";
 import { motion } from "framer-motion";
 import { FaChartLine, FaBolt, FaArrowLeft } from "react-icons/fa";
 import Contacto from "../../components/global/Contacto";
@@ -15,7 +13,7 @@ function DesarrolloWeb() {
 
   return (
     <>
-      <Navbar lang={lang} />
+
 
       <section className="bg-[#02070f] text-white py-20 px-6 lg:px-32">
         <div className="max-w-7xl mx-auto">
@@ -146,7 +144,7 @@ function DesarrolloWeb() {
         </div>
       )}
 
-      <Footer />
+
     </>
   );
 }

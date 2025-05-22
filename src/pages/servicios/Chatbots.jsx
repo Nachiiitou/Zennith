@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams, Link } from "react-router-dom";
-import Navbar from "../../components/global/Navbar";
-import Footer from "../../components/global/Footer";
 import { motion } from "framer-motion";
 import { FaChartLine, FaBolt, FaArrowLeft } from "react-icons/fa";
 import Contacto from "../../components/global/Contacto";
@@ -146,7 +144,7 @@ function Chatbots() {
         </div>
       )}
 
-      <Footer />
+
     </>
   );
 }
