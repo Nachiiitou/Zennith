@@ -294,7 +294,7 @@
         "descripcion": "Ideal para quienes dan sus primeros pasos en el mundo digital.",
         "precio": "$270.000 CLP",
         "detalles": [
-          "Sitio web de una sola página",
+          "Sitio web de una sola página (Diseño 100% personalizado, hecho en React + Tailwind. No en Wordpress)",
           "Diseño responsive (compatible con dispositivos móviles y de escritorio)",
           "Formulario de contacto funcional (envío a tu email)",
           "Botón de WhatsApp",
@@ -333,13 +333,57 @@
         ]
       }
     },
-    "boton": "Solicitar este Pack"
+    "boton": "Ver más detalles"
   },
-  "pack2": {
-    "nombre": "Pack Profesional",
-    "descripcion": "Incluye sitio web, automatización básica y analítica.",
-    "precio": "$480.000 CLP"
+  
+  "packEcommerce": {
+  "nombre": "Tu tienda online",
+  "boton": "Ver más detalles",
+  "niveles": {
+    "inicio": {
+      "nombre": "Listo para Empezar",
+      "descripcion": "Ideal para emprendedores que quieren lanzar su tienda y empezar a vender sin complicarse.",
+      "precio": "$690.000 CLP",
+      "detalles": [
+        "Sitio web personalizado con React + Tailwind",
+        "Hasta 10 productos cargados por nosotros",
+        "Planilla conectada (Google Sheets) para autogestión futura",
+        "Carrito de compras funcional",
+        "Integración con WebPay o MercadoPago",
+        "Formulario de contacto y botón de WhatsApp",
+        "Hosting + dominio por 1 año",
+        "Certificado SSL",
+        "Soporte técnico por 1 mes"
+      ]
+    },
+    "premium": {
+      "nombre": "Premium",
+      "descripcion": "Para marcas que necesitan una tienda escalable, con CRM, analítica y más control.",
+      "precio": "$950.000 CLP",
+      "detalles": [
+        "Todo lo del Nivel inicio",
+        "Hasta 30 productos cargados por nosotros",
+        "Integración con CRM básico (Hubspot / Sheets / Brevo)",
+        "Instalación de Google Analytics 4 o Meta Pixel",
+        "Vinculación con redes sociales + mapa de ubicación",
+        "Animaciones suaves en secciones clave",
+        "Manual de uso en PDF para autogestión",
+        "Soporte técnico por 3 meses"
+      ]
+    }
   },
+  "extras": [
+    "+ Productos adicionales: desde $1.000 c/u",
+    "+ Sitio bilingüe (español/inglés): +$80.000",
+    "+ Chatbot preconfigurado: +$50.000",
+    "+ Integraciones/API externas: cotización personalizada"
+  ]
+}
+,
+
+
+
+  
   "pack3": {
     "nombre": "Pack Full",
     "descripcion": "Solución integral: web + automatización + CRM + soporte mensual.",

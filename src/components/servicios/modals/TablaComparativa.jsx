@@ -3,23 +3,37 @@ import { CheckCircle, XCircle, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function TablaComparativa({ data, onClose }) {
-  const nivelesOriginal = data.niveles;
+  const nivelKeys = Object.keys(data.niveles);
 
-  // Herencia de niveles
-  const basico = [...nivelesOriginal.basico.detalles];
+  // Expande herencias tipo “Todo lo del Nivel X”
+  const resolvedNiveles = {};
 
-  const intermedio = nivelesOriginal.intermedio.detalles.includes("Todo lo del Nivel Básico")
-    ? [...basico, ...nivelesOriginal.intermedio.detalles.filter(f => f !== "Todo lo del Nivel Básico")]
-    : [...nivelesOriginal.intermedio.detalles];
+  nivelKeys.forEach((key, index) => {
+    const detalles = data.niveles[key].detalles;
+    const baseKeys = detalles.filter(d => d.includes("Todo lo del Nivel"));
+    const directFeatures = detalles.filter(d => !d.includes("Todo lo del Nivel"));
 
-  const premium = nivelesOriginal.premium.detalles.includes("Todo lo del Nivel Intermedio")
-    ? [...intermedio, ...nivelesOriginal.premium.detalles.filter(f => f !== "Todo lo del Nivel Intermedio")]
-    : [...nivelesOriginal.premium.detalles];
+    let inherited = [];
+    baseKeys.forEach(inheritStr => {
+      const refName = nivelKeys.find(k =>
+        inheritStr.includes(data.niveles[k].nombre.split("–")[0].trim()) ||
+        inheritStr.includes(data.niveles[k].nombre) ||
+        inheritStr.toLowerCase().includes(k)
+      );
+      if (refName && resolvedNiveles[refName]) {
+        inherited.push(...resolvedNiveles[refName]);
+      }
+    });
 
-  const niveles = { basico, intermedio, premium };
+    resolvedNiveles[key] = [...new Set([...inherited, ...directFeatures])];
+  });
 
-  const headers = ["Funcionalidad", "Básico", "Intermedio", "Premium"];
-  const allFeatures = new Set([...basico, ...intermedio, ...premium]);
+  const allFeatures = new Set();
+  Object.values(resolvedNiveles).forEach(nivel => {
+    nivel.forEach(f => allFeatures.add(f));
+  });
+
+  const headers = ["Funcionalidad", ...nivelKeys.map(k => data.niveles[k].nombre.split("–")[0].trim())];
   const featureList = Array.from(allFeatures);
 
   return (
@@ -67,9 +81,9 @@ export default function TablaComparativa({ data, onClose }) {
                 <td className="px-4 py-2 border border-[#1de9b6]/10 text-left text-gray-200">
                   {feature}
                 </td>
-                {["basico", "intermedio", "premium"].map((nivelKey, j) => (
+                {nivelKeys.map((nivelKey, j) => (
                   <td key={j} className="px-4 py-2 text-center border border-[#1de9b6]/10">
-                    {niveles[nivelKey].includes(feature) ? (
+                    {resolvedNiveles[nivelKey].includes(feature) ? (
                       <CheckCircle className="text-[#1de9b6] mx-auto" size={20} />
                     ) : (
                       <XCircle className="text-gray-500 mx-auto" size={20} />
@@ -84,12 +98,12 @@ export default function TablaComparativa({ data, onClose }) {
 
       {/* Precios al pie */}
       <div className="flex justify-around mt-6 flex-wrap gap-4">
-        {["basico", "intermedio", "premium"].map(nivelKey => (
+        {nivelKeys.map(nivelKey => (
           <div
             key={nivelKey}
             className="bg-[#1de9b6] text-black font-bold px-4 py-2 rounded-full shadow-md text-sm"
           >
-            {nivelKey.charAt(0).toUpperCase() + nivelKey.slice(1)}:{" "}
+            {data.niveles[nivelKey].nombre.split("–")[0].trim()}:{" "}
             {data.niveles[nivelKey].precio}
           </div>
         ))}
