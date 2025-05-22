@@ -1,13 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
 
 const Navbar = ({ activeSection, toggleLanguage, lang }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
- const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = (item) => {
     if (item === "hero") {
@@ -93,54 +89,6 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
       >
         {lang === "es" ? "ES" : "EN"}
       </button>
-
-
-
-      <div className="flex lg:hidden items-center gap-3">
-  <button
-    onClick={toggleLanguage}
-    className="text-sm border border-[#1de9b6] px-3 py-1 rounded-full text-[#1de9b6]"
-  >
-    {lang === "es" ? "ES" : "EN"}
-  </button>
-  <button
-    onClick={() => setMenuOpen(!menuOpen)}
-    className="text-[#1de9b6]"
-    aria-label="Abrir menú"
-  >
-    {menuOpen ? <X size={28} /> : <Menu size={28} />}
-  </button>
-</div>
-
-
-{menuOpen && (
-  <div className="absolute top-full left-0 w-full bg-[#02070f] text-white px-6 py-6 shadow-lg z-40 flex flex-col gap-6 lg:hidden">
-    {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => (
-      <div key={idx}>
-        {item === "servicios" ? (
-          <Link
-            to={`/${lang}/servicios`}
-            onClick={() => setMenuOpen(false)}
-            className="block w-full text-left text-lg"
-          >
-            {t(`nav.${item}`)}
-          </Link>
-        ) : (
-          <button
-            onClick={() => {
-              handleClick(item);
-              setTimeout(() => setMenuOpen(false), 300);
-            }}
-            className="block w-full text-left text-lg"
-          >
-            {t(`nav.${item}`)}
-          </button>
-        )}
-      </div>
-    ))}
-  </div>
-)}
-
     </nav>
   );
 };

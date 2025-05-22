@@ -5,7 +5,7 @@ import React, {
   lazy,
   Suspense
 } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
@@ -14,10 +14,7 @@ import "../i18n";
 
 // Componentes críticos
 import SplashScreen from "../components/home/SplashScreen";
-import Navbar from "../components/global/Navbar";
 import Hero from "../components/home/Hero";
-import Footer from "../components/global/Footer";
-import WhatsAppButton from "../components/global/WhatsAppButton";
 
 // Componentes diferidos (lazy load)
 const ServiciosDestacados = lazy(() => import("../components/home/ServiciosDestacados"));
@@ -27,25 +24,15 @@ const Contacto = lazy(() => import("../components/home/Contacto"));
 
 function Home({ lang }) {
   const location = useLocation();
-  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  const [loading, setLoading] = useState(() => {
-    const wasHereBefore = sessionStorage.getItem("visited");
-    const skipSplash = location.state?.skipAnimation === true;
+  const [loading, setLoading] = useState(false); // ← fuerza desactivación del Splash
 
-    return !wasHereBefore && !skipSplash;
-  });
 
   const [activeSection, setActiveSection] = useState("hero");
   const [status, setStatus] = useState(null);
-  const [hideButton, setHideButton] = useState(false);
   const [activo, setActivo] = useState(null);
   const formRef = useRef(null);
-
-  const toggleLanguage = () => {
-    navigate(`/${lang === "es" ? "en" : "es"}`);
-  };
 
   useEffect(() => {
     if (lang && i18n.language !== lang) {
@@ -90,19 +77,6 @@ function Home({ lang }) {
     }
   }, [status]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const footer = document.getElementById("footer");
-      if (!footer) return;
-      const footerTop = footer.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      setHideButton(footerTop < windowHeight - 60);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
@@ -145,29 +119,18 @@ function Home({ lang }) {
         <meta property="og:locale" content={lang === "es" ? "es_CL" : "en_US"} />
       </Helmet>
 
-      <div className="relative bg-[#02070f] text-white min-h-screen font-sans overflow-x-hidden scroll-smooth">
-        <Navbar
-          activeSection={activeSection}
-          toggleLanguage={toggleLanguage}
-          lang={lang}
-        />
-        <main className="min-h-[1000px]">
-          <Hero onClickContacto={scrollToContacto} />
+      <Hero onClickContacto={scrollToContacto} />
 
-          <Suspense fallback={<div className="h-[1000px]" />}>
-            <ServiciosDestacados activo={activo} setActivo={setActivo} />
-            <SobreNosotros />
-            <Testimonios />
-            <Contacto
-              formRef={formRef}
-              handleSubmit={handleSubmit}
-              status={status}
-            />
-          </Suspense>
-          <Footer />
-          <WhatsAppButton hide={hideButton} />
-        </main>
-      </div>
+      <Suspense fallback={<div className="h-[1000px]" />}>
+        <ServiciosDestacados activo={activo} setActivo={setActivo} />
+        <SobreNosotros />
+        <Testimonios />
+        <Contacto
+          formRef={formRef}
+          handleSubmit={handleSubmit}
+          status={status}
+        />
+      </Suspense>
     </>
   );
 }

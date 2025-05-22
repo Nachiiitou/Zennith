@@ -1,5 +1,4 @@
-// App.jsx
-import React, { lazy, Suspense, useState, useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -7,18 +6,21 @@ import {
   Navigate,
   useParams,
   useNavigate,
-  useLocation
+  useLocation,
+  Outlet,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./i18n";
 import ScrollToTop from "./components/global/ScrollToTop";
 
+// Componentes globales
+import Navbar from "./components/global/Navbar";
+import Footer from "./components/global/Footer";
+import WhatsAppButton from "./components/global/WhatsAppButton";
 
-// Páginas principales
+// Páginas
 const Home = lazy(() => import("./pages/Home"));
 const Servicios = lazy(() => import("./pages/Servicios"));
-
-// Páginas individuales de servicios
 const Automatizacion = lazy(() => import("./pages/servicios/Automatizacion"));
 const SoporteTecnico = lazy(() => import("./pages/servicios/SoporteTecnico"));
 const DesarrolloWeb = lazy(() => import("./pages/servicios/DesarrolloWeb"));
@@ -36,53 +38,62 @@ const getInitialLang = () => {
   return ["es", "en"].includes(browserLang) ? browserLang : "es";
 };
 
-function Wrapper({ Component }) {
-  const { i18n } = useTranslation();
-  const navigate = useNavigate();
-  const location = useLocation();
+// Layout con Navbar y lógica de idioma
+function LayoutWrapper() {
   const { lang } = useParams();
-  const [currentLang, setCurrentLang] = useState(lang);
+  const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     if (lang) {
       i18n.changeLanguage(lang);
-      setCurrentLang(lang);
       localStorage.setItem("lang", lang);
     }
   }, [lang, i18n]);
 
   const toggleLanguage = () => {
-    const newLang = currentLang === "es" ? "en" : "es";
+    const newLang = lang === "es" ? "en" : "es";
     localStorage.setItem("lang", newLang);
     navigate(`/${newLang}`);
   };
 
-  return <Component lang={currentLang} toggleLanguage={toggleLanguage} />;
+  return (
+    <div className="relative bg-[#02070f] text-white min-h-screen font-sans overflow-x-hidden scroll-smooth">
+      <Navbar lang={lang} toggleLanguage={toggleLanguage} />
+      <main className="min-h-[1000px]">
+        <Outlet />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  );
 }
 
+// App con rutas
 function AppWrapper() {
   const initialLang = getInitialLang();
   const location = useLocation();
 
   return (
-   <>
-      <ScrollToTop /> {/* 👈 Esto se asegura de hacer scroll al top en cada ruta */}
+    <>
+      <ScrollToTop />
       <Suspense fallback={<div />}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Navigate to={`/${initialLang}`} replace />} />
-          <Route path="/:lang" element={<Wrapper Component={Home} />} />
-          <Route path="/:lang/servicios" element={<Wrapper Component={Servicios} />} />
 
-          {/* Rutas individuales para cada servicio */}
-          <Route path="/:lang/servicios/automatizacion" element={<Wrapper Component={Automatizacion} />} />
-          <Route path="/:lang/servicios/soporte-tecnico" element={<Wrapper Component={SoporteTecnico} />} />
-          <Route path="/:lang/servicios/desarrollo-web" element={<Wrapper Component={DesarrolloWeb} />} />
-          <Route path="/:lang/servicios/mantenimiento-web" element={<Wrapper Component={MantenimientoWeb} />} />
-          <Route path="/:lang/servicios/consultoria-tecnologica" element={<Wrapper Component={ConsultoriaTecnologica} />} />
-          <Route path="/:lang/servicios/integracion-apis" element={<Wrapper Component={IntegracionApis} />} />
-          <Route path="/:lang/servicios/agentes-ia" element={<Wrapper Component={AgentesIA} />} />
-          <Route path="/:lang/servicios/business-intelligence" element={<Wrapper Component={BusinessIntelligence} />} />
-          <Route path="/:lang/servicios/chatbots" element={<Wrapper Component={Chatbots} />} />
+          <Route path="/:lang" element={<LayoutWrapper />}>
+            <Route index element={<Home />} />
+            <Route path="servicios" element={<Servicios />} />
+            <Route path="servicios/automatizacion" element={<Automatizacion />} />
+            <Route path="servicios/soporte-tecnico" element={<SoporteTecnico />} />
+            <Route path="servicios/desarrollo-web" element={<DesarrolloWeb />} />
+            <Route path="servicios/mantenimiento-web" element={<MantenimientoWeb />} />
+            <Route path="servicios/consultoria-tecnologica" element={<ConsultoriaTecnologica />} />
+            <Route path="servicios/integracion-apis" element={<IntegracionApis />} />
+            <Route path="servicios/agentes-ia" element={<AgentesIA />} />
+            <Route path="servicios/business-intelligence" element={<BusinessIntelligence />} />
+            <Route path="servicios/chatbots" element={<Chatbots />} />
+          </Route>
         </Routes>
       </Suspense>
     </>
