@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Menu, X } from "lucide-react";
 
 const Navbar = ({ activeSection, toggleLanguage, lang }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = (item) => {
+    setMenuOpen(false); // Cierra menú móvil
+
     if (item === "hero") {
       if (window.location.pathname === `/${lang}`) {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -21,32 +26,22 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
     }
   };
 
+  const navItems = ["hero", "servicios", "nosotros", "contacto"];
+
   return (
-    <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-10 relative">
-      {/* Logo e inicio */}
+    <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-50 w-full">
+      {/* Logo */}
       <div
         className="flex items-center gap-3 cursor-pointer"
-        onClick={() => {
-          if (window.location.pathname === `/${lang}`) {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          } else {
-            navigate(`/${lang}`, { state: { skipAnimation: true } });
-          }
-        }}
+        onClick={() => handleClick("hero")}
       >
-        <img
-          src="/Logo.svg"
-          alt="Zennith Logo"
-          width="40"
-          height="40"
-          className="h-10 w-auto"
-        />
+        <img src="/Logo.svg" alt="Zennith Logo" width="40" height="40" className="h-10 w-auto" />
         <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
       </div>
 
-      {/* Navegación */}
+      {/* Navegación Desktop */}
       <ul className="hidden lg:flex gap-10 text-base">
-        {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => {
+        {navItems.map((item, idx) => {
           const isServiciosPage = window.location.pathname.includes("/servicios");
           const isActive =
             item === "servicios"
@@ -82,13 +77,52 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
         })}
       </ul>
 
-      {/* Botón cambio de idioma */}
+      {/* Botón idioma + menú hamburguesa en móvil */}
+      <div className="lg:hidden flex items-center gap-3">
+        <button
+          onClick={toggleLanguage}
+          className="text-[#1de9b6] border border-[#1de9b6] px-3 py-1 text-sm rounded-full"
+        >
+          {lang === "es" ? "ES" : "EN"}
+        </button>
+        <button onClick={() => setMenuOpen(!menuOpen)} className="text-[#1de9b6]">
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Botón idioma (solo desktop) */}
       <button
         onClick={toggleLanguage}
-        className="ml-4 text-sm border border-[#1de9b6] px-4 py-1 rounded-full text-[#1de9b6] hover:bg-[#1de9b6] hover:text-black transition"
+        className="ml-4 text-sm border border-[#1de9b6] px-4 py-1 rounded-full text-[#1de9b6] hover:bg-[#1de9b6] hover:text-black transition hidden lg:block"
       >
         {lang === "es" ? "ES" : "EN"}
       </button>
+
+      {/* Menú móvil desplegable */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#02070f] text-white flex flex-col gap-6 px-6 py-6 shadow-lg z-40 lg:hidden">
+          {navItems.map((item, idx) => (
+            <div key={idx}>
+              {item === "servicios" ? (
+                <Link
+                  to={`/${lang}/servicios`}
+                  onClick={() => setMenuOpen(false)}
+                  className="block w-full text-left text-lg"
+                >
+                  {t(`nav.${item}`)}
+                </Link>
+              ) : (
+                <button
+                  onClick={() => handleClick(item)}
+                  className="block w-full text-left text-lg"
+                >
+                  {t(`nav.${item}`)}
+                </button>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };

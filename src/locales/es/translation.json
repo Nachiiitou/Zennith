@@ -284,12 +284,56 @@
   "nosotros1_parte2": " combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.",
   "nosotros2_texto": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación.",
   "verMas": "Ver más",
-  
   "packs": {
-  "pack1": {
-    "nombre": "Pack Inicial",
-    "descripcion": "Ideal para pequeñas empresas que inician su transformación digital.",
-    "precio": "$250.000 CLP"
+  "packDesarrollador": {
+    "nombre":"Pack Presencia Digital",
+    "descripcion": "Una solución escalable que se adapta a tu etapa de crecimiento digital. Elige entre 3 niveles diseñados para acompañarte desde tu primera página web hasta una presencia online profesional y completa. Desde $270.000 hasta $620.000 CLP según el nivel que elijas",
+    "niveles": {
+      "basico": {
+        "nombre": "Nivel Básico – Tu Primera Presencia Online",
+        "descripcion": "Ideal para quienes dan sus primeros pasos en el mundo digital.",
+        "precio": "$270.000 CLP",
+        "detalles": [
+          "Sitio web de una sola página",
+          "Diseño responsive (compatible con dispositivos móviles y de escritorio)",
+          "Formulario de contacto funcional (envío a tu email)",
+          "Botón de WhatsApp",
+          "Certificado SSL (navegación segura)",
+          "Optimización SEO básica (para que Google te encuentre)",
+          "Diseño personalizado (una propuesta antes de comenzar)",
+          "Soporte técnico por 1 mes",
+          "Dominio .cl o .com por 1 año",
+          "Hosting por 1 año"
+        ]
+      },
+      "intermedio": {
+        "nombre": "Nivel Intermedio – Sitio Profesional",
+        "descripcion": "Para marcas que quieren consolidar su presencia digital.",
+        "precio": "$420.000 CLP",
+        "detalles": [
+          "Todo lo del Nivel Básico",
+          "Sitio web de hasta 3 secciones (Inicio, Servicios, Sobre mí, Contacto)",
+          "Email corporativo (ej: contacto@tumarca.cl)",
+          "Vinculación a redes sociales + creación de perfiles (opcional)",
+          "Soporte técnico por 3 meses"
+        ]
+      },
+      "premium": {
+        "nombre": "Nivel Premium – Tu Marca Digital Completa",
+        "descripcion": "Para marcas que buscan autonomía y proyección.",
+        "precio": "$620.000 CLP",
+        "detalles": [
+          "Todo lo del Nivel Intermedio",
+          "Sitio web de hasta 5 secciones",
+          "Integración de chatbot básico con respuestas predefinidas",
+          "Botones a redes sociales",
+          "Manual de uso en PDF (autogestión básica del sitio)",
+          "Soporte técnico por 6 meses",
+          "Animaciones personalizadas"
+        ]
+      }
+    },
+    "boton": "Solicitar este Pack"
   },
   "pack2": {
     "nombre": "Pack Profesional",
@@ -302,5 +346,4 @@
     "precio": "$750.000 CLP"
   }
 }
-
 }
