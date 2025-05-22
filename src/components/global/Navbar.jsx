@@ -118,7 +118,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
             <button
               onClick={() => {
                 handleClick("servicios");
-                setMenuOpen(false);
+                setTimeout(() => setMenuOpen(false), 300); // espera 300ms antes de cerrar
               }}
               className="block w-full text-left text-lg"
             >
@@ -148,7 +148,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
     ))}
   </div>
 )}
-
+c
 
       
 
