@@ -41,7 +41,7 @@
         "Sending notifications or scheduled tasks.",
         "Creating internal workflows with a single click."
       ],
-      "imagen": "/assets/servicios/automatizacion.webp",
+      "imagen": "/assets/servicios/automatizacion_en.webp",
       "caso": {
         "titulo": "How we helped a clinic save 40 hours per month",
         "contenido": "One of our clients, a clinic with a high patient volume, had their staff manually copying data from the reservation platform to the accounting system.\n\nWe automated this process through a direct integration between both platforms, completely eliminating manual intervention. The result: over 40 hours per month freed up for clinical tasks.\n\nAdditionally, errors were reduced and information traceability improved."
@@ -104,7 +104,7 @@
     "Custom web platforms for bookings, sales, or operations.",
     "Redesigns of slow or outdated websites."
   ],
-  "imagen": "/assets/servicios/desarrollo.webp",
+  "imagen": "/assets/servicios/desarrollo_en.webp",
   "caso": {
     "titulo": "How we modernized a regional company’s website",
     "contenido": "An agricultural SME asked us to redesign its website, which was old, slow, and not mobile-friendly.\n\nWe created a modern, search-engine-optimized site with a self-management panel. Within just 2 weeks, they increased their contact rate and improved their image with clients and suppliers.\n\nSince then, their digital presence has become an active tool for closing business deals."
@@ -135,7 +135,7 @@
     "Monthly review of broken links and forms.",
     "Restoring the site in case of failures or critical errors."
   ],
-  "imagen": "/assets/servicios/mantenimiento.webp",
+  "imagen": "/assets/servicios/mantenimiento_en.webp",
   "caso": {
     "titulo": "How we protected a site from a cyberattack",
     "contenido": "A client contacted us after their WordPress site was hacked and redirected to malicious pages.\n\nWe restored a backup, reinforced the server’s security, and migrated the site to a more stable and secure structure.\n\nSince then, we’ve provided monthly maintenance and the site has remained protected, fast, and uninterrupted."
@@ -165,7 +165,7 @@
     "Designing a technology roadmap for your company.",
     "Support during digital transformation processes."
   ],
-  "imagen": "/assets/servicios/consultoria.webp",
+  "imagen": "/assets/servicios/consultoria_en.webp",
   "caso": {
     "titulo": "How we helped a sales team digitize their processes",
     "contenido": "A distribution company needed to better organize its order flow and customer tracking, which was handled manually.\n\nAfter consulting sessions, we implemented a custom CRM, automated repetitive tasks, and trained the team to make the most of the tool.\n\nThe result was a more organized operation, with better visibility and fewer human errors."
@@ -196,7 +196,7 @@
     "Automation of reports from multiple sources.",
     "Inventory synchronization between different systems."
   ],
-  "imagen": "/assets/servicios/integracion.webp",
+  "imagen": "/assets/servicios/integracion_en.webp",
   "caso": {
     "titulo": "How we connected an e-commerce store with automatic invoicing",
     "contenido": "An online store client had to manually issue every invoice from their tax system.\n\nWe built an integration between the e-commerce platform and the invoicing system so that, when a paid order was received, the invoice would be generated automatically and sent to the customer.\n\nThis eliminated errors, saved the team hours of work, and sped up delivery to the end customer."
@@ -226,7 +226,7 @@
     "AI that automates simple tasks like scheduling meetings or sending reminders.",
     "Agent integrated into your CRM to retrieve customer data."
   ],
-  "imagen": "/assets/servicios/agentes.webp",
+  "imagen": "/assets/servicios/agentes_en.webp",
   "caso": {
     "titulo": "How an AI chatbot reduced 60% of repeated inquiries",
     "contenido": "A client with a high volume of repetitive questions in their e-commerce store needed to ease the support team’s workload.\n\nWe built a custom agent trained with their FAQs and internal policies. We connected it to their website and WhatsApp.\n\nIn one month, it reduced incoming tickets by 60%, allowing the team to focus on more complex cases and improving customer experience."
@@ -285,7 +285,7 @@
     "Bot that guides users step by step to schedule an appointment.",
     "Integration with external tools to query data or send emails."
   ],
-  "imagen": "/assets/servicios/chatbots.webp",
+  "imagen": "/assets/servicios/chatbots_en.webp",
   "caso": {
     "titulo": "How a chatbot helped triple web leads",
     "contenido": "A natural products store was overwhelmed with inquiries on social media and their website.\n\nWe built a chatbot that automatically handles messages, answers FAQs, and collects contact information from prospects.\n\nThe result was a 300% increase in inquiries, higher customer satisfaction, and reduced workload for the human team."

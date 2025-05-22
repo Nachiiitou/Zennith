@@ -42,6 +42,7 @@ const getInitialLang = () => {
 function LayoutWrapper() {
   const { lang } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -54,7 +55,10 @@ function LayoutWrapper() {
   const toggleLanguage = () => {
     const newLang = lang === "es" ? "en" : "es";
     localStorage.setItem("lang", newLang);
-    navigate(`/${newLang}`);
+
+    // Reemplazar solo el prefijo /es o /en por el nuevo idioma
+    const updatedPath = location.pathname.replace(/^\/(es|en)/, `/${newLang}`);
+    navigate(updatedPath);
   };
 
   return (

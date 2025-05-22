@@ -42,11 +42,11 @@ const Footer = () => {
           </a>
         </div>
 
-        <p className="text-sm text-right text-white">{t("footer")}</p>
+        <p className="text-sm text-right text-gray-500">{t("footer")}</p>
       </div>
 
       {/* Mobile */}
-      <div className="block md:hidden text-center flex flex-col items-center gap-6 text-[#404040]">
+      <div className="block md:hidden text-center flex flex-col items-center gap-6 text-gray-500">
         <div className="flex items-center gap-3 justify-center">
           <img src="/Logo.svg" alt="Logo pequeño de Zennith" className="h-10 w-10" />
         </div>
@@ -72,7 +72,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="text-sm text-white">{t("footer")}</p>
+        <p className="text-sm text-gray-500">{t("footer")}</p>
       </div>
     </footer>
   );

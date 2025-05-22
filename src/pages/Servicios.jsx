@@ -51,21 +51,21 @@ function Servicios() {
       {activeTab === "servicios" ? (
         <>
           {/* Fila 1 */}
-          <div className="grid md:grid-cols-3 gap-10 mb-16">
+          <div className="grid md:grid-cols-3 gap-10 items-stretch mb-16">
             {keys.slice(0, 3).map((key, i) => (
               <ServicioCard key={key} index={i} id={key} lang={lang} />
             ))}
           </div>
 
           {/* Fila 2 */}
-          <div className="grid md:grid-cols-3 gap-10 mb-16">
+          <div className="grid md:grid-cols-3 gap-10 items-stretch mb-16">
             {keys.slice(3, 6).map((key, i) => (
               <ServicioCard key={key} index={i + 3} id={key} lang={lang} />
             ))}
           </div>
 
           {/* Fila 3 */}
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-10 items-stretch">
             {keys.slice(6, 9).map((key, i) => (
               <ServicioCard key={key} index={i + 6} id={key} lang={lang} />
             ))}
