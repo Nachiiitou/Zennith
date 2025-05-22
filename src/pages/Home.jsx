@@ -26,12 +26,15 @@ const Testimonios = lazy(() => import("../components/home/Testimonios"));
 const Contacto = lazy(() => import("../components/home/Contacto"));
 
 function Home({ lang }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+
   const [loading, setLoading] = useState(() => {
     const wasHereBefore = sessionStorage.getItem("visited");
-    const isReload = window.performance.navigation.type === 1;
+    const skipSplash = location.state?.skipAnimation === true;
 
-    // Mostrar splash si es primera vez o recarga
-    return !wasHereBefore || isReload;
+    return !wasHereBefore && !skipSplash;
   });
 
   const [activeSection, setActiveSection] = useState("hero");
@@ -39,10 +42,6 @@ function Home({ lang }) {
   const [hideButton, setHideButton] = useState(false);
   const [activo, setActivo] = useState(null);
   const formRef = useRef(null);
-
-  const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const toggleLanguage = () => {
     navigate(`/${lang === "es" ? "en" : "es"}`);
@@ -154,6 +153,7 @@ function Home({ lang }) {
         />
         <main className="min-h-[1000px]">
           <Hero onClickContacto={scrollToContacto} />
+
           <Suspense fallback={<div className="h-[1000px]" />}>
             <ServiciosDestacados activo={activo} setActivo={setActivo} />
             <SobreNosotros />

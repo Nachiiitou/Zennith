@@ -115,10 +115,13 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
       <div key={idx}>
         {item === "servicios" ? (
           <Link
-            to={`/${lang}/servicios`}
-            onClick={() => setMenuOpen(false)}
-            className="block w-full text-left text-lg"
-          >
+  to={`/${lang}/servicios`}
+  onClick={() => {
+    setMenuOpen(false);
+  }}
+  className="block w-full text-left text-lg transition-opacity duration-200"
+>
+
             {t(`nav.${item}`)}
           </Link>
         ) : (
