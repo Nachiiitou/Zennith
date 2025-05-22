@@ -12,7 +12,7 @@ const Hero = ({ onClickContacto }) => {
     <section
       id="hero"
       aria-label="Sección principal Zennith"
-      className="flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-24 py-24 gap-16 relative"
+      className="mt-20 flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-24 py-24 gap-16 relative"
     >
       <motion.div
         initial={{ x: -100, opacity: 0 }}
