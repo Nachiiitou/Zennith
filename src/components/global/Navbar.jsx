@@ -1,7 +1,8 @@
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
+import { useState } from "react";
+
 
 const Navbar = ({ activeSection, toggleLanguage, lang }) => {
   const { t } = useTranslation();
@@ -9,8 +10,6 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = (item) => {
-    setMenuOpen(false); // Cierra menú móvil
-
     if (item === "hero") {
       if (window.location.pathname === `/${lang}`) {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -26,22 +25,32 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
     }
   };
 
-  const navItems = ["hero", "servicios", "nosotros", "contacto"];
-
   return (
-    <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-50 w-full">
-      {/* Logo */}
+    <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-10 relative">
+      {/* Logo e inicio */}
       <div
         className="flex items-center gap-3 cursor-pointer"
-        onClick={() => handleClick("hero")}
+        onClick={() => {
+          if (window.location.pathname === `/${lang}`) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          } else {
+            navigate(`/${lang}`, { state: { skipAnimation: true } });
+          }
+        }}
       >
-        <img src="/Logo.svg" alt="Zennith Logo" width="40" height="40" className="h-10 w-auto" />
+        <img
+          src="/Logo.svg"
+          alt="Zennith Logo"
+          width="40"
+          height="40"
+          className="h-10 w-auto"
+        />
         <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
       </div>
 
-      {/* Navegación Desktop */}
+      {/* Navegación */}
       <ul className="hidden lg:flex gap-10 text-base">
-        {navItems.map((item, idx) => {
+        {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => {
           const isServiciosPage = window.location.pathname.includes("/servicios");
           const isActive =
             item === "servicios"
@@ -77,52 +86,73 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
         })}
       </ul>
 
-      {/* Botón idioma + menú hamburguesa en móvil */}
-      <div className="lg:hidden flex items-center gap-3">
-        <button
-          onClick={toggleLanguage}
-          className="text-[#1de9b6] border border-[#1de9b6] px-3 py-1 text-sm rounded-full"
-        >
-          {lang === "es" ? "ES" : "EN"}
-        </button>
-        <button onClick={() => setMenuOpen(!menuOpen)} className="text-[#1de9b6]">
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+      {/* Botón idioma (desktop) */}
+<div className="hidden lg:flex items-center">
+  <button
+    onClick={toggleLanguage}
+    className="ml-4 text-sm border border-[#1de9b6] px-4 py-1 rounded-full text-[#1de9b6] hover:bg-[#1de9b6] hover:text-black transition"
+  >
+    {lang === "es" ? "ES" : "EN"}
+  </button>
+</div>
+
+{/* Botones móviles: idioma + hamburguesa */}
+<div className="flex lg:hidden items-center gap-3">
+  <button
+    onClick={toggleLanguage}
+    className="text-sm border border-[#1de9b6] px-3 py-1 rounded-full text-[#1de9b6]"
+  >
+    {lang === "es" ? "ES" : "EN"}
+  </button>
+  <button onClick={() => setMenuOpen(!menuOpen)} className="text-[#1de9b6]">
+    {menuOpen ? <X size={28} /> : <Menu size={28} />}
+  </button>
+</div>
+
+{menuOpen && (
+  <div className="absolute top-full left-0 w-full bg-[#02070f] text-white px-6 py-6 shadow-lg z-40 flex flex-col gap-6 lg:hidden">
+    {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => (
+      <div key={idx}>
+        {item === "servicios" ? (
+          window.location.pathname === `/${lang}` ? (
+            <button
+              onClick={() => {
+                handleClick("servicios");
+                setMenuOpen(false);
+              }}
+              className="block w-full text-left text-lg"
+            >
+              {t(`nav.${item}`)}
+            </button>
+          ) : (
+            <Link
+              to={`/${lang}/servicios`}
+              onClick={() => setMenuOpen(false)}
+              className="block w-full text-left text-lg"
+            >
+              {t(`nav.${item}`)}
+            </Link>
+          )
+        ) : (
+          <button
+            onClick={() => {
+              handleClick(item);
+              setMenuOpen(false);
+            }}
+            className="block w-full text-left text-lg"
+          >
+            {t(`nav.${item}`)}
+          </button>
+        )}
       </div>
+    ))}
+  </div>
+)}
 
-      {/* Botón idioma (solo desktop) */}
-      <button
-        onClick={toggleLanguage}
-        className="ml-4 text-sm border border-[#1de9b6] px-4 py-1 rounded-full text-[#1de9b6] hover:bg-[#1de9b6] hover:text-black transition hidden lg:block"
-      >
-        {lang === "es" ? "ES" : "EN"}
-      </button>
 
-      {/* Menú móvil desplegable */}
-      {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#02070f] text-white flex flex-col gap-6 px-6 py-6 shadow-lg z-40 lg:hidden">
-          {navItems.map((item, idx) => (
-            <div key={idx}>
-              {item === "servicios" ? (
-                <Link
-                  to={`/${lang}/servicios`}
-                  onClick={() => setMenuOpen(false)}
-                  className="block w-full text-left text-lg"
-                >
-                  {t(`nav.${item}`)}
-                </Link>
-              ) : (
-                <button
-                  onClick={() => handleClick(item)}
-                  className="block w-full text-left text-lg"
-                >
-                  {t(`nav.${item}`)}
-                </button>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+      
+
+
     </nav>
   );
 };
