@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
-import { ReactComponent as Logo } from "../assets/Logo.svg"; // ajusta ruta según tu estructura
+import { ReactComponent as Logo } from "../../assets/Logo.svg";
+
 
 
 
