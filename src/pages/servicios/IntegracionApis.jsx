@@ -112,20 +112,24 @@ function IntegracionAPIs() {
           */}
 
           {/* CTA final */}
-          <div className="bg-[#0a101a] p-12 rounded-xl shadow-lg text-center mt-20">
-            <h3 className="text-3xl font-bold text-[#1de9b6] mb-4">
-              ¿Tu negocio necesita plataformas conectadas?
-            </h3>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Agenda una asesoría gratuita y te ayudamos a conectar todo tu ecosistema digital.
-            </p>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-[#1de9b6] hover:bg-[#14cba1] text-black font-semibold py-3 px-8 rounded-full transition text-lg"
-            >
-              Agenda tu asesoría
-            </button>
-          </div>
+         {data.cta && (
+  <div className="bg-[#0a101a] p-12 rounded-xl shadow-lg text-center mt-20">
+    <h3 className="text-3xl font-bold text-[#1de9b6] mb-4">
+      {data.cta.titulo}
+    </h3>
+    <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+      {data.cta.descripcion}
+    </p>
+    <button
+      onClick={() => setShowModal(true)}
+      className="bg-[#1de9b6] hover:bg-[#14cba1] text-black font-semibold py-3 px-8 rounded-full transition text-lg"
+    >
+      {data.cta.boton}
+    </button>
+  </div>
+)}
+
+
         </div>
       </section>
 

@@ -112,20 +112,21 @@ function ConsultoriaTecnologica() {
           */}
 
           {/* CTA final */}
-          <div className="bg-[#0a101a] p-12 rounded-xl shadow-lg text-center mt-20">
-            <h3 className="text-3xl font-bold text-[#1de9b6] mb-4">
-              ¿Listo para tomar decisiones tecnológicas acertadas?
-            </h3>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Agenda una asesoría sin compromiso y llevemos tu estrategia digital al siguiente nivel.
-            </p>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-[#1de9b6] hover:bg-[#14cba1] text-black font-semibold py-3 px-8 rounded-full transition text-lg"
-            >
-              Agenda tu asesoría
-            </button>
-          </div>
+        <div className="bg-[#0a101a] p-12 rounded-xl shadow-lg text-center mt-20">
+        <h3 className="text-3xl font-bold text-[#1de9b6] mb-4">
+            ¿Listo para tomar decisiones tecnológicas acertadas?
+        </h3>
+        <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+            Agenda una asesoría sin compromiso y llevemos tu estrategia digital al siguiente nivel.
+        </p>
+        <button
+            onClick={() => setShowModal(true)}
+            className="bg-[#1de9b6] hover:bg-[#14cba1] text-black font-semibold py-3 px-8 rounded-full transition text-lg"
+        >
+            Agenda tu asesoría
+        </button>
+        </div>
+
         </div>
       </section>
 

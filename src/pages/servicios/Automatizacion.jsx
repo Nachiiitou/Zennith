@@ -13,8 +13,6 @@ function Automatizacion() {
 
   return (
     <>
-
-
       <section className="bg-[#02070f] text-white py-20 px-6 lg:px-32">
         <div className="max-w-7xl mx-auto">
           {/* Volver a Servicios */}
@@ -22,7 +20,7 @@ function Automatizacion() {
             to={`/${lang}/servicios`}
             className="inline-flex items-center text-[#1de9b6] hover:text-white mb-10 transition"
           >
-            <FaArrowLeft className="mr-2" /> Volver a Servicios
+            <FaArrowLeft className="mr-2" /> {t("nav.servicios")}
           </Link>
 
           {/* Imagen y descripción principal */}
@@ -61,7 +59,7 @@ function Automatizacion() {
           {data.beneficios && (
             <div className="mb-20">
               <h2 className="text-2xl font-semibold text-[#1de9b6] mb-6">
-                Beneficios de automatizar
+                {t("servicios.automatizacion.titulo_beneficios", "Beneficios de automatizar")}
               </h2>
               <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
                 {data.beneficios.map((b, i) => (
@@ -81,7 +79,7 @@ function Automatizacion() {
           {data.ejemplos && (
             <div className="mb-20">
               <h2 className="text-2xl font-semibold text-[#1de9b6] mb-6">
-                Casos de uso comunes
+                {t("servicios.automatizacion.titulo_ejemplos", "Casos de uso comunes")}
               </h2>
               <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
                 {data.ejemplos.map((e, i) => (
@@ -98,20 +96,22 @@ function Automatizacion() {
           )}
 
           {/* CTA final */}
-          <div className="bg-[#0a101a] p-12 rounded-xl shadow-lg text-center mt-20">
-            <h3 className="text-3xl font-bold text-[#1de9b6] mb-4">
-              ¿Listo para dejar atrás las tareas repetitivas?
-            </h3>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Agenda una reunión sin compromiso. Te mostraremos cómo podrías ahorrar cientos de horas al año con automatización personalizada.
-            </p>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-[#1de9b6] hover:bg-[#14cba1] text-black font-semibold py-3 px-8 rounded-full transition text-lg"
-            >
-              Agenda tu asesoría
-            </button>
-          </div>
+          {data.cta && (
+            <div className="bg-[#0a101a] p-12 rounded-xl shadow-lg text-center mt-20">
+              <h3 className="text-3xl font-bold text-[#1de9b6] mb-4">
+                {data.cta.titulo}
+              </h3>
+              <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+                {data.cta.descripcion}
+              </p>
+              <button
+                onClick={() => setShowModal(true)}
+                className="bg-[#1de9b6] hover:bg-[#14cba1] text-black font-semibold py-3 px-8 rounded-full transition text-lg"
+              >
+                {data.cta.boton}
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -129,8 +129,6 @@ function Automatizacion() {
           </div>
         </div>
       )}
-
- 
     </>
   );
 }
