@@ -44,7 +44,7 @@
     "Envío de notificaciones o tareas programadas.",
     "Creación de flujos internos con un solo clic."
   ],
-  "imagen": "/assets/servicios/automatizacion.png",
+  "imagen": "/assets/servicios/automatizacion.webp",
   "caso": {
     "titulo": "Cómo ayudamos a una clínica a ahorrar 40 horas al mes",
     "contenido": "Uno de nuestros clientes, una clínica con alto volumen de pacientes, tenía a su equipo copiando manualmente datos desde la plataforma de reservas al sistema contable.\n\nAutomatizamos este proceso mediante una integración directa entre ambas plataformas, eliminando por completo la intervención manual. El resultado: más de 40 horas mensuales liberadas para enfocarse en tareas clínicas.\n\nAdemás, se redujeron los errores y se mejoró la trazabilidad de la información."
@@ -69,7 +69,7 @@
     "Instalación y configuración de equipos nuevos.",
     "Mantenimiento y optimización de servidores y PCs."
   ],
-  "imagen": "/assets/servicios/soporte.png",
+  "imagen": "/assets/servicios/soporte.webp",
   "caso": {
     "titulo": "Cómo ayudamos a una pyme a evitar pérdidas por caídas de red",
     "contenido": "Una empresa de ventas online nos contactó debido a caídas constantes en su red, lo que les impedía procesar pedidos a tiempo.\n\nRealizamos un diagnóstico completo, reconfiguramos su red local y estandarizamos sus estaciones de trabajo. Resultado: una operación estable y sin interrupciones en más de 6 meses.\n\nAdemás, incorporamos monitoreo preventivo y soporte remoto inmediato, reduciendo drásticamente los tiempos de respuesta ante cualquier incidente."
@@ -95,7 +95,7 @@
     "Plataformas web personalizadas para reservas, ventas u operaciones.",
     "Reestructuración de sitios lentos o desactualizados."
   ],
-  "imagen": "/assets/servicios/desarrollo.png",
+  "imagen": "/assets/servicios/desarrollo.webp",
   "caso": {
     "titulo": "Cómo modernizamos el sitio de una empresa regional",
     "contenido": "Una pyme del rubro agrícola nos pidió renovar su página web, que era antigua, lenta y no se adaptaba a móviles.\n\nCreamos un sitio moderno, optimizado para buscadores y con un panel autoadministrable. En solo 2 semanas aumentaron su tasa de contacto y mejoraron su imagen frente a clientes y proveedores.\n\nDesde entonces, su presencia digital es una herramienta activa para cerrar negocios."
@@ -120,7 +120,7 @@
     "Revisión mensual de enlaces rotos y formularios.",
     "Restauración del sitio en caso de fallos o errores graves."
   ],
-  "imagen": "/assets/servicios/mantenimiento.png",
+  "imagen": "/assets/servicios/mantenimiento.webp",
   "caso": {
     "titulo": "Cómo protegimos un sitio ante un ciberataque",
     "contenido": "Un cliente nos contactó luego de que su sitio WordPress fuera hackeado y redirigiera a páginas maliciosas.\n\nRestauramos una copia de seguridad, reforzamos la seguridad del servidor y migramos el sitio a una estructura más estable y segura.\n\nDesde entonces, realizamos mantenimiento mensual y el sitio ha permanecido protegido, rápido y sin interrupciones."
@@ -145,7 +145,7 @@
     "Diseño de un roadmap tecnológico para tu empresa.",
     "Acompañamiento en procesos de transformación digital."
   ],
-  "imagen": "/assets/servicios/consultoria.png",
+  "imagen": "/assets/servicios/consultoria.webp",
   "caso": {
     "titulo": "Cómo ayudamos a un equipo comercial a digitalizar sus procesos",
     "contenido": "Una empresa de distribución necesitaba organizar mejor su flujo de pedidos y seguimiento de clientes, que se hacía manualmente.\n\nLuego de sesiones de consultoría, implementamos un CRM personalizado, automatizamos tareas repetitivas y capacitamos al equipo para sacarle provecho a la herramienta.\n\nEl resultado fue una operación más ordenada, con mejor visibilidad y menos errores humanos."
@@ -170,7 +170,7 @@
     "Automatización de reportes desde múltiples fuentes.",
     "Sincronización de inventario entre sistemas distintos."
   ],
-  "imagen": "/assets/servicios/integracion.png",
+  "imagen": "/assets/servicios/integracion.webp",
   "caso": {
     "titulo": "Cómo conectamos el e-commerce con la facturación automática",
     "contenido": "Un cliente con tienda online debía emitir manualmente cada factura desde su sistema tributario.\n\nCreamos una integración entre el e-commerce y su sistema de facturación para que, al recibir un pedido pagado, se generara automáticamente la factura y se enviara al cliente.\n\nEsto eliminó errores, ahorró horas al equipo y aceleró la entrega al cliente final."
@@ -195,7 +195,7 @@
     "IA que automatiza procesos simples como agendar reuniones o enviar recordatorios.",
     "Agente integrado a tu CRM para consultar datos de clientes."
   ],
-  "imagen": "/assets/servicios/agentes.png",
+  "imagen": "/assets/servicios/agentes.webp",
   "caso": {
     "titulo": "Cómo un chatbot con IA redujo el 60% de las consultas repetidas",
     "contenido": "Un cliente con alto volumen de preguntas repetitivas en su ecommerce necesitaba liberar al equipo de soporte.\n\nCreamos un agente personalizado entrenado con sus preguntas frecuentes y políticas internas. Lo conectamos a su sitio web y WhatsApp.\n\nEn un mes, redujo en un 60% los tickets entrantes, permitiendo al equipo enfocarse en casos más complejos y en mejorar la experiencia de cliente."
@@ -219,7 +219,7 @@
     "Tablero de operaciones logísticas con alarmas visuales.",
     "Reportes automáticos mensuales para tus inversionistas."
   ],
-  "imagen": "/assets/servicios/dashboards.png",
+  "imagen": "/assets/servicios/dashboards.webp",
   "caso": {
     "titulo": "Cómo ayudamos a una empresa a visualizar sus métricas en tiempo real",
     "contenido": "Una pyme comercializadora registraba sus ventas en planillas sueltas sin consolidación.\n\nCreamos un dashboard conectado a Google Sheets que cruza ventas, costos, márgenes y proyecciones. Hoy pueden ver en segundos cómo van sus resultados diarios y tomar decisiones basadas en datos.\n\nEl equipo ahora trabaja alineado y con foco en resultados."
@@ -244,7 +244,7 @@
     "Bot que guía al usuario paso a paso para agendar una cita.",
     "Integración con herramientas externas para consultar datos o enviar correos."
   ],
-  "imagen": "/assets/servicios/chatbots.png",
+  "imagen": "/assets/servicios/chatbots.webp",
   "caso": {
     "titulo": "Cómo un chatbot ayudó a triplicar los contactos desde la web",
     "contenido": "Una tienda de productos naturales no daba abasto con las consultas en redes sociales y sitio web.\n\nCreamos un chatbot que atiende automáticamente, responde preguntas frecuentes y toma datos de contacto de interesados.\n\nEl resultado fue un aumento del 300% en solicitudes, mayor satisfacción de clientes y menos carga para el equipo humano."

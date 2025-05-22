@@ -4,30 +4,48 @@ import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import Logo from '../../assets/Logo.svg?react';
 
-
-
-
-
 const Navbar = ({ activeSection, toggleLanguage, lang }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = (item) => {
-    if (item === "hero") {
-      if (window.location.pathname === `/${lang}`) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        navigate(`/${lang}`, { state: { skipAnimation: true } });
-      }
-      return;
-    }
 
+const handleClick = (item) => {
+  const goToSection = () => {
     const section = document.getElementById(item);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const isInHome = window.location.pathname === `/${lang}` || window.location.pathname === "/";
+
+  if (item === "hero") {
+    if (isInHome) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate(`/${lang}`, { state: { skipAnimation: true } });
+    }
+    return;
+  }
+
+  if (isInHome) {
+    goToSection();
+  } else {
+    navigate(`/${lang}`, { state: { skipAnimation: true } });
+
+    setTimeout(() => {
+      goToSection();
+    }, 300); // puedes ajustar este tiempo si ves que no alcanza a cargar
+  }
+};
+
+
+
+
+  // NUEVO: detectar si estás en la página de inicio o servicios
+  const isServiciosPage = window.location.pathname.includes("/servicios");
+  const isHomePage = window.location.pathname === `/${lang}` || window.location.pathname === "/";
 
   return (
     <nav className="flex justify-between items-center px-6 py-5 border-b border-[#1de9b6] bg-[#02070f]/90 backdrop-blur-sm z-10 relative">
@@ -35,7 +53,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
       <div
         className="flex items-center gap-3 cursor-pointer"
         onClick={() => {
-          if (window.location.pathname === `/${lang}`) {
+          if (isHomePage) {
             window.scrollTo({ top: 0, behavior: "smooth" });
           } else {
             navigate(`/${lang}`, { state: { skipAnimation: true } });
@@ -43,17 +61,16 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
         }}
       >
         <Logo className="h-10 w-10 min-w-[40px] min-h-[40px]" />
-
-  
         <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
       </div>
 
       {/* Navegación desktop */}
       <ul className="hidden lg:flex gap-10 text-base">
         {["hero", "servicios", "nosotros", "contacto"].map((item, idx) => {
-          const isServiciosPage = window.location.pathname.includes("/servicios");
           const isActive =
-            item === "servicios"
+            item === "hero"
+              ? isHomePage || activeSection === "hero"
+              : item === "servicios"
               ? isServiciosPage || activeSection === "servicios"
               : activeSection === item;
 

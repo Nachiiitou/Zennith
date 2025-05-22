@@ -47,11 +47,11 @@ const Contacto = ({ formRef, handleSubmit, status }) => {
         ></textarea>
 
         <button
-          type="submit"
-          className="bg-[#1de9b6] text-black px-10 py-3 rounded-full font-semibold hover:scale-105 transition-transform"
-        >
-          {t("botonEnviar")}
-        </button>
+  type="submit"
+  className="bg-[#1de9b6] text-black px-10 py-3 rounded-full font-semibold hover:scale-105 transition-transform cursor-pointer"
+>
+  {t("botonEnviar")}
+</button>
 
         {/* Mensaje de estado de envío */}
         {status === "success" && (
