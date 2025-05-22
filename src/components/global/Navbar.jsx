@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
+import { ReactComponent as Logo } from "../assets/Logo.svg"; // ajusta ruta según tu estructura
+
+
 
 const Navbar = ({ activeSection, toggleLanguage, lang }) => {
   const { t } = useTranslation();
@@ -37,15 +40,9 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
           }
         }}
       >
-        <img
-  src="/Logo.svg"
-  alt="Zennith Logo"
-  className="h-10 w-10 min-w-[40px] min-h-[40px]"
-  width="40"
-  height="40"
-  decoding="async"
-  loading="lazy"
-/>
+        <Logo className="h-10 w-10 min-w-[40px] min-h-[40px]" />
+
+  
         <h1 className="text-3xl font-bold text-[#1de9b6] tracking-wide">ZENNITH</h1>
       </div>
 
