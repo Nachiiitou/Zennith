@@ -25,17 +25,17 @@ const Hero = ({ onClickContacto }) => {
           <span className="text-[#1de9b6]">{ultimaPalabra}</span>
         </h2>
 
-        <p className="text-gray-300 text-lg mb-10 leading-relaxed">
+        <p className="text-gray-100 text-lg mb-10 leading-relaxed">
           {t("subtituloHero")}
         </p>
 
         <motion.button
-  whileHover={{ scale: 1.08, boxShadow: "0px 0px 15px #1de9b6" }}
-  className="bg-[#1de9b6] text-[#0a0a0a] px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300 cursor-pointer"
-  onClick={onClickContacto}
->
-  {t("botonHero")}
-</motion.button>
+          whileHover={{ scale: 1.08, boxShadow: "0px 0px 15px #1de9b6" }}
+          className="bg-[#1de9b6] text-black px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300 cursor-pointer"
+          onClick={onClickContacto}
+        >
+          {t("botonHero")}
+        </motion.button>
       </motion.div>
 
       <motion.div
