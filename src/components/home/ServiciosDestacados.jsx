@@ -34,7 +34,7 @@ const ServiciosDestacados = ({ activo, setActivo }) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-10 text-[#1de9b6]"
+        className="text-4xl font-bold text-center mb-10 text-[#00e6b8]"
       >
         {t("tituloServicios")}
       </motion.h3>
@@ -50,7 +50,7 @@ const ServiciosDestacados = ({ activo, setActivo }) => {
             className="bg-[#101b26] rounded-xl p-6 shadow-md shadow-[#1de9b633] cursor-pointer"
             onClick={() => setActivo(activo === i ? null : i)}
           >
-            <h4 className="text-xl font-semibold mb-2 text-[#00ffc3]">
+            <h4 className="text-xl font-semibold mb-2 text-[#00e6b8]">
               {servicio.titulo}
             </h4>
             <p className="text-white">{servicio.desc}</p>
