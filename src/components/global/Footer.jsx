@@ -42,7 +42,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <p className="text-sm text-right text-gray-500">{t("footer")}</p>
+        <p className="text-sm text-right text-gray-200">{t("footer")}</p>
       </div>
 
       {/* Mobile */}

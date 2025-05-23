@@ -454,6 +454,7 @@
     "boton": "Ir a WhatsApp"
   }
 },
+
 "sobreNosotros": {
   "meta": {
     "title": "Sobre Nosotros - Zennith",
@@ -461,10 +462,14 @@
   },
   "titulo": "Sobre Nosotros",
   "descripcion": "Zennith no es una agencia cualquiera. Aquí el código es artesanal, pensado, optimizado y diseñado para ti. No usamos plantillas, ni WordPress, ni soluciones prefabricadas. Todo lo que ves fue hecho a mano.",
+
+  "frase": "El futuro no se construye con plantillas. Se codifica a mano, línea por línea.",
+
   "filosofia": {
     "titulo": "Nuestra filosofía",
     "descripcion": "Construimos sitios únicos, con identidad. No creemos en copiar y pegar soluciones. Para nosotros, cada línea de código representa dedicación y profesionalismo. Somos una empresa joven, sí, pero eso significa que estamos más comprometidos que nunca con hacer un trabajo impecable y ganar tu confianza con resultados."
   },
+
   "stack": {
     "titulo": "Nuestro stack tecnológico",
     "lista": [
@@ -475,6 +480,7 @@
       "Sin dependencias innecesarias"
     ]
   },
+
   "artesanal": {
     "titulo": "¿Por qué código artesanal?",
     "descripcion": "Creemos en soluciones únicas. Cada sitio es una expresión del cliente y su propósito, por eso evitamos los atajos genéricos.",
@@ -483,8 +489,22 @@
       "Diseño 100% adaptado a tu marca.",
       "Escalabilidad real para el futuro."
     ],
-    "imagen": "/assets/servicios/codigo-ejemplo.webp"
+    "imagen": "/assets/servicios/codigo-ejemplo.webp",
+    "subtexto": "Web hecha a mano con React + Tailwind. Sin WordPress. Sin plantillas."
   },
+
+  "lighthouse": {
+    "titulo": "+95 en Lighthouse garantizado",
+    "descripcion": "Nuestros sitios alcanzan entre 95 y 100 puntos en rendimiento, accesibilidad, SEO y buenas prácticas.",
+    "nota": "* Aplica en proyectos estándar sin integraciones externas que comprometan el puntaje.",
+    "boton": "¿Qué es Lighthouse?",
+    "imagen": "/assets/servicios/lighthouse-example.png",
+    "modal": {
+      "titulo": "¿Qué es Google Lighthouse?",
+      "descripcion": "Lighthouse es una herramienta de Google que analiza tu sitio web y lo califica en 4 áreas clave: rendimiento, accesibilidad, SEO y buenas prácticas. En Zennith, optimizamos todo para sobresalir en cada una."
+    }
+  },
+
   "metodo": {
     "titulo": "Cómo trabajamos",
     "pasos": [
@@ -493,8 +513,10 @@
       "Codificamos todo a mano, sin plantillas.",
       "Te involucramos durante todo el proceso.",
       "Entregamos algo sólido, rápido y escalable."
-    ]
+    ],
+    "imagen": "/assets/servicios/metodo.webp"
   },
+
   "queNo": {
     "titulo": "Lo que evitamos",
     "lista": [
@@ -504,20 +526,13 @@
       "No dependemos de plantillas prefabricadas ni page builders."
     ]
   },
+
   "proyectos": {
     "titulo": "Muy pronto...",
     "descripcion": "Estamos trabajando en un portafolio donde podrás ver cada proyecto que hemos desarrollado.",
     "boton": "Contáctanos"
   },
+
   "lang": "es"
 }
-
-
-
-
-
-
-
-  
-
 }
