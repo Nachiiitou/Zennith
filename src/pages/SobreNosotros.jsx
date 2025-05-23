@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import { Dialog } from "@headlessui/react";
+import LighthouseCard from "../components/LighthouseCard";
+import Contacto from "../components/global/Contacto";
 
 export default function SobreNosotros() {
   const { t } = useTranslation();
@@ -13,8 +15,23 @@ export default function SobreNosotros() {
 
   const imagenArtesanal = t("sobreNosotros.artesanal.imagen");
   const imagenMetodo = t("sobreNosotros.metodo.imagen");
-  const imagenLighthouse = t("sobreNosotros.lighthouse.imagen");
   const fraseInspiradora = t("sobreNosotros.frase");
+  const [openContacto, setOpenContacto] = useState(false);
+const formRef = useRef();
+const [status, setStatus] = useState(null);
+
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus(null);
+  try {
+    // Tu lógica de envío aquí
+    setStatus("success");
+  } catch (error) {
+    setStatus("error");
+  }
+};
 
   return (
     <section className="px-6 lg:px-24 py-16 bg-[#02070f] text-white">
@@ -41,59 +58,54 @@ export default function SobreNosotros() {
         {t("sobreNosotros.descripcion")}
       </motion.p>
 
-      {/* Filosofía */}
-      <div className="max-w-5xl mx-auto rounded-xl p-8 mb-20 shadow-lg border border-[#1de9b6]/10 bg-gradient-to-br from-[#0e1a26] to-[#0a131c]">
-        <motion.h3
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+      {/* +95 en Lighthouse garantizado */}
+      <LighthouseCard onOpenModal={() => setOpenLighthouse(true)} />
+
+      {/* Método Zennith + Cómo trabajamos */}
+      <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl lg:text-3xl font-semibold text-[#1de9b6] mb-4"
+          className="rounded-xl p-6 border border-white/5"
         >
-          {t("sobreNosotros.filosofia.titulo")}
-        </motion.h3>
-        <p className="text-gray-300 leading-relaxed whitespace-pre-line">
-          {t("sobreNosotros.filosofia.descripcion")}
-        </p>
+          <h3 className="text-2xl lg:text-3xl font-semibold text-[#1de9b6] mb-4">
+            {t("sobreNosotros.metodo.titulo")}
+          </h3>
+          <ol className="list-decimal list-inside text-gray-300 space-y-2">
+            {t("sobreNosotros.metodo.pasos", { returnObjects: true }).map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ol>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="hidden md:block"
+        >
+          {imagenMetodo && (
+            <img
+              src={imagenMetodo}
+              alt="Método Zennith"
+              className="rounded-xl shadow-lg border border-[#1de9b6]/20 max-w-full h-auto"
+              onError={() => console.warn("No se pudo cargar imagen:", imagenMetodo)}
+            />
+          )}
+        </motion.div>
       </div>
 
-      {/* Stack tecnológico */}
-      <div className="max-w-5xl mx-auto rounded-xl p-8 mb-20 shadow-lg border border-[#1de9b6]/10 bg-gradient-to-br from-[#0e1a26] to-[#0a131c]">
-        <motion.h3
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-2xl lg:text-3xl font-semibold text-[#1de9b6] mb-4"
-        >
-          {t("sobreNosotros.stack.titulo")}
-        </motion.h3>
-        <ul className="list-disc list-inside text-gray-300 space-y-2">
-          {t("sobreNosotros.stack.lista", { returnObjects: true }).map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Frase inspiracional */}
-      <motion.blockquote
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center max-w-3xl mx-auto text-xl italic text-[#1de9b6] my-20"
-      >
-        {fraseInspiradora}
-      </motion.blockquote>
-
-      {/* Código artesanal + imagen */}
+      {/* ¿Por qué código artesanal? + Imagen */}
       <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-20">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="space-y-6"
+          className="space-y-6 rounded-xl p-6 border border-white/5"
         >
           <h3 className="text-2xl lg:text-3xl font-semibold text-[#1de9b6]">
             {t("sobreNosotros.artesanal.titulo")}
@@ -146,96 +158,6 @@ export default function SobreNosotros() {
           </Dialog.Panel>
         </div>
       </Dialog>
-      {/* Rendimiento garantizado */}
-      <div className="max-w-5xl mx-auto rounded-xl p-8 mb-20 shadow-lg border border-[#1de9b6]/10 bg-gradient-to-br from-[#0e1a26] to-[#0a131c] text-center">
-        <motion.h3
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-2xl lg:text-3xl font-semibold text-[#1de9b6] mb-4"
-        >
-          {t("sobreNosotros.lighthouse.titulo")}
-        </motion.h3>
-        <p className="text-gray-300 mb-6">
-          {t("sobreNosotros.lighthouse.descripcion")}
-          <br />
-          <span className="text-sm text-gray-400">
-            {t("sobreNosotros.lighthouse.nota")}
-          </span>
-        </p>
-        <div className="flex justify-center mb-4">
-          <img
-            src={imagenLighthouse}
-            alt="Ejemplo Lighthouse Zennith"
-            className="rounded-lg border border-[#1de9b6]/20 shadow-md max-w-md"
-          />
-        </div>
-        <button
-          onClick={() => setOpenLighthouse(true)}
-          className="mt-2 text-sm underline text-[#1de9b6] hover:text-[#13c8a2] transition"
-        >
-          {t("sobreNosotros.lighthouse.boton")}
-        </button>
-      </div>
-
-      {/* Modal Lighthouse */}
-      <Dialog open={openLighthouse} onClose={() => setOpenLighthouse(false)} className="z-50 relative">
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50">
-          <Dialog.Panel className="relative max-w-lg w-full bg-[#0e1a26] text-white p-6 rounded-xl shadow-xl border border-[#1de9b6]/20">
-            <button
-              onClick={() => setOpenLighthouse(false)}
-              className="absolute top-3 right-4 text-white text-2xl hover:text-[#1de9b6]"
-            >
-              ×
-            </button>
-            <h4 className="text-xl font-semibold text-[#1de9b6] mb-3">
-              {t("sobreNosotros.lighthouse.modal.titulo")}
-            </h4>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              {t("sobreNosotros.lighthouse.modal.descripcion")}
-            </p>
-          </Dialog.Panel>
-        </div>
-      </Dialog>
-
-      {/* Cómo trabajamos */}
-      <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-[#0e1a26] to-[#0a131c] p-8 rounded-xl shadow-lg border border-[#1de9b6]/10"
-        >
-          <h3 className="text-2xl lg:text-3xl font-semibold text-[#1de9b6] mb-4">
-            {t("sobreNosotros.metodo.titulo")}
-          </h3>
-          <ol className="list-decimal list-inside text-gray-300 space-y-2">
-            {t("sobreNosotros.metodo.pasos", { returnObjects: true }).map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ol>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="hidden md:block"
-        >
-          {imagenMetodo && (
-  <img
-    src={imagenMetodo}
-    alt="Método Zennith"
-    className="rounded-xl shadow-lg border border-[#1de9b6]/20 max-w-full h-auto"
-    onError={() => console.warn("No se pudo cargar imagen:", imagenMetodo)}
-  />
-)}
-
-        </motion.div>
-      </div>
 
       {/* Lo que evitamos */}
       <div className="max-w-5xl mx-auto rounded-xl p-8 mb-20 shadow-lg border border-[#1de9b6]/10 bg-gradient-to-br from-[#0e1a26] to-[#0a131c]">
@@ -255,6 +177,51 @@ export default function SobreNosotros() {
         </ul>
       </div>
 
+      {/* Stack tecnológico */}
+      <div className="max-w-5xl mx-auto rounded-xl p-8 mb-20 shadow-lg border border-[#1de9b6]/10 bg-gradient-to-br from-[#0e1a26] to-[#0a131c]">
+        <motion.h3
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-2xl lg:text-3xl font-semibold text-[#1de9b6] mb-4"
+        >
+          {t("sobreNosotros.stack.titulo")}
+        </motion.h3>
+        <ul className="list-disc list-inside text-gray-300 space-y-2">
+          {t("sobreNosotros.stack.lista", { returnObjects: true }).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Filosofía */}
+      <div className="max-w-5xl mx-auto rounded-xl p-8 mb-20 shadow-lg border border-[#1de9b6]/10 bg-gradient-to-br from-[#0e1a26] to-[#0a131c]">
+        <motion.h3
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-2xl lg:text-3xl font-semibold text-[#1de9b6] mb-4"
+        >
+          {t("sobreNosotros.filosofia.titulo")}
+        </motion.h3>
+        <p className="text-gray-300 leading-relaxed whitespace-pre-line">
+          {t("sobreNosotros.filosofia.descripcion")}
+        </p>
+      </div>
+
+      {/* Frase inspiracional */}
+      <motion.blockquote
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto text-xl italic text-[#1de9b6] my-20"
+      >
+        {fraseInspiradora}
+      </motion.blockquote>
+
       {/* CTA Final */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -266,15 +233,35 @@ export default function SobreNosotros() {
         <h4 className="text-2xl font-semibold text-white mb-2">
           {t("sobreNosotros.proyectos.titulo")}
         </h4>
-        <p className="text-gray-400 mb-4">
+        <p className="text-gray-400 mb-4 ">
           {t("sobreNosotros.proyectos.descripcion")}
         </p>
-        <Link
-          to={`/${lang}/contacto`}
-          className="inline-block bg-[#1de9b6] text-black px-8 py-3 rounded-full font-semibold text-lg hover:bg-[#13c8a2] transition"
-        >
-          {t("sobreNosotros.proyectos.boton")}
-        </Link>
+        <button
+  onClick={() => setOpenContacto(true)}
+  className="inline-block bg-[#1de9b6] text-black px-8 py-3 rounded-full font-semibold text-lg hover:bg-[#13c8a2] transition cursor-pointer"
+>
+  {t("sobreNosotros.proyectos.boton")}
+</button>
+
+<Dialog open={openContacto} onClose={() => setOpenContacto(false)} className="z-50 relative">
+  <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50 overflow-auto">
+    <Dialog.Panel className="relative max-w-2xl w-full bg-[#0e1a26] text-white p-6 rounded-xl shadow-xl border border-[#1de9b6]/20">
+      <button
+        onClick={() => setOpenContacto(false)}
+        className="absolute top-3 right-4 text-white text-2xl hover:text-[#1de9b6] cursor-pointer"
+        aria-label="Cerrar contacto"
+      >
+        ×
+      </button>
+      <Contacto
+        formRef={formRef}
+        handleSubmit={handleSubmit}
+        status={status}
+      />
+    </Dialog.Panel>
+  </div>
+</Dialog>
+
       </motion.div>
     </section>
   );

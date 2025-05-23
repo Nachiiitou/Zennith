@@ -330,20 +330,24 @@
   "footer": "© 2025 Zennith SpA. Todos los derechos reservados.",
   "_comentario_nosotros": "Sección Nosotros",
   "tituloNosotros": "Sobre Nosotros",
+  
   "nosotros1_parte1": "En ",
   "nosotros1_zennith": "Zennith",
   "nosotros1_parte2": " combinamos innovación y experiencia para llevar tu negocio al siguiente nivel. Somos una empresa enfocada en desarrollo web, automatización de procesos y soluciones digitales.",
   "nosotros2_texto": "Nos apasiona la tecnología y nos comprometemos a transformar tus ideas en productos funcionales, rápidos y modernos, trabajando a tu lado con enfoque y dedicación.",
+  "cta_nosotros": "Conoce más sobre nuestro trabajo",
   "verMas": "Ver más",
   "packs": {
   "packDesarrollador": {
     "nombre":"Pack Presencia Digital",
+    "precioResumen": "Desde $270.000 hasta $620.000 CLP",
     "descripcion": "Una solución escalable que se adapta a tu etapa de crecimiento digital. Elige entre 3 niveles diseñados para acompañarte desde tu primera página web hasta una presencia online profesional y completa. Desde $270.000 hasta $620.000 CLP según el nivel que elijas",
     "niveles": {
       "basico": {
         "nombre": "Nivel Básico – Tu Primera Presencia Online",
         "descripcion": "Ideal para quienes dan sus primeros pasos en el mundo digital.",
         "precio": "$270.000 CLP",
+         "boton": "Ver más detalles",
         "detalles": [
           "Sitio web de una sola página (Diseño 100% personalizado, hecho en React + Tailwind. No en Wordpress)",
           "Diseño responsive (compatible con dispositivos móviles y de escritorio)",
@@ -389,6 +393,9 @@
   
   "packEcommerce": {
   "nombre": "Tu tienda online",
+  "descripcion": "Ideal para emprendedores y negocios que quieren comenzar a vender online con una tienda moderna, rápida y fácil de administrar. Incluye todo lo necesario para lanzar tu ecommerce sin complicaciones y con opción de escalar según tu crecimiento.",
+
+  "precioResumen": "Desde $690.000 CLP a $950.000 CLP",
   "boton": "Ver más detalles",
   "niveles": {
     "inicio": {
@@ -438,7 +445,9 @@
   "pack3": {
     "nombre": "Pack Full",
     "descripcion": "Solución integral: web + automatización + CRM + soporte mensual.",
-    "precio": "$750.000 CLP"
+    "precio": "$750.000 CLP",
+    "precioResumen": "Desde $690.000 CLP a $950.000 CLP",
+     "boton": "Ver más detalles"
   }
 },
 "contactoFormulario": {
@@ -494,15 +503,24 @@
   },
 
   "lighthouse": {
-    "titulo": "+95 en Lighthouse garantizado",
-    "descripcion": "Nuestros sitios alcanzan entre 95 y 100 puntos en rendimiento, accesibilidad, SEO y buenas prácticas.",
-    "nota": "* Aplica en proyectos estándar sin integraciones externas que comprometan el puntaje.",
-    "boton": "¿Qué es Lighthouse?",
-    "imagen": "/assets/servicios/lighthouse-example.png",
-    "modal": {
-      "titulo": "¿Qué es Google Lighthouse?",
-      "descripcion": "Lighthouse es una herramienta de Google que analiza tu sitio web y lo califica en 4 áreas clave: rendimiento, accesibilidad, SEO y buenas prácticas. En Zennith, optimizamos todo para sobresalir en cada una."
-    }
+  "titulo": "+95 en Lighthouse garantizado",
+  "descripcion": "Nuestros sitios alcanzan entre 95 y 100 puntos en rendimiento, accesibilidad, SEO y buenas prácticas.",
+  "nota": "* Aplica en proyectos estándar sin integraciones externas que comprometan el puntaje.",
+  "boton": "¿Qué es Lighthouse?",
+  "imagen": "/assets/servicios/lighthouse-example.png",
+  "stats": [
+    { "label": "Rendimiento", "valor": 100 },
+    { "label": "Accesibilidad", "valor": 100 },
+    { "label": "Recomendaciones", "valor": 100 },
+    { "label": "SEO", "valor": 100 }
+  ],
+  "modal": {
+    "titulo": "¿Qué es Google Lighthouse?",
+    "descripcion": "Lighthouse es una herramienta de Google que analiza tu sitio web y lo califica en 4 áreas clave: rendimiento, accesibilidad, SEO y buenas prácticas. En Zennith, optimizamos todo para sobresalir en cada una.",
+    "leyenda": "Zennith.cl obtuvo 100/100 en todas las métricas",
+    "leyenda2": "Ejemplo real de sitio WordPress (anónimo)"
+  }
+
   },
 
   "metodo": {
@@ -533,6 +551,25 @@
     "boton": "Contáctanos"
   },
 
+  
+
   "lang": "es"
+},
+"contacto": {
+  "titulo": "Contáctanos",
+  "descripcion": "¿Tienes un proyecto o dudas? Escríbenos.",
+  "nombre": "Tu nombre",
+  "email": "Tu correo",
+  "mensaje": "Tu mensaje",
+  "enviar": "Enviar mensaje",
+  "whatsapp": "WhatsApp",
+  "correo": "contacto@zennith.cl",
+  "instagram": "https://instagram.com/zennith_cl",
+  "linkedin": "https://linkedin.com/company/zennith-chile",
+    "exito": "Mensaje enviado con éxito"
+
 }
+
+
+
 }

@@ -332,7 +332,9 @@
 "packs": {
   "packDesarrollador": {
     "nombre": "Digital Presence Pack",
+    "precioResumen": "Desde $270.000 hasta $620.000 CLP",
     "descripcion": "A scalable solution that adapts to your stage of digital growth. Choose from 3 levels designed to support you from your first website to a fully professional online presence. Ranges from $270,000 to $620,000 CLP depending on the level you choose.",
+    "boton":"View more details",
     "niveles": {
       "basico": {
         "nombre": "Basic Level – Your First Online Presence",
@@ -377,12 +379,13 @@
           "Custom animations"
         ]
       }
-    },
-    "boton": "View more details"
+    }
   },
 
   "packEcommerce": {
     "nombre": "Your Online Store",
+    "precioResumen": "Desde $690.000 CLP a $950.000 CLP",
+    "descripcion": "Perfect for entrepreneurs and businesses looking to start selling online with a modern, fast, and easy-to-manage store. Includes everything you need to launch your ecommerce smoothly and scale as your business grows.",
     "boton": "View more details",
     "niveles": {
       "inicio": {
@@ -428,7 +431,9 @@
   "pack3": {
     "nombre": "Full Pack",
     "descripcion": "Complete solution: website + automation + CRM + monthly support.",
-    "precio": "$750,000 CLP"
+    "precio": "$750,000 CLP",
+    "precioResumen": "Desde $690.000 CLP a $950.000 CLP",
+    "boton": "View more details"
   }
 },
 
@@ -444,6 +449,109 @@
     "texto": "Would you rather chat via WhatsApp?",
     "boton": "Go to WhatsApp"
   }
+},
+"sobreNosotros": {
+  "meta": {
+    "title": "About Us - Zennith",
+    "description": "Discover the philosophy, tech stack, and work approach behind Zennith. 100% handcrafted code. No WordPress. No templates. Fully custom."
+  },
+  "titulo": "About Us",
+  "descripcion": "Zennith isn’t just another agency. Here, the code is handcrafted, thoughtful, optimized, and designed specifically for you. We don’t use templates, WordPress, or prebuilt solutions. Everything you see was built from scratch.",
+
+  "frase": "The future isn’t built with templates. It’s hand-coded, line by line.",
+
+  "filosofia": {
+    "titulo": "Our Philosophy",
+    "descripcion": "We build unique websites with real identity. We don’t believe in copy-pasting solutions. For us, every line of code reflects dedication and professionalism. We're a young company, yes — and that means we're more committed than ever to doing excellent work and earning your trust through results."
+  },
+
+  "stack": {
+    "titulo": "Our Tech Stack",
+    "lista": [
+      "React + Vite for a modern, fast experience",
+      "TailwindCSS for clean and efficient styling",
+      "100% custom JavaScript, HTML, and CSS",
+      "Optimized deployments on Vercel or your preferred service",
+      "No unnecessary dependencies"
+    ]
+  },
+
+  "artesanal": {
+    "titulo": "Why Handcrafted Code?",
+    "descripcion": "We believe in unique solutions. Every website is an expression of the client and their purpose, which is why we avoid generic shortcuts.",
+    "lista": [
+      "Greater control, performance, and security.",
+      "100% design tailored to your brand.",
+      "Real scalability for the future."
+    ],
+    "imagen": "/assets/servicios/codigo-ejemplo.webp",
+    "subtexto": "Website handcrafted with React + Tailwind. No WordPress. No templates."
+  },
+
+  "lighthouse": {
+    "titulo": "Guaranteed +95 on Lighthouse",
+    "descripcion": "Our websites consistently score between 95 and 100 in performance, accessibility, SEO, and best practices.",
+    "nota": "* Applies to standard projects without third-party integrations that impact performance.",
+    "boton": "What is Lighthouse?",
+    "imagen": "/assets/servicios/lighthouse-example.png",
+    "stats": [
+      { "label": "Performance", "valor": 100 },
+      { "label": "Accessibility", "valor": 100 },
+      { "label": "Best Practices", "valor": 100 },
+      { "label": "SEO", "valor": 100 }
+    ],
+    "modal": {
+      "titulo": "What is Google Lighthouse?",
+      "descripcion": "Lighthouse is a Google tool that audits your website and scores it across four key areas: performance, accessibility, SEO, and best practices. At Zennith, we optimize every detail to excel in all of them.",
+      "leyenda": "Zennith.cl scored 100/100 in every metric.",
+      "leyenda2": "Real WordPress site example (anonymous)"
+    }
+  },
+
+  "metodo": {
+    "titulo": "How We Work",
+    "pasos": [
+      "We listen to your idea thoroughly and turn it into a clear proposal.",
+      "We design everything from scratch, based on your goals and style.",
+      "We hand-code everything — no templates.",
+      "You're involved throughout the whole process.",
+      "We deliver something solid, fast, and scalable."
+    ],
+    "imagen": "/assets/servicios/metodo.webp"
+  },
+
+  "queNo": {
+    "titulo": "What We Avoid",
+    "lista": [
+      "No WordPress, Wix, or drag-and-drop platforms.",
+      "No cloning third-party websites.",
+      "No generic solutions everyone else uses.",
+      "No reliance on prebuilt templates or page builders."
+    ]
+  },
+
+  "proyectos": {
+    "titulo": "Coming soon...",
+    "descripcion": "We're working on a portfolio where you’ll be able to explore all the projects we’ve developed.",
+    "boton": "Contact Us"
+  },
+
+  "lang": "en"
+},
+
+"contacto": {
+  "titulo": "Contact Us",
+  "descripcion": "Got a project or questions? Send us a message.",
+  "nombre": "Your name",
+  "email": "Your email",
+  "mensaje": "Your message",
+  "enviar": "Send message",
+  "whatsapp": "WhatsApp",
+  "correo": "contacto@zennith.cl",
+  "instagram": "https://instagram.com/zennith_cl",
+  "linkedin": "https://linkedin.com/company/zennith-chile",
+  "exito": "Message sent successfully"
 }
+
 
 }

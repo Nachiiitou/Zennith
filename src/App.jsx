@@ -19,9 +19,11 @@ import SplashScreen from "./components/home/SplashScreen";
 import Navbar from "./components/global/Navbar";
 import Footer from "./components/global/Footer";
 import WhatsAppButton from "./components/global/WhatsAppButton";
-import SobreNosotros from "./pages/SobreNosotros";
 
 // Páginas
+import SobreNosotros from "./pages/SobreNosotros";
+import Contacto from "./pages/Contacto"; // ✅ NUEVA página de contacto
+
 const Home = lazy(() => import("./pages/Home"));
 const Servicios = lazy(() => import("./pages/Servicios"));
 const Automatizacion = lazy(() => import("./pages/servicios/Automatizacion"));
@@ -108,7 +110,6 @@ function AppWrapper() {
 
       {!loading && (
         <Suspense fallback={<div className="h-screen bg-black" />} >
-
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Navigate to={`/${initialLang}`} replace />} />
             <Route path="/:lang" element={<LayoutWrapper />}>
@@ -124,6 +125,7 @@ function AppWrapper() {
               <Route path="servicios/business-intelligence" element={<BusinessIntelligence />} />
               <Route path="servicios/chatbots" element={<Chatbots />} />
               <Route path="nosotros" element={<SobreNosotros />} />
+              <Route path="contacto" element={<Contacto />} /> {/* ✅ RUTA NUEVA */}
             </Route>
           </Routes>
         </Suspense>

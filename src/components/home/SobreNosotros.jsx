@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const SobreNosotros = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || "es";
 
   return (
     <section
@@ -27,6 +30,17 @@ const SobreNosotros = () => {
             {t("nosotros1_parte2")}
           </p>
           <p>{t("nosotros2_texto")}</p>
+
+          {/* Botón elegante, centrado y con aire visual */}
+          <div className="pt-6 flex justify-center">
+            <Link
+              to={`/${lang}/nosotros`}
+              className="inline-flex items-center gap-2 text-[#1de9b6] hover:underline hover:gap-3 transition-all duration-200 text-lg"
+            >
+              {t("cta_nosotros")}
+              <ArrowRight size={18} strokeWidth={2} />
+            </Link>
+          </div>
         </div>
       </motion.div>
     </section>

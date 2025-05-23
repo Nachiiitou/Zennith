@@ -14,7 +14,7 @@ function Contacto() {
         <form
           action="https://formspree.io/f/mblozapl"
           method="POST"
-          className="space-y-4"
+          className="space-y-4 w-full"
         >
           <input
             type="text"
@@ -35,6 +35,7 @@ function Contacto() {
             placeholder={t("contactoFormulario.form.mensaje")}
             rows="4"
             className="w-full p-3 rounded bg-[#111827] border border-gray-700 text-white"
+            required
           ></textarea>
           <button
             type="submit"
