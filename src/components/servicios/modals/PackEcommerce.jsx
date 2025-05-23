@@ -3,11 +3,13 @@ import { CheckCircle, BarChart2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import TablaComparativa from "./TablaComparativa";
 import BaseModal from "./BaseModal";
+import Contacto from "../../global/Contacto"; // ✅ Importación corregida
 
 export default function PackEcommerce({ data }) {
   const nivelesKeys = ["inicio", "premium"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showComparison, setShowComparison] = useState(false);
+  const [showContact, setShowContact] = useState(false); // ✅ Modal contacto
 
   const nivel = data.niveles[nivelesKeys[currentIndex]];
 
@@ -19,7 +21,7 @@ export default function PackEcommerce({ data }) {
           <button
             key={key}
             onClick={() => setCurrentIndex(index)}
-            className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+            className={`cursor-pointer px-5 py-2 rounded-full text-sm font-semibold transition-all ${
               index === currentIndex
                 ? "bg-gradient-to-r from-[#1de9b6] to-[#13c8a2] text-black shadow"
                 : "border border-[#1de9b6] text-white hover:bg-[#1de9b610]"
@@ -34,7 +36,7 @@ export default function PackEcommerce({ data }) {
       <div className="hidden md:flex justify-center w-full mt-1">
         <button
           onClick={() => setShowComparison(true)}
-          className="flex items-center gap-2 text-sm text-[#1de9b6] hover:text-[#13c8a2] transition"
+          className="cursor-pointer flex items-center gap-2 text-sm text-[#1de9b6] hover:text-[#13c8a2] transition"
         >
           <BarChart2 size={16} />
           Ver tabla comparativa
@@ -72,29 +74,38 @@ export default function PackEcommerce({ data }) {
               ))}
             </div>
 
-            {/* Precio y CTA */}
+            {/* Precio y CTAs */}
             <div className="flex justify-between items-center flex-wrap gap-4 mt-6">
               <div className="bg-[#1de9b6] text-black font-bold px-6 py-2 rounded-full text-lg shadow-md">
                 {nivel.precio}
               </div>
-              <button className="bg-[#1de9b6] hover:bg-[#13c8a2] text-black font-semibold py-2 px-6 rounded-full shadow-md transition">
-                {data.boton}
+
+              <button
+                onClick={() => setShowContact(true)}
+                className="cursor-pointer border border-[#1de9b6] text-[#1de9b6] font-semibold py-2 px-6 rounded-full shadow-md hover:bg-[#1de9b6]/10 transition"
+              >
+                Me interesa este pack
               </button>
             </div>
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Modal comparativa */}
+      {/* Modal: Tabla comparativa */}
       <BaseModal isOpen={showComparison} onClose={() => setShowComparison(false)}>
         <TablaComparativa data={data} onClose={() => setShowComparison(false)} />
       </BaseModal>
 
-      {/* Botón flotante en mobile */}
+      {/* Modal: Contacto */}
+      <BaseModal isOpen={showContact} onClose={() => setShowContact(false)}>
+        <Contacto />
+      </BaseModal>
+
+      {/* Botón flotante (mobile) */}
       <div className="md:hidden fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setShowComparison(true)}
-          className="bg-[#1de9b6] text-black p-3 rounded-full shadow-lg hover:bg-[#13c8a2] transition"
+          className="cursor-pointer bg-[#1de9b6] text-black p-3 rounded-full shadow-lg hover:bg-[#13c8a2] transition"
           title="Comparar niveles"
         >
           <BarChart2 size={20} />

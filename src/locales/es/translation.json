@@ -453,6 +453,71 @@
     "texto": "¿Prefieres hablar por WhatsApp?",
     "boton": "Ir a WhatsApp"
   }
+},
+"sobreNosotros": {
+  "meta": {
+    "title": "Sobre Nosotros - Zennith",
+    "description": "Descubre la filosofía, el stack y la forma de trabajo detrás de Zennith. Código 100% artesanal, sin WordPress ni plantillas. Totalmente a medida."
+  },
+  "titulo": "Sobre Nosotros",
+  "descripcion": "Zennith no es una agencia cualquiera. Aquí el código es artesanal, pensado, optimizado y diseñado para ti. No usamos plantillas, ni WordPress, ni soluciones prefabricadas. Todo lo que ves fue hecho a mano.",
+  "filosofia": {
+    "titulo": "Nuestra filosofía",
+    "descripcion": "Construimos sitios únicos, con identidad. No creemos en copiar y pegar soluciones. Para nosotros, cada línea de código representa dedicación y profesionalismo. Somos una empresa joven, sí, pero eso significa que estamos más comprometidos que nunca con hacer un trabajo impecable y ganar tu confianza con resultados."
+  },
+  "stack": {
+    "titulo": "Nuestro stack tecnológico",
+    "lista": [
+      "React + Vite para una experiencia moderna y rápida",
+      "TailwindCSS para estilos limpios y eficientes",
+      "JavaScript, HTML y CSS 100% personalizados",
+      "Deploys optimizados en Vercel o servicios a elección",
+      "Sin dependencias innecesarias"
+    ]
+  },
+  "artesanal": {
+    "titulo": "¿Por qué código artesanal?",
+    "descripcion": "Creemos en soluciones únicas. Cada sitio es una expresión del cliente y su propósito, por eso evitamos los atajos genéricos.",
+    "lista": [
+      "Mayor control, rendimiento y seguridad.",
+      "Diseño 100% adaptado a tu marca.",
+      "Escalabilidad real para el futuro."
+    ],
+    "imagen": "/assets/servicios/codigo-ejemplo.webp"
+  },
+  "metodo": {
+    "titulo": "Cómo trabajamos",
+    "pasos": [
+      "Escuchamos tu idea a fondo y la transformamos en una propuesta clara.",
+      "Diseñamos desde cero basados en tus objetivos y estilo.",
+      "Codificamos todo a mano, sin plantillas.",
+      "Te involucramos durante todo el proceso.",
+      "Entregamos algo sólido, rápido y escalable."
+    ]
+  },
+  "queNo": {
+    "titulo": "Lo que evitamos",
+    "lista": [
+      "No usamos WordPress, Wix ni plataformas arrastrar-soltar.",
+      "No clonamos sitios de terceros.",
+      "No ofrecemos soluciones genéricas que todos tienen.",
+      "No dependemos de plantillas prefabricadas ni page builders."
+    ]
+  },
+  "proyectos": {
+    "titulo": "Muy pronto...",
+    "descripcion": "Estamos trabajando en un portafolio donde podrás ver cada proyecto que hemos desarrollado.",
+    "boton": "Contáctanos"
+  },
+  "lang": "es"
 }
+
+
+
+
+
+
+
+  
 
 }

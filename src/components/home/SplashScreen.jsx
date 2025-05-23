@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const SplashScreen = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#02070f]">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#02070f] w-screen h-screen">
       <motion.img
         src="/Logo.svg"
         alt="Logo de carga Zennith"
@@ -11,7 +11,6 @@ const SplashScreen = () => {
         transition={{ repeat: Infinity, duration: 0.9, repeatType: "reverse" }}
         className="h-60 w-auto"
       />
-      
     </div>
   );
 };

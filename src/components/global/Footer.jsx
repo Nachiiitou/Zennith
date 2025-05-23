@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       {/* Mobile */}
-      <div className="block md:hidden text-center flex flex-col items-center gap-6 text-gray-500">
+      <div className=" md:hidden text-center flex flex-col items-center gap-6 text-gray-500">
         <div className="flex items-center gap-3 justify-center">
           <img src="/Logo.svg" alt="Logo pequeño de Zennith" className="h-10 w-10" />
         </div>

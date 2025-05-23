@@ -36,7 +36,7 @@ function PacksList() {
           <div className="text-center mt-4">
             <button
               onClick={() => setOpenModal("packDev")}
-              className="bg-[#1de9b6] text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#13c8a2] transition"
+              className="bg-[#1de9b6] text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#13c8a2] transition cursor-pointer"
             >
               {packDev.boton}
             </button>
@@ -62,7 +62,7 @@ function PacksList() {
           <div className="text-center mt-4">
             <button
               onClick={() => setOpenModal("packEcommerce")}
-              className="bg-[#1de9b6] text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#13c8a2] transition"
+              className="bg-[#1de9b6] text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#13c8a2] transition cursor-pointer"
             >
               {packEcommerce.boton}
             </button>
@@ -81,7 +81,7 @@ function PacksList() {
             </div>
           </div>
           <div className="text-center mt-4">
-            <button className="bg-[#1de9b6] text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#13c8a2] transition">
+            <button className="bg-[#1de9b6] text-black font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-[#13c8a2] transition cursor-pointer">
               {packDev.boton}
             </button>
           </div>

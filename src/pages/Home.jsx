@@ -26,8 +26,11 @@ function Home({ lang }) {
   const location = useLocation();
   const { t, i18n } = useTranslation();
 
-  const [loading, setLoading] = useState(false); // ← fuerza desactivación del Splash
-
+  const [loading, setLoading] = useState(() => {
+    const wasHereBefore = sessionStorage.getItem("visited");
+    const skipSplash = location.state?.skipAnimation === true;
+    return !wasHereBefore && !skipSplash;
+  });
 
   const [activeSection, setActiveSection] = useState("hero");
   const [status, setStatus] = useState(null);
