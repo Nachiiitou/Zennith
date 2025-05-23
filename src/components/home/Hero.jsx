@@ -31,7 +31,7 @@ const Hero = ({ onClickContacto }) => {
 
         <motion.button
           whileHover={{ scale: 1.08, boxShadow: "0px 0px 15px #1de9b6" }}
-          className="bg-[#1de9b6] text-black px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300 cursor-pointer"
+          className="bg-[#14cba1] text-black px-10 py-3 rounded-full text-lg font-semibold transition-all duration-300 cursor-pointer"
           onClick={onClickContacto}
         >
           {t("botonHero")}
