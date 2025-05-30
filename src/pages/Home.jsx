@@ -8,6 +8,7 @@ import React, {
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../i18n";
@@ -16,7 +17,7 @@ import "../i18n";
 import SplashScreen from "../components/home/SplashScreen";
 import Hero from "../components/home/Hero";
 
-// Componentes diferidos (lazy load)
+// Componentes diferidos
 const ServiciosDestacados = lazy(() => import("../components/home/ServiciosDestacados"));
 const SobreNosotros = lazy(() => import("../components/home/SobreNosotros"));
 const Testimonios = lazy(() => import("../components/home/Testimonios"));
@@ -26,15 +27,13 @@ function Home({ lang }) {
   const location = useLocation();
   const { t, i18n } = useTranslation();
 
-  const [loading, setLoading] = useState(() => {
-    const wasHereBefore = sessionStorage.getItem("visited");
-    const skipSplash = location.state?.skipAnimation === true;
-    return !wasHereBefore && !skipSplash;
+  const [showSplash, setShowSplash] = useState(() => {
+    return sessionStorage.getItem("splashShown") !== "true";
   });
 
-  const [activeSection, setActiveSection] = useState("hero");
   const [status, setStatus] = useState(null);
   const [activo, setActivo] = useState(null);
+  const [activeSection, setActiveSection] = useState("hero");
   const formRef = useRef(null);
 
   useEffect(() => {
@@ -44,17 +43,17 @@ function Home({ lang }) {
   }, [lang, i18n]);
 
   useEffect(() => {
-    if (!loading) return;
+    if (showSplash) {
+      AOS.init({ once: true });
 
-    AOS.init({ once: true });
+      const timer = setTimeout(() => {
+        sessionStorage.setItem("splashShown", "true");
+        setShowSplash(false);
+      }, 1500);
 
-    const timer = setTimeout(() => {
-      sessionStorage.setItem("visited", "true");
-      setLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, [loading]);
+      return () => clearTimeout(timer);
+    }
+  }, [showSplash]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -109,8 +108,6 @@ function Home({ lang }) {
     }
   };
 
-  if (loading) return <SplashScreen />;
-
   return (
     <>
       <Helmet>
@@ -120,20 +117,54 @@ function Home({ lang }) {
         <meta property="og:description" content={t("meta.ogDescription")} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content={lang === "es" ? "es_CL" : "en_US"} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: lang === "es" ? "Inicio" : "Home",
+                item: lang === "es"
+                  ? "https://www.zennith.cl/es"
+                  : "https://www.zennith.cl/en"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
-      <Hero onClickContacto={scrollToContacto} />
+      <AnimatePresence>
+        {showSplash && (
+          <motion.div
+            key="splash"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
+          >
+            <SplashScreen />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <Suspense fallback={<div className="h-[1000px]" />}>
-        <ServiciosDestacados activo={activo} setActivo={setActivo} />
-        <SobreNosotros />
-        <Testimonios />
-        <Contacto
-          formRef={formRef}
-          handleSubmit={handleSubmit}
-          status={status}
-        />
-      </Suspense>
+      {!showSplash && (
+        <>
+          <Hero onClickContacto={scrollToContacto} />
+          <Suspense fallback={<div className="h-[1000px]" />}>
+            <ServiciosDestacados activo={activo} setActivo={setActivo} />
+            <SobreNosotros />
+            <Testimonios />
+            <Contacto
+              formRef={formRef}
+              handleSubmit={handleSubmit}
+              status={status}
+            />
+          </Suspense>
+        </>
+      )}
     </>
   );
 }
