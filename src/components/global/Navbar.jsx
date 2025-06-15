@@ -110,7 +110,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
       <div className="flex gap-3 items-center flex-none ml-auto">
         <button
           onClick={toggleLanguage}
-          className="hidden lg:block text-sm border border-[#1de9b6] px-4 py-1 rounded-full text-[#1de9b6] hover:bg-[#1de9b6] hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1de9b6]"
+          className="hidden lg:block text-sm border border-[#1de9b6] px-4 py-1 rounded-full text-[#1de9b6] hover:bg-[#1de9b6] hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1de9b6] cursor-pointer"
         >
           {lang === "es" ? "ES" : "EN"}
         </button>
