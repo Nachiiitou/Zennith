@@ -15,7 +15,7 @@ import "../i18n";
 
 // Componentes críticos
 import SplashScreen from "../components/home/SplashScreen";
-import Hero from "../components/home/Hero";
+import NewHero from "../components/home/NewHero"; // Nuevo Hero rediseñado
 
 // Componentes diferidos
 const ServiciosDestacados = lazy(() => import("../components/home/ServiciosDestacados"));
@@ -152,7 +152,7 @@ function Home({ lang }) {
 
       {!showSplash && (
         <>
-          <Hero onClickContacto={scrollToContacto} />
+          <NewHero onClickContacto={scrollToContacto} />
           <Suspense fallback={<div className="h-[1000px]" />}>
             <ServiciosDestacados activo={activo} setActivo={setActivo} />
             <SobreNosotros />

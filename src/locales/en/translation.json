@@ -3,7 +3,7 @@
     "title": "Zennith - IT Consulting and Web Development in Chile",
     "description": "Zennith is a Chilean tech company offering web development, automation, and digital solutions.",
     "ogTitle": "Zennith - Consulting and Digital Solutions",
-    "ogDescription": "We develop technology solutions for companies that want to stand out in the digital world."
+    "ogDescription": "We develop technological solutions for businesses that want to stand out in the digital world."
   },
   "_comentario_nav": "Main navigation",
   "nav": {
@@ -12,546 +12,560 @@
     "nosotros": "About Us",
     "contacto": "Contact"
   },
-  "_comentario_hero": "Main section / Hero",
-  "tituloHero": "Smart digital solutions",
-  "subtituloHero": "We develop custom software, provide technical support, and boost your business with technology.",
-  "botonHero": "Request your consultation",
+  "_comentario_hero": "Main section / Hero with direct value proposition",
+  "home": {
+    "hero": {
+      "tagline": "Web development & custom automation",
+      "titulo": {
+        "primera": "Custom digital technology.",
+        "destacada": "No templates. No WordPress."
+      },
+      "subtitulo": "We create 100% custom digital solutions. Performance, scalability, and full control for your business.",
+      "boton": "Start your digital transformation",
+      "beneficios": {
+        "lighthouse": "100/100 Lighthouse score (where applicable)",
+        "ia": "AI and API integrations",
+        "automatizacion": "Automation and real scalability",
+        "codigo": "Proprietary code: higher performance, greater control."
+      }
+    }
+  },
   "_comentario_servicios": "Individual services",
   "tituloServicios": "Our Services",
   "tabs": {
     "servicios": "Services",
-    "packs": "Packs & Offers"
+    "packs": "Packages & Offers"
   },
   "servicios": {
     "automatizacion": {
-      "slug": "automatizacion",
+      "slug": "automation",
       "titulo": "Process Automation",
-      "desc": "Turn repetitive tasks into real operational efficiency.",
-      "resumen": "We identify repetitive tasks and automate them so your team can focus on strategic work.",
-      "detalle": "At Zennith, we understand that time and efficiency are not just resources—they are strategic assets for business growth.\n\nProcess automation allows us to identify repetitive, manual, or error-prone tasks and transform them into automatic workflows that run without human intervention. This can be achieved through scripts, integrations between platforms, or custom tools, always tailored to your operation's specific needs.\n\nOur goal is to free your team from mechanical tasks so they can focus on what truly matters: growth, innovation, and strategic decision-making.\n\nAutomation not only optimizes your operation—it makes you more competitive, agile, and focused on what really creates value.",
+      "desc": "Transform repetitive tasks into real operational efficiency.",
+      "resumen": "We identify repetitive tasks and automate them so your team can focus on strategy.",
+      "detalle": "At Zennith, we understand that time and efficiency are not just resources—they’re strategic assets for business growth.\n\nProcess automation identifies repetitive, manual, or error-prone tasks and converts them into automated workflows that run without human intervention. This can be achieved through scripts, platform integrations, or custom tools tailored to your operational needs.\n\nOur goal is to free your team from mechanical tasks so they can focus on what truly matters: growth, innovation, and strategic decision-making.\n\nAutomation not only optimizes your operations—it makes you more competitive, agile, and focused on what truly adds value.",
       "beneficios": [
         "Reduction of human errors.",
         "Improved response times.",
-        "Overall productivity boost.",
-        "Operational scalability without increasing administrative burden."
+        "Increased overall productivity.",
+        "Operational scalability without administrative overload."
       ],
       "ejemplos": [
-        "Integration of systems that don’t communicate with each other.",
+        "Integration of disconnected systems.",
         "Automatic report generation.",
-        "Sending notifications or scheduled tasks.",
-        "Creating internal workflows with a single click."
+        "Scheduled notifications or tasks.",
+        "Single-click internal workflows."
       ],
-      "imagen": "/assets/servicios/automatizacion_en.webp",
+      "imagen": "/assets/servicios/automation.webp",
       "caso": {
         "titulo": "How we helped a clinic save 40 hours per month",
-        "contenido": "One of our clients, a clinic with a high patient volume, had their staff manually copying data from the reservation platform to the accounting system.\n\nWe automated this process through a direct integration between both platforms, completely eliminating manual intervention. The result: over 40 hours per month freed up for clinical tasks.\n\nAdditionally, errors were reduced and information traceability improved."
+        "contenido": "One client, a high-volume clinic, had staff manually copying data from their booking platform to their accounting system.\n\nWe automated this process through direct integration between both platforms, eliminating manual work entirely. Result: over 40 hours saved monthly, redirected to clinical tasks.\n\nAdditionally, errors were reduced, and information traceability improved."
       },
-
       "cta": {
-  "titulo": "Ready to leave repetitive tasks behind?",
-  "descripcion": "Schedule a meeting with no commitment. We'll show you how you could save hundreds of hours per year with custom automation.",
-  "boton": "Book your consultation"
-}
-
-    },
- 
-"soporte-tecnico": {
-  "slug": "soporte-tecnico",
-  "titulo": "Technical Support",
-  "desc": "Quick solutions to keep your operations running smoothly.",
-  "resumen": "Immediate and reliable technical support to solve problems and keep your systems running.",
-  "detalle": "We know how frustrating it is when technology fails at critical moments. That’s why at Zennith we offer agile and reliable technical support to ensure your operations never stop.\n\nOur team provides both remote and on-site assistance, solving issues related to networks, hardware, software, or internal systems. We apply both preventive and corrective approaches so your tools are always available, up-to-date, and working optimally.\n\nWe become your company's tech partner, providing fast responses and professional follow-up, with solutions tailored to your business type.",
-  "beneficios": [
-    "Reduced downtime caused by technical failures.",
-    "Immediate remote assistance and on-site support when needed.",
-    "Prevention of issues before they occur.",
-    "Improved stability of internal systems and networks."
-  ],
-  "ejemplos": [
-    "Remote desktop support to fix software errors.",
-    "Diagnosis and repair of slow or unstable networks.",
-    "Installation and configuration of new equipment.",
-    "Maintenance and optimization of servers and PCs."
-  ],
-  "imagen": "/assets/servicios/soporte.webp",
-  "caso": {
-    "titulo": "How we helped a small business avoid losses due to network outages",
-    "contenido": "An online sales company contacted us due to constant network outages that were preventing them from processing orders on time.\n\nWe conducted a full diagnosis, reconfigured their local network, and standardized their workstations. Result: stable operation with no interruptions for over 6 months.\n\nWe also implemented preventive monitoring and instant remote support, drastically reducing response times to any incident."
-  },
-  "cta": {
-  "titulo": "Need immediate technical assistance?",
-  "descripcion": "Book a free consultation and let’s solve your issue quickly and professionally.",
-  "boton": "Book your consultation"
-}
-
-},
-
-"desarrollo-web": {
-  "slug": "desarrollo-web",
-  "titulo": "Web Development",
-  "desc": "We create modern, efficient, and customized websites.",
-  "resumen": "We develop fast, adaptable, and optimized websites to enhance your digital presence.",
-  "detalle": "We design and develop responsive websites that load quickly, look amazing on any device, and are performance-optimized.\n\nWe use technologies like React, TailwindCSS, and Next.js to build custom solutions that reflect your brand identity and build trust with your customers.\n\nFrom landing pages to fully custom platforms, we make sure every line of code has a purpose: helping your business grow online.",
-  "beneficios": [
-    "Professional design tailored to your brand.",
-    "Fast, secure, and SEO-optimized websites.",
-    "Responsive experience for mobile and tablet users.",
-    "Integrations with marketing or management tools."
-  ],
-  "ejemplos": [
-    "Landing pages for advertising campaigns.",
-    "Modern, self-managed institutional websites.",
-    "Custom web platforms for bookings, sales, or operations.",
-    "Redesigns of slow or outdated websites."
-  ],
-  "imagen": "/assets/servicios/desarrollo_en.webp",
-  "caso": {
-    "titulo": "How we modernized a regional company’s website",
-    "contenido": "An agricultural SME asked us to redesign its website, which was old, slow, and not mobile-friendly.\n\nWe created a modern, search-engine-optimized site with a self-management panel. Within just 2 weeks, they increased their contact rate and improved their image with clients and suppliers.\n\nSince then, their digital presence has become an active tool for closing business deals."
-  },
-  "cta": {
-  "titulo": "Ready for a professional website?",
-  "descripcion": "Book a free consultation and let's build a website that boosts your digital presence.",
-  "boton": "Book your consultation"
-}
-
-},
-
-"mantenimiento-web": {
-  "slug": "mantenimiento-web",
-  "titulo": "Web Maintenance",
-  "desc": "Keep your site secure, up-to-date, and running at its best.",
-  "resumen": "We keep your website secure, updated, and uninterrupted with monthly technical support.",
-  "detalle": "We take care of your website's technical maintenance so you don’t have to worry about a thing.\n\nWe perform automatic backups, security updates, performance improvements, and offer monthly support to solve any issue that may arise.\n\nThis service is designed for companies that want to ensure the stability and continuity of their digital presence without spending time on technical tasks.",
-  "beneficios": [
-    "Greater protection against vulnerabilities or attacks.",
-    "Ongoing improvements in speed and performance.",
-    "Fixing technical issues before you even notice.",
-    "Monthly technical support tailored to your needs."
-  ],
-  "ejemplos": [
-    "Updating plugins, CMS, or frameworks.",
-    "Optimizing images and load times.",
-    "Monthly review of broken links and forms.",
-    "Restoring the site in case of failures or critical errors."
-  ],
-  "imagen": "/assets/servicios/mantenimiento_en.webp",
-  "caso": {
-    "titulo": "How we protected a site from a cyberattack",
-    "contenido": "A client contacted us after their WordPress site was hacked and redirected to malicious pages.\n\nWe restored a backup, reinforced the server’s security, and migrated the site to a more stable and secure structure.\n\nSince then, we’ve provided monthly maintenance and the site has remained protected, fast, and uninterrupted."
-  },
-  "cta": {
-  "titulo": "Does your site need reliable maintenance?",
-  "descripcion": "We ensure your website is always secure, up-to-date, and running smoothly.",
-  "boton": "Book your consultation"
-}
-
-},
-"consultoria-tecnologica": {
-  "slug": "consultoria-tecnologica",
-  "titulo": "Technology Consulting",
-  "desc": "We guide you to make digital decisions with real impact.",
-  "resumen": "We help you make smart tech decisions that drive your business forward.",
-  "detalle": "We help you define a technology strategy aligned with your business goals.\n\nWe assess your current and future needs, propose scalable solutions, and support you in adopting tools that accelerate your digital growth.\n\nOur approach combines strategic vision with technical expertise so you don’t overspend or adopt solutions you don’t need. Technology should serve you, not the other way around.",
-  "beneficios": [
-    "Avoid unnecessary or misaligned investments.",
-    "Make decisions backed by technical and strategic insight.",
-    "Access an external, updated, and professional perspective.",
-    "Align technology with your business’s real goals."
-  ],
-  "ejemplos": [
-    "Advisory on choosing between different software or providers.",
-    "Assessment of your current digital infrastructure.",
-    "Designing a technology roadmap for your company.",
-    "Support during digital transformation processes."
-  ],
-  "imagen": "/assets/servicios/consultoria_en.webp",
-  "caso": {
-    "titulo": "How we helped a sales team digitize their processes",
-    "contenido": "A distribution company needed to better organize its order flow and customer tracking, which was handled manually.\n\nAfter consulting sessions, we implemented a custom CRM, automated repetitive tasks, and trained the team to make the most of the tool.\n\nThe result was a more organized operation, with better visibility and fewer human errors."
-  },
-  "cta": {
-  "titulo": "Ready to make smart tech decisions?",
-  "descripcion": "Book a free consultation and let's take your digital strategy to the next level.",
-  "boton": "Book your consultation"
-}
-
-},
-
-"integracion-apis": {
-  "slug": "integracion-apis",
-  "titulo": "API Integration",
-  "desc": "Make your platforms work together intelligently.",
-  "resumen": "We connect your platforms so they work together and automate key processes.",
-  "detalle": "We integrate external services like CRMs, ERPs, payment gateways, marketing tools, and more, so your entire digital ecosystem works in sync.\n\nWe connect systems that previously operated separately, improving efficiency, reducing errors, and allowing your data to flow automatically between platforms.",
-  "beneficios": [
-    "Avoid manual data entry between systems.",
-    "Improve data traceability and consistency.",
-    "Automate workflows across external and internal platforms.",
-    "Optimize operational and administrative processes."
-  ],
-  "ejemplos": [
-    "Integration between sales platforms and accounting systems.",
-    "Connection between CRM and email marketing tools.",
-    "Automation of reports from multiple sources.",
-    "Inventory synchronization between different systems."
-  ],
-  "imagen": "/assets/servicios/integracion_en.webp",
-  "caso": {
-    "titulo": "How we connected an e-commerce store with automatic invoicing",
-    "contenido": "An online store client had to manually issue every invoice from their tax system.\n\nWe built an integration between the e-commerce platform and the invoicing system so that, when a paid order was received, the invoice would be generated automatically and sent to the customer.\n\nThis eliminated errors, saved the team hours of work, and sped up delivery to the end customer."
-  },
-  "cta": {
-  "titulo": "Does your business need connected platforms?",
-  "descripcion": "Book a free consultation and we’ll help you connect your entire digital ecosystem.",
-  "boton": "Book your consultation"
-}
-
-},
-"agentes-ia": {
-  "slug": "agentes-ia",
-  "titulo": "Custom AI Agents",
-  "desc": "Intelligent assistants trained with your data to automate tasks or answer questions.",
-  "resumen": "We build smart agents that respond, automate tasks, and learn from your data.",
-  "detalle": "We develop agents capable of interacting with your clients or team, with contextual memory, access to documents, and task execution capabilities.\n\nWe can integrate them into your existing workflows, train them with your knowledge base, and customize them to reflect your brand and tone of communication.\n\nWhether for customer support, internal help, onboarding, or process automation, AI-powered agents are a leap toward intelligent efficiency.",
-  "beneficios": [
-    "24/7 support without interruption.",
-    "Fast, personalized, and contextual responses.",
-    "Time savings in support, sales, or training.",
-    "Scalability without increasing staff."
-  ],
-  "ejemplos": [
-    "Agent that answers FAQs on your website or WhatsApp.",
-    "Internal assistant that responds to team questions using your documentation.",
-    "AI that automates simple tasks like scheduling meetings or sending reminders.",
-    "Agent integrated into your CRM to retrieve customer data."
-  ],
-  "imagen": "/assets/servicios/agentes_en.webp",
-  "caso": {
-    "titulo": "How an AI chatbot reduced 60% of repeated inquiries",
-    "contenido": "A client with a high volume of repetitive questions in their e-commerce store needed to ease the support team’s workload.\n\nWe built a custom agent trained with their FAQs and internal policies. We connected it to their website and WhatsApp.\n\nIn one month, it reduced incoming tickets by 60%, allowing the team to focus on more complex cases and improving customer experience."
-  },
-  "cta": {
-  "titulo": "Ready to implement a custom AI agent?",
-  "descripcion": "Schedule a free consultation and discover how an intelligent assistant can help you scale.",
-  "boton": "Book your consultation"
-}
-
-},
-"business-intelligence": {
-  "slug": "business-intelligence",
-  "titulo": "Business Intelligence & Dashboards",
-  "desc": "Make decisions with interactive dashboards designed to visualize your key data.",
-  "resumen": "Interactive dashboards to visualize your data and make better real-time decisions.",
-  "detalle": "We create dashboards connected to your data sources (Excel, APIs, Google Sheets, CRMs, etc.) with customized visualization to improve decision-making.\n\nWe identify the metrics that really matter and present them in a clear, useful format—available in real time. This way, you can act based on reliable, updated information.",
-  "beneficios": [
-    "Greater visibility of your KPIs and critical metrics.",
-    "Decision-making based on real data.",
-    "Accessible visualization from any device.",
-    "Automated reporting and real-time tracking."
-  ],
-  "ejemplos": [
-    "Sales dashboard connected to your CRM.",
-    "Financial panel integrated with your accounting system.",
-    "Logistics operations dashboard with visual alerts.",
-    "Monthly automatic reports for your investors."
-  ],
-  "imagen": "/assets/servicios/dashboards.webp",
-  "caso": {
-    "titulo": "How we helped a company visualize its metrics in real time",
-    "contenido": "A trading SME was recording sales in disconnected spreadsheets with no consolidation.\n\nWe built a dashboard connected to Google Sheets that combines sales, costs, margins, and projections. Now, they can instantly see daily results and make data-driven decisions.\n\nThe team now works in sync and with a results-focused mindset."
-  },
-  "cta": {
-  "titulo": "Want to make data-driven decisions?",
-  "descripcion": "Schedule a free consultation and discover how to visualize your key metrics clearly and effectively.",
-  "boton": "Book your consultation"
-}
-
-},"chatbots": {
-  "slug": "chatbots",
-  "titulo": "Chatbot Development",
-  "desc": "Automate customer service with conversational assistants for web and WhatsApp.",
-  "resumen": "We build chatbots for web or WhatsApp that automate customer service 24/7.",
-  "detalle": "We create custom chatbots that answer questions, generate leads, or automate processes using efficient conversational flows.\n\nThey can operate on your website, social media, or WhatsApp, with fast responses, useful integrations, and a user-friendly experience. If needed, they can also be powered by artificial intelligence.",
-  "beneficios": [
-    "24/7 availability with no additional human cost.",
-    "Reduced volume of repetitive questions.",
-    "Improved user experience in digital support.",
-    "Automation of simple tasks like reservations or forms."
-  ],
-  "ejemplos": [
-    "Website chatbot to handle frequently asked questions.",
-    "Conversational assistant on WhatsApp to generate leads.",
-    "Bot that guides users step by step to schedule an appointment.",
-    "Integration with external tools to query data or send emails."
-  ],
-  "imagen": "/assets/servicios/chatbots_en.webp",
-  "caso": {
-    "titulo": "How a chatbot helped triple web leads",
-    "contenido": "A natural products store was overwhelmed with inquiries on social media and their website.\n\nWe built a chatbot that automatically handles messages, answers FAQs, and collects contact information from prospects.\n\nThe result was a 300% increase in inquiries, higher customer satisfaction, and reduced workload for the human team."
-  },
-  "cta": {
-  "titulo": "Ready to automate your business support?",
-  "descripcion": "Schedule a consultation and let's create a chatbot that assists, solves, and converts for you.",
-  "boton": "Book your consultation"
-}
-
-} },
-"_comentario_testimonios": "Client testimonials",
-"tituloTestimonios": "What our clients say",
-"testimonios": {
-  "loreto": {
-    "nombre": "Loreto C. | Avícola Pichiarauco",
-    "texto": "Zennith guided me in developing the focus of my business"
-  },
-  "ana": {
-    "nombre": "Ana L. | AILV Clothes",
-    "texto": "With Zennith's help I was able to boost my sales and improve my digital image"
-  }
-},
-"_comentario_contacto": "Contact form",
-"tituloContacto": "Contact Us",
-"placeholders": {
-  "nombre": "Name",
-  "correo": "Email",
-  "mensaje": "Message"
-},
-"botonEnviar": "Send message",
-"mensajeExito": "Message sent successfully!",
-"mensajeError": "An error occurred. Please try again.",
-"_comentario_footer": "Footer",
-"footer": "© 2025 Zennith SpA. All rights reserved.",
-"_comentario_nosotros": "About Us section",
-"tituloNosotros": "About Us",
-"nosotros1_parte1": "At ",
-"nosotros1_zennith": "Zennith",
-"nosotros1_parte2": " we combine innovation and experience to take your business to the next level. We specialize in web development, process automation, and digital solutions.",
-"nosotros2_texto": "We are passionate about technology and committed to turning your ideas into functional, fast, and modern products—working alongside you with focus and dedication.",
-"verMas": "Read more",
- 
-"packs": {
-  "packDesarrollador": {
-    "nombre": "Digital Presence Pack",
-    "precioResumen": "Desde $270.000 hasta $620.000 CLP",
-    "descripcion": "A scalable solution that adapts to your stage of digital growth. Choose from 3 levels designed to support you from your first website to a fully professional online presence. Ranges from $270,000 to $620,000 CLP depending on the level you choose.",
-    "boton":"View more details",
-    "niveles": {
-      "basico": {
-        "nombre": "Basic Level – Your First Online Presence",
-        "descripcion": "Ideal for those taking their first steps into the digital world.",
-        "precio": "$270,000 CLP",
-        "detalles": [
-          "Single-page website (100% custom design built with React + Tailwind. Not WordPress)",
-          "Responsive design (compatible with mobile and desktop devices)",
-          "Functional contact form (messages sent to your email)",
-          "WhatsApp button",
-          "SSL certificate (secure browsing)",
-          "Basic SEO optimization (so Google can find you)",
-          "Custom design proposal before development",
-          "1 month of technical support",
-          ".cl or .com domain for 1 year",
-          "1 year of hosting"
-        ]
-      },
-      "intermedio": {
-        "nombre": "Intermediate Level – Professional Website",
-        "descripcion": "For brands looking to consolidate their digital presence.",
-        "precio": "$420,000 CLP",
-        "detalles": [
-          "Everything from the Basic Level",
-          "Website with up to 3 sections (Home, Services, About Me, Contact)",
-          "Corporate email (e.g. contacto@yourbrand.cl)",
-          "Social media linking + profile creation (optional)",
-          "3 months of technical support"
-        ]
-      },
-      "premium": {
-        "nombre": "Premium Level – Your Complete Digital Brand",
-        "descripcion": "For brands that want autonomy and projection.",
-        "precio": "$620,000 CLP",
-        "detalles": [
-          "Everything from the Intermediate Level",
-          "Website with up to 5 sections",
-          "Integration of basic chatbot with predefined responses",
-          "Buttons linking to social media",
-          "PDF user manual (basic site self-management)",
-          "6 months of technical support",
-          "Custom animations"
-        ]
+        "titulo": "Ready to leave repetitive tasks behind?",
+        "descripcion": "Schedule a no-commitment meeting. We’ll show you how to save hundreds of hours annually with custom automation.",
+        "boton": "Schedule your consultation"
       }
+    },
+    "soporte-tecnico": {
+      "slug": "tech-support",
+      "titulo": "Technical Support",
+      "desc": "Quick solutions to keep your operations running smoothly.",
+      "resumen": "Immediate, reliable technical support to resolve issues and maintain your systems.",
+      "detalle": "We know how frustrating it is when technology fails during critical moments. That’s why Zennith offers agile technical support to keep your operations running.\n\nOur team provides remote and on-site assistance, resolving issues with networks, hardware, software, or internal systems. We apply preventive and corrective approaches to keep your tools updated, available, and optimized.\n\nWe become your tech partner, offering rapid responses, professional follow-up, and solutions tailored to your business.",
+      "beneficios": [
+        "Reduced downtime from technical failures.",
+        "Immediate remote or on-site assistance.",
+        "Problem prevention before they occur.",
+        "Improved stability of systems and networks."
+      ],
+      "ejemplos": [
+        "Remote desktop support for software issues.",
+        "Diagnosis and repair of slow/unstable networks.",
+        "Installation and configuration of new equipment.",
+        "Server and PC maintenance/optimization."
+      ],
+      "imagen": "/assets/servicios/support.webp",
+      "caso": {
+        "titulo": "How we helped an SMB avoid losses from network outages",
+        "contenido": "An online sales company contacted us due to constant network crashes disrupting order processing.\n\nAfter a full diagnosis, we reconfigured their local network and standardized workstations. Result: stable operations with zero outages for 6+ months.\n\nWe also added preventive monitoring and instant remote support, drastically reducing response times."
+      },
+      "cta": {
+        "titulo": "Need immediate technical assistance?",
+        "descripcion": "Schedule a free consultation to resolve your issue quickly and professionally.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "desarrollo-web": {
+      "slug": "web-development",
+      "titulo": "Web Development",
+      "desc": "We create modern, efficient, custom websites.",
+      "resumen": "Fast, adaptable, optimized websites to boost your digital presence.",
+      "detalle": "We design responsive websites that load quickly, look great on all devices, and are performance-optimized.\n\nWe use React, TailwindCSS, and Next.js to build custom solutions that reflect your brand identity and earn customer trust.\n\nFrom landing pages to custom platforms, every line of code serves a purpose: growing your business online.",
+      "beneficios": [
+        "Professional design aligned with your brand.",
+        "Fast, secure, SEO-optimized sites.",
+        "Mobile-responsive experience.",
+        "Integrations with marketing/management tools."
+      ],
+      "ejemplos": [
+        "Landing pages for ad campaigns.",
+        "Modern, self-managed corporate sites.",
+        "Custom web platforms for bookings, sales, or operations.",
+        "Overhauls of slow/outdated sites."
+      ],
+      "imagen": "/assets/servicios/web-development.webp",
+      "caso": {
+        "titulo": "How we modernized a regional company's site",
+        "contenido": "An agricultural SMB asked us to revamp their old, slow, non-mobile-friendly site.\n\nWe built a modern, SEO-optimized site with a self-manageable panel. Within 2 weeks, contact rates increased, and their image improved among clients and suppliers.\n\nTheir digital presence is now an active tool for closing deals."
+      },
+      "cta": {
+        "titulo": "Ready for a professional website?",
+        "descripcion": "Schedule a free consultation to build a site that elevates your digital presence.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "mantenimiento-web": {
+      "slug": "web-maintenance",
+      "titulo": "Web Maintenance",
+      "desc": "Keep your site secure, updated, and running smoothly.",
+      "resumen": "Monthly maintenance to ensure security, updates, and uptime.",
+      "detalle": "We handle technical maintenance so you don’t have to worry.\n\nWe perform automatic backups, security updates, performance improvements, and monthly support to resolve issues.\n\nThis service is for businesses wanting to ensure digital stability without technical hassles.",
+      "beneficios": [
+        "Enhanced security against vulnerabilities/attacks.",
+        "Continuous speed/performance improvements.",
+        "Technical fixes without your involvement.",
+        "Monthly technical support as needed."
+      ],
+      "ejemplos": [
+        "Plugin/CMS/framework updates.",
+        "Image and load-time optimization.",
+        "Monthly broken link/form checks.",
+        "Site restoration from failures/errors."
+      ],
+      "imagen": "/assets/servicios/maintenance.webp",
+      "caso": {
+        "titulo": "How we protected a site from cyberattacks",
+        "contenido": "A client contacted us after their WordPress site was hacked, redirecting to malicious pages.\n\nWe restored from backup, fortified server security, and migrated to a stable structure.\n\nSince then, monthly maintenance has kept the site secure, fast, and uninterrupted."
+      },
+      "cta": {
+        "titulo": "Need reliable website maintenance?",
+        "descripcion": "We’ll keep your site secure, updated, and error-free.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "consultoria-tecnologica": {
+      "slug": "tech-consulting",
+      "titulo": "Tech Consulting",
+      "desc": "Guide your digital decisions for real impact.",
+      "resumen": "Strategic tech decisions to drive your business.",
+      "detalle": "We help define tech strategies aligned with your goals.\n\nWe assess current/future needs, propose scalable solutions, and support tool adoption for digital growth.\n\nOur approach combines strategic vision with technical expertise, ensuring you invest wisely in necessary solutions. Technology serves you, not vice versa.",
+      "beneficios": [
+        "Avoid unnecessary/misguided investments.",
+        "Decisions backed by technical/strategic expertise.",
+        "Access to updated, professional insights.",
+        "Align tech with your business objectives."
+      ],
+      "ejemplos": [
+        "Choosing software/vendors.",
+        "Evaluating digital infrastructure.",
+        "Designing tech roadmaps.",
+        "Digital transformation support."
+      ],
+      "imagen": "/assets/servicios/consulting.webp",
+      "caso": {
+        "titulo": "How we helped a sales team digitize processes",
+        "contenido": "A distribution company needed to organize order flows and client tracking done manually.\n\nAfter consultations, we implemented a custom CRM, automated tasks, and trained the team.\n\nResult: streamlined operations with better visibility and fewer errors."
+      },
+      "cta": {
+        "titulo": "Ready for strategic tech decisions?",
+        "descripcion": "Schedule a free consultation to elevate your digital strategy.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "integracion-apis": {
+      "slug": "api-integration",
+      "titulo": "API Integration",
+      "desc": "Make platforms work together intelligently.",
+      "resumen": "Connect platforms to automate key processes.",
+      "detalle": "Integrate external services like CRMs, ERPs, payment gateways, marketing tools, etc., to synchronize your digital ecosystem.\n\nConnect previously siloed systems to boost efficiency, reduce errors, and automate data flow.",
+      "beneficios": [
+        "Eliminate manual data entry between systems.",
+        "Improved data traceability/consistency.",
+        "Automate workflows across platforms.",
+        "Optimize operational/administrative processes."
+      ],
+      "ejemplos": [
+        "Sales platform to accounting system integration.",
+        "CRM to email marketing tool connections.",
+        "Automated reports from multiple sources.",
+        "Inventory sync across different systems."
+      ],
+      "imagen": "/assets/servicios/integration.webp",
+      "caso": {
+        "titulo": "How we connected e-commerce with auto-invoicing",
+        "contenido": "A client manually issued invoices from their tax system after online sales.\n\nWe integrated their e-commerce with invoicing to auto-generate/send invoices upon payment.\n\nResult: errors eliminated, hours saved, faster delivery."
+      },
+      "cta": {
+        "titulo": "Need platforms connected?",
+        "descripcion": "Schedule a free consultation to unify your digital ecosystem.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "agentes-ia": {
+      "slug": "ai-agents",
+      "titulo": "Custom AI Agents",
+      "desc": "Intelligent assistants trained on your data to automate tasks or answer questions.",
+      "resumen": "Smart agents that respond, automate, and learn from your data.",
+      "detalle": "Develop agents that interact with clients/teams, with contextual memory, document access, and task execution.\n\nIntegrate them into existing flows, train them on your knowledge base, and customize their tone/branding.\n\nWhether for customer service, internal support, onboarding, or automation, AI agents drive intelligent efficiency.",
+      "beneficios": [
+        "24/7 availability without interruptions.",
+        "Quick, personalized, contextual responses.",
+        "Time saved on support, sales, or training.",
+        "Scalability without increasing staff."
+      ],
+      "ejemplos": [
+        "Agent answering FAQs via your site/WhatsApp.",
+        "Internal assistant for team queries using your docs.",
+        "AI automating meetings/reminders.",
+        "CRM-integrated agent for client data."
+      ],
+      "imagen": "/assets/servicios/ai-agents.webp",
+      "caso": {
+        "titulo": "How an AI chatbot cut repetitive queries by 60%",
+        "contenido": "An e-commerce client faced repetitive support tickets.\n\nWe built a custom AI agent trained on FAQs and policies, connected to their site and WhatsApp.\n\nWithin a month, tickets dropped 60%, freeing the team to handle complex cases."
+      },
+      "cta": {
+        "titulo": "Ready to deploy an AI agent?",
+        "descripcion": "Schedule a free consultation to explore intelligent assistants.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "business-intelligence": {
+      "slug": "business-intelligence",
+      "titulo": "Business Intelligence & Dashboards",
+      "desc": "Make decisions with interactive dashboards for key data.",
+      "resumen": "Real-time interactive dashboards for data-driven decisions.",
+      "detalle": "Create dashboards connected to your data sources (Excel, APIs, Google Sheets, CRMs) with custom visualizations.\n\nWe identify critical metrics and present them clearly for real-time, informed decisions.",
+      "beneficios": [
+        "Visibility into KPIs and critical metrics.",
+        "Data-driven decision-making.",
+        "Accessible from any device.",
+        "Automated real-time reporting."
+      ],
+      "ejemplos": [
+        "Sales dashboard linked to CRM.",
+        "Financial dashboard integrated with accounting.",
+        "Logistics dashboard with visual alerts.",
+        "Automatic investor reports."
+      ],
+      "imagen": "/assets/servicios/dashboards.webp",
+      "caso": {
+        "titulo": "How we enabled real-time metrics for a company",
+        "contenido": "A trading SMB tracked sales in fragmented spreadsheets.\n\nWe built a Google Sheets-connected dashboard showing sales, costs, margins, and projections. They now see daily results instantly.\n\nThe team operates with unified focus on outcomes."
+      },
+      "cta": {
+        "titulo": "Want data-driven decisions?",
+        "descripcion": "Schedule a free consultation to visualize key metrics effectively.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "chatbots": {
+      "slug": "chatbots",
+      "titulo": "Chatbot Development",
+      "desc": "Automate customer service with conversational agents for web and WhatsApp.",
+      "resumen": "24/7 customer service chatbots for web/WhatsApp.",
+      "detalle": "Create custom chatbots that answer questions, generate leads, or automate processes.\n\nDeploy on your site, social media, or WhatsApp with fast responses and integrations. Optional AI-powered capabilities.",
+      "beneficios": [
+        "24/7 availability without added staffing.",
+        "Reduce repetitive queries.",
+        "Enhanced digital customer experience.",
+        "Automate bookings/forms."
+      ],
+      "ejemplos": [
+        "Website chatbot for FAQs.",
+        "WhatsApp assistant for lead generation.",
+        "Step-by-step booking bot.",
+        "External tool integrations for data/mail."
+      ],
+      "imagen": "/assets/servicios/chatbots.webp",
+      "caso": {
+        "titulo": "How a chatbot tripled website leads",
+        "contenido": "A natural products store struggled with social/media inquiries.\n\nOur chatbot automated responses and collected leads.\n\nResult: 300% more requests, happier customers, and reduced workload."
+      },
+      "cta": {
+        "titulo": "Ready to automate customer service?",
+        "descripcion": "Schedule a consultation to build a chatbot that converts.",
+        "boton": "Schedule your consultation"
+      }
+    },
+    "boton": "Explore our services",
+    "descripcion": "Discover key services to accelerate your digital transformation. Custom web development, AI integration, and more for your business."
+  },
+  "_comentario_testimonios": "Client testimonials",
+  "tituloTestimonios": "What our clients say",
+  "testimonios": {
+    "loreto": {
+      "nombre": "Loreto C. | Avícola Pichiarauco",
+      "texto": "Zennith guided me in refining my business focus"
+    },
+    "ana": {
+      "nombre": "Ana L. | AILV Clothes",
+      "texto": "With Zennith's help, I boosted sales and improved my digital image"
     }
   },
-
-  "packEcommerce": {
-    "nombre": "Your Online Store",
-    "precioResumen": "Desde $690.000 CLP a $950.000 CLP",
-    "descripcion": "Perfect for entrepreneurs and businesses looking to start selling online with a modern, fast, and easy-to-manage store. Includes everything you need to launch your ecommerce smoothly and scale as your business grows.",
-    "boton": "View more details",
-    "niveles": {
-      "inicio": {
-        "nombre": "Ready to Launch",
-        "descripcion": "Ideal for entrepreneurs who want to launch their store and start selling without complications.",
-        "precio": "$690,000 CLP",
-        "detalles": [
-          "Custom website built with React + Tailwind",
-          "Up to 10 products uploaded by us",
-          "Connected spreadsheet (Google Sheets) for future self-management",
-          "Functional shopping cart",
-          "Integration with WebPay or MercadoPago",
-          "Contact form and WhatsApp button",
-          "Hosting + domain for 1 year",
-          "SSL certificate",
-          "1 month of technical support"
-        ]
+  "tituloContacto": "Contact Us",
+  "descripcionContacto": "Have a project in mind? Let’s take it to the next level.",
+  "placeholders": {
+    "nombre": "Name",
+    "correo": "Email",
+    "mensaje": "Message"
+  },
+  "botonEnviar": "Send message",
+  "mensajeExito": "Message sent successfully!",
+  "mensajeError": "An error occurred. Please try again.",
+  "_comentario_footer": "Footer",
+  "footer1": "© 2025 Zennith SpA. All rights reserved.",
+  "footer": "Made with ❤️ by Zennith",
+  "_comentario_nosotros": "About Us section",
+  "tituloNosotros": "About Us",
+  "nosotros": {
+    "descripcion": "We create custom digital technology for your business. Zennith combines innovation, proprietary code, and strategy to help you scale, automate, and stand out online.",
+    "item1": {
+      "titulo": "Innovation & efficiency",
+      "texto": "We apply automation and AI to solve real problems, optimize processes, and boost productivity."
+    },
+    "item2": {
+      "titulo": "Proprietary code, no templates",
+      "texto": "No WordPress or generic solutions. Every line of code is tailored to your business."
+    },
+    "item3": {
+      "titulo": "Long-term focus",
+      "texto": "Scalable, secure, fast solutions ready for future expansion."
+    }
+  },
+  "cta_nosotros": "Learn more about our work",
+  "verMas": "See more",
+  "packs": {
+    "packDesarrollador": {
+      "nombre": "Digital Presence Package",
+      "precioResumen": "From $270,000 to $620,000 CLP",
+      "descripcion": "A scalable solution for your digital growth. Choose from 3 tiers: your first website to a full professional online presence. Pricing from $270,000 to $620,000 CLP based on tier.",
+      "niveles": {
+        "basico": {
+          "nombre": "Basic Tier – Your First Online Presence",
+          "descripcion": "Ideal for digital newcomers.",
+          "precio": "$270,000 CLP",
+          "boton": "See details",
+          "detalles": [
+            "Single-page site (100% custom React + Tailwind design. No WordPress)",
+            "Responsive design (mobile/desktop)",
+            "Functional contact form (email integration)",
+            "WhatsApp button",
+            "SSL certificate (secure browsing)",
+            "Basic SEO optimization",
+            "Custom design draft",
+            "1-month tech support",
+            ".cl or .com domain for 1 year",
+            "1-year hosting"
+          ]
+        },
+        "intermedio": {
+          "nombre": "Intermediate Tier – Professional Site",
+          "descripcion": "For brands consolidating digital presence.",
+          "precio": "$420,000 CLP",
+          "detalles": [
+            "Includes Basic Tier features",
+            "Up to 3 site sections (Home, Services, About, Contact)",
+            "Corporate email (e.g., contacto@yourbrand.cl)",
+            "Social media links + profile creation (optional)",
+            "3-month tech support"
+          ]
+        },
+        "premium": {
+          "nombre": "Premium Tier – Complete Digital Brand",
+          "descripcion": "For brands seeking autonomy and growth.",
+          "precio": "$620,000 CLP",
+          "detalles": [
+            "Includes Intermediate Tier features",
+            "Up to 5 site sections",
+            "Basic pre-configured chatbot",
+            "Social media buttons",
+            "PDF user manual (self-management)",
+            "6-month tech support",
+            "Custom animations"
+          ]
+        }
       },
-      "premium": {
-        "nombre": "Premium",
-        "descripcion": "For brands that need a scalable store with CRM, analytics, and more control.",
-        "precio": "$950,000 CLP",
-        "detalles": [
-          "Everything from the 'Ready to Launch' level",
-          "Up to 30 products uploaded by us",
-          "Integration with basic CRM (Hubspot / Sheets / Brevo)",
-          "Installation of Google Analytics 4 or Meta Pixel",
-          "Social media linking + location map",
-          "Smooth animations in key sections",
-          "PDF user manual for self-management",
-          "3 months of technical support"
-        ]
+      "boton": "See details"
+    },
+    "packEcommerce": {
+      "nombre": "Your Online Store",
+      "descripcion": "Ideal for entrepreneurs starting modern, easy-to-manage e-commerce. Includes essentials to launch and scale.",
+      "precioResumen": "From $690,000 CLP to $950,000 CLP",
+      "boton": "See details",
+      "niveles": {
+        "inicio": {
+          "nombre": "Starter Tier",
+          "descripcion": "Ideal for launching hassle-free e-commerce.",
+          "precio": "$690,000 CLP",
+          "detalles": [
+            "Custom React + Tailwind site",
+            "Up to 10 pre-loaded products",
+            "Google Sheets integration for self-management",
+            "Functional cart",
+            "WebPay/MercadoPago integration",
+            "Contact form + WhatsApp button",
+            "1-year hosting + domain",
+            "SSL certificate",
+            "1-month tech support"
+          ]
+        },
+        "premium": {
+          "nombre": "Premium Tier",
+          "descripcion": "Scalable e-commerce with CRM and analytics.",
+          "precio": "$950,000 CLP",
+          "detalles": [
+            "Includes Starter features",
+            "Up to 30 pre-loaded products",
+            "Basic CRM integration (Hubspot/Sheets/Brevo)",
+            "Google Analytics 4/Meta Pixel setup",
+            "Social media + location map links",
+            "Subtle animations",
+            "PDF user manual",
+            "3-month tech support"
+          ]
+        }
+      },
+      "extras": [
+        "+ Additional products: from $1,000 each",
+        "+ Bilingual site (Spanish/English): +$80,000",
+        "+ Pre-configured chatbot: +$50,000",
+        "+ Custom API integrations: personalized quote"
+      ]
+    },
+    "pack3": {
+      "nombre": "Full Package",
+      "descripcion": "Comprehensive solution: web + automation + CRM + monthly support.",
+      "precio": "$750,000 CLP",
+      "precioResumen": "From $690,000 CLP to $950,000 CLP",
+      "boton": "See details"
+    }
+  },
+  "contactoFormulario": {
+    "titulo": "How would you like to contact us?",
+    "form": {
+      "nombre": "Your name",
+      "email": "Your email",
+      "mensaje": "How can we help?",
+      "boton": "Send"
+    },
+    "whatsapp": {
+      "texto": "Prefer WhatsApp?",
+      "boton": "Go to WhatsApp"
+    }
+  },
+  "sobreNosotros": {
+    "meta": {
+      "title": "About Us - Zennith",
+      "description": "Discover Zennith’s philosophy, tech stack, and approach. 100% handcrafted code—no WordPress or templates."
+    },
+    "titulo": "About Us",
+    "descripcion": "Zennith isn’t a typical agency. Our code is artisanal, optimized, and designed for you. We use no templates, WordPress, or prefab solutions. Everything is handcrafted.",
+    "frase": "The future isn’t built with templates. It’s coded line by line.",
+    "filosofia": {
+      "titulo": "Our Philosophy",
+      "descripcion": "We build unique, identity-driven sites. No copy-paste solutions. Every line of code reflects dedication. We’re young but committed to impeccable work and earning trust through results."
+    },
+    "stack": {
+      "titulo": "Our Tech Stack",
+      "lista": [
+        "React + Vite for modern, fast experiences",
+        "TailwindCSS for clean styling",
+        "100% custom JavaScript, HTML, CSS",
+        "Optimized deploys on Vercel",
+        "No unnecessary dependencies"
+      ]
+    },
+    "artesanal": {
+      "titulo": "Why Handcrafted Code?",
+      "descripcion": "Unique solutions. Each site reflects the client’s purpose—no generic shortcuts.",
+      "lista": [
+        "Greater control, performance, security.",
+        "100% brand-aligned design.",
+        "Real scalability for the future."
+      ],
+      "imagen": "/assets/servicios/code-example.webp",
+      "subtexto": "Handmade web with React + Tailwind. No WordPress. No templates."
+    },
+    "lighthouse": {
+      "titulo": "Guaranteed +95 Lighthouse Score",
+      "descripcion": "Our sites score 95-100 in performance, accessibility, SEO, and best practices.",
+      "nota": "* Applies to standard projects without external integrations affecting scores.",
+      "boton": "What is Lighthouse?",
+      "imagen": "/assets/servicios/lighthouse-example.png",
+      "stats": [
+        {
+          "label": "Performance",
+          "valor": 100
+        },
+        {
+          "label": "Accessibility",
+          "valor": 100
+        },
+        {
+          "label": "Best Practices",
+          "valor": 100
+        },
+        {
+          "label": "SEO",
+          "valor": 100
+        }
+      ],
+      "modal": {
+        "titulo": "What is Google Lighthouse?",
+        "descripcion": "Lighthouse is a Google tool analyzing websites on performance, accessibility, SEO, and best practices. We optimize every aspect.",
+        "leyenda": "Zennith.cl scored 100/100 across all metrics",
+        "leyenda2": "Example of a WordPress site (anonymous)"
       }
     },
-    "extras": [
-      "+ Additional products: from $1,000 each",
-      "+ Bilingual website (Spanish/English): +$80,000",
-      "+ Preconfigured chatbot: +$50,000",
-      "+ External API/Integrations: custom quote"
-    ]
+    "metodo": {
+      "titulo": "Our Process",
+      "pasos": [
+        "Deeply understand your idea to craft a clear proposal.",
+        "Design from scratch based on your goals/style.",
+        "Hand-code everything—no templates.",
+        "Keep you involved throughout.",
+        "Deliver a solid, fast, scalable product."
+      ],
+      "imagen": "/assets/servicios/process.webp"
+    },
+    "queNo": {
+      "titulo": "What We Avoid",
+      "lista": [
+        "No WordPress, Wix, or drag-and-drop platforms.",
+        "No cloning others’ sites.",
+        "No generic solutions everyone else uses.",
+        "No reliance on prefab templates/page builders."
+      ]
+    },
+    "proyectos": {
+      "titulo": "Coming Soon...",
+      "descripcion": "We’re building a portfolio to showcase our projects.",
+      "boton": "Contact Us"
+    },
+    "lang": "en"
   },
-
-  "pack3": {
-    "nombre": "Full Pack",
-    "descripcion": "Complete solution: website + automation + CRM + monthly support.",
-    "precio": "$750,000 CLP",
-    "precioResumen": "Desde $690.000 CLP a $950.000 CLP",
-    "boton": "View more details"
-  }
-},
-
-"contactoFormulario": {
-  "titulo": "How would you like to contact us?",
-  "form": {
+  "contacto": {
+    "titulo": "Contact Us",
+    "descripcion": "Have a project or questions? Write to us.",
     "nombre": "Your name",
     "email": "Your email",
-    "mensaje": "How can we help you?",
-    "boton": "Send"
-  },
-  "whatsapp": {
-    "texto": "Would you rather chat via WhatsApp?",
-    "boton": "Go to WhatsApp"
+    "mensaje": "Your message",
+    "enviar": "Send message",
+    "whatsapp": "WhatsApp",
+    "correo": "contacto@zennith.cl",
+    "instagram": "https://instagram.com/zennith_cl",
+    "linkedin": "https://linkedin.com/company/zennith-chile",
+    "exito": "Message sent successfully"
   }
-},
-"sobreNosotros": {
-  "meta": {
-    "title": "About Us - Zennith",
-    "description": "Discover the philosophy, tech stack, and work approach behind Zennith. 100% handcrafted code. No WordPress. No templates. Fully custom."
-  },
-  "titulo": "About Us",
-  "descripcion": "Zennith isn’t just another agency. Here, the code is handcrafted, thoughtful, optimized, and designed specifically for you. We don’t use templates, WordPress, or prebuilt solutions. Everything you see was built from scratch.",
-
-  "frase": "The future isn’t built with templates. It’s hand-coded, line by line.",
-
-  "filosofia": {
-    "titulo": "Our Philosophy",
-    "descripcion": "We build unique websites with real identity. We don’t believe in copy-pasting solutions. For us, every line of code reflects dedication and professionalism. We're a young company, yes — and that means we're more committed than ever to doing excellent work and earning your trust through results."
-  },
-
-  "stack": {
-    "titulo": "Our Tech Stack",
-    "lista": [
-      "React + Vite for a modern, fast experience",
-      "TailwindCSS for clean and efficient styling",
-      "100% custom JavaScript, HTML, and CSS",
-      "Optimized deployments on Vercel or your preferred service",
-      "No unnecessary dependencies"
-    ]
-  },
-
-  "artesanal": {
-    "titulo": "Why Handcrafted Code?",
-    "descripcion": "We believe in unique solutions. Every website is an expression of the client and their purpose, which is why we avoid generic shortcuts.",
-    "lista": [
-      "Greater control, performance, and security.",
-      "100% design tailored to your brand.",
-      "Real scalability for the future."
-    ],
-    "imagen": "/assets/servicios/codigo-ejemplo.webp",
-    "subtexto": "Website handcrafted with React + Tailwind. No WordPress. No templates."
-  },
-
-  "lighthouse": {
-    "titulo": "Guaranteed +95 on Lighthouse",
-    "descripcion": "Our websites consistently score between 95 and 100 in performance, accessibility, SEO, and best practices.",
-    "nota": "* Applies to standard projects without third-party integrations that impact performance.",
-    "boton": "What is Lighthouse?",
-    "imagen": "/assets/servicios/lighthouse-example.png",
-    "stats": [
-      { "label": "Performance", "valor": 100 },
-      { "label": "Accessibility", "valor": 100 },
-      { "label": "Best Practices", "valor": 100 },
-      { "label": "SEO", "valor": 100 }
-    ],
-    "modal": {
-      "titulo": "What is Google Lighthouse?",
-      "descripcion": "Lighthouse is a Google tool that audits your website and scores it across four key areas: performance, accessibility, SEO, and best practices. At Zennith, we optimize every detail to excel in all of them.",
-      "leyenda": "Zennith.cl scored 100/100 in every metric.",
-      "leyenda2": "Real WordPress site example (anonymous)"
-    }
-  },
-
-  "metodo": {
-    "titulo": "How We Work",
-    "pasos": [
-      "We listen to your idea thoroughly and turn it into a clear proposal.",
-      "We design everything from scratch, based on your goals and style.",
-      "We hand-code everything — no templates.",
-      "You're involved throughout the whole process.",
-      "We deliver something solid, fast, and scalable."
-    ],
-    "imagen": "/assets/servicios/metodo.webp"
-  },
-
-  "queNo": {
-    "titulo": "What We Avoid",
-    "lista": [
-      "No WordPress, Wix, or drag-and-drop platforms.",
-      "No cloning third-party websites.",
-      "No generic solutions everyone else uses.",
-      "No reliance on prebuilt templates or page builders."
-    ]
-  },
-
-  "proyectos": {
-    "titulo": "Coming soon...",
-    "descripcion": "We're working on a portfolio where you’ll be able to explore all the projects we’ve developed.",
-    "boton": "Contact Us"
-  },
-
-  "lang": "en"
-},
-
-"contacto": {
-  "titulo": "Contact Us",
-  "descripcion": "Got a project or questions? Send us a message.",
-  "nombre": "Your name",
-  "email": "Your email",
-  "mensaje": "Your message",
-  "enviar": "Send message",
-  "whatsapp": "WhatsApp",
-  "correo": "contacto@zennith.cl",
-  "instagram": "https://instagram.com/zennith_cl",
-  "linkedin": "https://linkedin.com/company/zennith-chile",
-  "exito": "Message sent successfully"
-}
-
-
 }
