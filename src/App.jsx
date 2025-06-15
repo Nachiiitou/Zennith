@@ -18,12 +18,6 @@ import Footer from "./components/global/Footer";
 import WhatsAppButton from "./components/global/WhatsAppButton";
 import ScrollToTop from "./components/global/ScrollToTop";
 
-// Admin
-import Login from "./pages/admin/Login";
-import Dashboard from "./pages/admin/Dashboard";
-import NuevaEntrada from "./pages/admin/NuevaEntrada";
-import Analytics from "./pages/admin/Analytics";
-import Configuracion from "./pages/admin/Configuracion";
 
 // Páginas públicas
 import SobreNosotros from "./pages/SobreNosotros";
@@ -90,12 +84,7 @@ function AppWrapper() {
           {/* Redirección inicial */}
           <Route path="/" element={<Navigate to={`/${initialLang}`} replace />} />
 
-          {/* RUTAS PRIVADAS (admin) */}
-          <Route path="/admin/login" element={<Login />} />
-          <Route path="/admin/dashboard" element={<Dashboard />} />
-          <Route path="/admin/nueva" element={<NuevaEntrada />} /> {/* ✅ NUEVA RUTA */}
-          <Route path="/admin/analytics" element={<Analytics />} />
-          <Route path="/admin/configuracion" element={<Configuracion />} />
+        
 
           {/* RUTAS PÚBLICAS MULTIIDIOMA */}
           <Route path="/:lang" element={<LayoutWrapper />}>
