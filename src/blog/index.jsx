@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import { meta as lighthouse } from "./como-saber-si-una-web-es-buena-para-google";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
@@ -7,8 +6,13 @@ export default function BlogHome() {
   const { lang } = useParams();
 
   const post = {
-    ...lighthouse,
-    link: `/${lang}/blog/${lighthouse.slug}`,
+    slug: "como-saber-si-tu-web-es-buena",
+    titulo: "¿Cómo saber si tu web es buena para Google?",
+    resumen:
+      "Te explicamos cómo se mide la calidad técnica de un sitio web y qué significa tener 100/100 en Lighthouse.",
+    fecha: "Junio 2025",
+    imagen: "/assets/blog/lighthouse.webp",
+    link: `/${lang}/blog/como-saber-si-tu-web-es-buena`,
   };
 
   return (
@@ -45,7 +49,6 @@ export default function BlogHome() {
         to={post.link}
         className="block group overflow-hidden rounded-xl hover:shadow-xl transition duration-300 bg-white border border-neutral-200"
       >
-        {/* Imagen con relación de aspecto y animación */}
         <div className="aspect-[16/9] w-full overflow-hidden">
           <motion.img
             src={post.imagen}
@@ -57,7 +60,6 @@ export default function BlogHome() {
           />
         </div>
 
-        {/* Contenido */}
         <div className="px-4 py-5">
           <h2 className="text-xl font-semibold mb-1 group-hover:text-indigo-600 transition-colors">
             {post.titulo}
