@@ -1,7 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import { Dialog } from "@headlessui/react";
 import LighthouseCard from "../components/LighthouseCard";
@@ -12,34 +11,41 @@ export default function SobreNosotros() {
   const { lang } = useParams();
   const [openImage, setOpenImage] = useState(false);
   const [openLighthouse, setOpenLighthouse] = useState(false);
+  const [openContacto, setOpenContacto] = useState(false);
+  const formRef = useRef();
+  const [status, setStatus] = useState(null);
 
   const imagenArtesanal = t("sobreNosotros.artesanal.imagen");
   const imagenMetodo = t("sobreNosotros.metodo.imagen");
   const fraseInspiradora = t("sobreNosotros.frase");
-  const [openContacto, setOpenContacto] = useState(false);
-const formRef = useRef();
-const [status, setStatus] = useState(null);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus(null);
+    try {
+      // Lógica de envío aquí
+      setStatus("success");
+    } catch (error) {
+      setStatus("error");
+    }
+  };
 
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setStatus(null);
-  try {
-    // Tu lógica de envío aquí
-    setStatus("success");
-  } catch (error) {
-    setStatus("error");
-  }
-};
+  // Reemplazo de Helmet con useEffect
+  useEffect(() => {
+    document.title = t("sobreNosotros.meta.title");
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", t("sobreNosotros.meta.description"));
+    } else {
+      const desc = document.createElement("meta");
+      desc.name = "description";
+      desc.content = t("sobreNosotros.meta.description");
+      document.head.appendChild(desc);
+    }
+  }, [t]);
 
   return (
     <section className="px-6 lg:px-24 py-16 bg-[#02070f] text-white">
-      <Helmet>
-        <title>{t("sobreNosotros.meta.title")}</title>
-        <meta name="description" content={t("sobreNosotros.meta.description")} />
-      </Helmet>
-
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,7 +64,6 @@ const handleSubmit = async (e) => {
         {t("sobreNosotros.descripcion")}
       </motion.p>
 
-      {/* +95 en Lighthouse garantizado */}
       <LighthouseCard onOpenModal={() => setOpenLighthouse(true)} />
 
       {/* Método Zennith + Cómo trabajamos */}
@@ -92,13 +97,12 @@ const handleSubmit = async (e) => {
               src={imagenMetodo}
               alt="Método Zennith"
               className="rounded-xl shadow-lg border border-[#1de9b6]/20 max-w-full h-auto"
-              onError={() => console.warn("No se pudo cargar imagen:", imagenMetodo)}
             />
           )}
         </motion.div>
       </div>
 
-      {/* ¿Por qué código artesanal? + Imagen */}
+      {/* Código artesanal */}
       <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-20">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -139,7 +143,6 @@ const handleSubmit = async (e) => {
         </motion.div>
       </div>
 
-      {/* Modal imagen artesanal */}
       <Dialog open={openImage} onClose={() => setOpenImage(false)} className="z-50 relative">
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50">
           <Dialog.Panel className="relative max-w-5xl w-full">
