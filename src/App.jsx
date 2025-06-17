@@ -10,7 +10,6 @@ import {
   Outlet,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { HelmetProvider } from "react-helmet-async"; // ⬅️ Import necesario
 import "./i18n";
 
 // Componentes globales
@@ -112,11 +111,9 @@ function AppWrapper() {
 
 function App() {
   return (
-    <HelmetProvider> {/* ⬅️ Necesario para que funcione Helmet */}
-      <BrowserRouter>
-        <AppWrapper />
-      </BrowserRouter>
-    </HelmetProvider>
+    <BrowserRouter>
+      <AppWrapper />
+    </BrowserRouter>
   );
 }
 
