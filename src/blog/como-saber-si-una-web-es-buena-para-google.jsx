@@ -1,27 +1,26 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { meta } from "./meta/como-saber-si-una-web-es-buena";
 
 export default function ComoMedirLighthouse() {
-  const canonicalUrl = `https://www.zennith.cl/es/blog/${meta.slug}`;
-
   useEffect(() => {
-    document.title = `${meta.titulo} | Blog Zennith`;
+    document.title = "¿Cómo saber si tu web es buena para Google? | Blog Zennith";
   }, []);
+
+  const canonicalUrl = "https://www.zennith.cl/es/blog/como-saber-si-tu-web-es-buena";
 
   return (
     <div className="bg-white text-neutral-900 pb-20">
       {/* HERO */}
       <section className="px-6 md:px-12 pt-24 pb-10 max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight tracking-tight">
-          {meta.titulo}
+          ¿Cómo saber si tu web es buena para Google?
         </h1>
         <p className="text-neutral-500 text-base md:text-lg mb-4">
           Publicado el 17 de junio de 2025 por Zennith
         </p>
         <figure className="w-full overflow-hidden rounded-2xl shadow-lg my-6">
           <img
-            src={meta.imagen}
+            src="/assets/blog/lighthouse.webp"
             alt="Ilustración sobre rendimiento web medido con Lighthouse"
             className="w-full aspect-video object-cover transition duration-500 hover:scale-[1.01]"
           />
