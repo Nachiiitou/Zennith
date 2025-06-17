@@ -18,7 +18,7 @@ export default function ComoMedirLighthouse() {
           {meta.titulo}
         </h1>
         <p className="text-neutral-500 text-base md:text-lg mb-4">
-          Publicado el 16 de junio de 2025
+          Publicado el 17 de junio de 2025 por Zennith
         </p>
 
         <div className="w-full overflow-hidden rounded-2xl shadow-lg my-6">
