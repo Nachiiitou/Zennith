@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
-export const meta = {
-  slug: "como-saber-si-tu-web-es-buena",
-  titulo: "¿Cómo saber si tu web es buena para Google?",
-  resumen:
-    "Te explicamos cómo se mide la calidad técnica de un sitio web y qué significa tener 100/100 en Lighthouse.",
-  fecha: "Junio 2025",
-  imagen: "/assets/blog/lighthouse.webp",
-};
+import { meta } from "./meta/como-saber-si-una-web-es-buena";
 
 export default function ComoMedirLighthouse() {
   const canonicalUrl = `https://www.zennith.cl/es/blog/${meta.slug}`;
@@ -33,15 +25,15 @@ export default function ComoMedirLighthouse() {
           {meta.titulo}
         </h1>
         <p className="text-neutral-500 text-base md:text-lg mb-4">
-          Publicado el 17 de junio de 2025 por Zennith 
+          Publicado el 17 de junio de 2025 por Zennith
         </p>
-        <div className="w-full h-[280px] md:h-[400px] overflow-hidden rounded-2xl shadow-lg my-6">
+        <figure className="w-full overflow-hidden rounded-2xl shadow-lg my-6">
           <img
             src={meta.imagen}
-            alt="Gráfico de puntuación Lighthouse"
-            className="w-full h-full object-cover object-center transition duration-500 hover:scale-105"
+            alt="Ilustración sobre rendimiento web medido con Lighthouse"
+            className="w-full aspect-video object-cover transition duration-500 hover:scale-[1.01]"
           />
-        </div>
+        </figure>
         <p className="text-lg text-neutral-700 leading-relaxed">
           En Zennith nos tomamos el rendimiento web en serio. Cuando prometemos que tu sitio va a obtener entre 95 y 100 en Lighthouse, no es un número al azar. Es el resultado de un enfoque artesanal y técnico.
         </p>

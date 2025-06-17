@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Español -->
+  
+  <!-- HOME - Español -->
   <url>
     <loc>https://www.zennith.cl/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Inglés -->
+  <!-- HOME - Inglés -->
   <url>
     <loc>https://www.zennith.cl/en</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
+
+  <!-- BLOG principal -->
+  <url>
+    <loc>https://www.zennith.cl/es/blog</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Artículo 1 -->
+  <url>
+    <loc>https://www.zennith.cl/es/blog/como-saber-si-tu-web-es-buena</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>

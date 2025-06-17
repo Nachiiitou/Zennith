@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { meta as lighthouse } from "./como-saber-si-una-web-es-buena-para-google";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogHome() {
   const { lang } = useParams();
@@ -12,6 +13,23 @@ export default function BlogHome() {
 
   return (
     <div className="min-h-screen text-neutral-900 px-6 md:px-12 py-20 max-w-5xl mx-auto">
+      {/* METADATOS */}
+      <Helmet>
+        <title>Blog | Zennith</title>
+        <meta
+          name="description"
+          content="Publicamos ideas, casos reales y consejos para mejorar tu presencia digital cada semana."
+        />
+        <meta property="og:title" content="Blog | Zennith" />
+        <meta
+          property="og:description"
+          content="Ideas, casos reales y consejos sobre desarrollo web, rendimiento y más."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.zennith.cl/${lang}/blog`} />
+        <meta property="og:image" content={`https://www.zennith.cl${post.imagen}`} />
+      </Helmet>
+
       {/* ENCABEZADO */}
       <header className="mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-white">

@@ -10,6 +10,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { HelmetProvider } from "react-helmet-async"; // ⬅️ Import necesario
 import "./i18n";
 
 // Componentes globales
@@ -85,10 +86,7 @@ function AppWrapper() {
       <ScrollToTop />
       <Suspense fallback={<div className="h-screen bg-black" />}>
         <Routes location={location} key={location.pathname}>
-          {/* Redirección inicial */}
           <Route path="/" element={<Navigate to={`/${initialLang}`} replace />} />
-
-          {/* RUTAS MULTIIDIOMA */}
           <Route path="/:lang" element={<LayoutWrapper />}>
             <Route index element={<Home />} />
             <Route path="servicios" element={<Servicios />} />
@@ -103,8 +101,6 @@ function AppWrapper() {
             <Route path="servicios/chatbots" element={<Chatbots />} />
             <Route path="nosotros" element={<SobreNosotros />} />
             <Route path="contacto" element={<Contacto />} />
-
-            {/* BLOG */}
             <Route path="blog" element={<Blog />} />
             <Route path="blog/como-saber-si-tu-web-es-buena" element={<ComoMedirLighthouse />} />
           </Route>
@@ -116,9 +112,11 @@ function AppWrapper() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppWrapper />
-    </BrowserRouter>
+    <HelmetProvider> {/* ⬅️ Necesario para que funcione Helmet */}
+      <BrowserRouter>
+        <AppWrapper />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
