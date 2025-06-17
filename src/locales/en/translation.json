@@ -55,7 +55,7 @@
         "Scheduled notifications or tasks.",
         "Single-click internal workflows."
       ],
-      "imagen": "/assets/servicios/automation.webp",
+      "imagen": "/assets/servicios/automatizacion_en.webp",
       "caso": {
         "titulo": "How we helped a clinic save 40 hours per month",
         "contenido": "One client, a high-volume clinic, had staff manually copying data from their booking platform to their accounting system.\n\nWe automated this process through direct integration between both platforms, eliminating manual work entirely. Result: over 40 hours saved monthly, redirected to clinical tasks.\n\nAdditionally, errors were reduced, and information traceability improved."
@@ -84,7 +84,7 @@
         "Installation and configuration of new equipment.",
         "Server and PC maintenance/optimization."
       ],
-      "imagen": "/assets/servicios/support.webp",
+      "imagen": "/assets/servicios/soporte.webp",
       "caso": {
         "titulo": "How we helped an SMB avoid losses from network outages",
         "contenido": "An online sales company contacted us due to constant network crashes disrupting order processing.\n\nAfter a full diagnosis, we reconfigured their local network and standardized workstations. Result: stable operations with zero outages for 6+ months.\n\nWe also added preventive monitoring and instant remote support, drastically reducing response times."
@@ -113,7 +113,7 @@
         "Custom web platforms for bookings, sales, or operations.",
         "Overhauls of slow/outdated sites."
       ],
-      "imagen": "/assets/servicios/web-development.webp",
+      "imagen": "/assets/servicios/desarrollo_en.webp",
       "caso": {
         "titulo": "How we modernized a regional company's site",
         "contenido": "An agricultural SMB asked us to revamp their old, slow, non-mobile-friendly site.\n\nWe built a modern, SEO-optimized site with a self-manageable panel. Within 2 weeks, contact rates increased, and their image improved among clients and suppliers.\n\nTheir digital presence is now an active tool for closing deals."
@@ -142,7 +142,7 @@
         "Monthly broken link/form checks.",
         "Site restoration from failures/errors."
       ],
-      "imagen": "/assets/servicios/maintenance.webp",
+      "imagen": "/assets/servicios/mantenimiento_en.webp",
       "caso": {
         "titulo": "How we protected a site from cyberattacks",
         "contenido": "A client contacted us after their WordPress site was hacked, redirecting to malicious pages.\n\nWe restored from backup, fortified server security, and migrated to a stable structure.\n\nSince then, monthly maintenance has kept the site secure, fast, and uninterrupted."
@@ -171,7 +171,7 @@
         "Designing tech roadmaps.",
         "Digital transformation support."
       ],
-      "imagen": "/assets/servicios/consulting.webp",
+      "imagen": "/assets/servicios/consultoria_en.webp",
       "caso": {
         "titulo": "How we helped a sales team digitize processes",
         "contenido": "A distribution company needed to organize order flows and client tracking done manually.\n\nAfter consultations, we implemented a custom CRM, automated tasks, and trained the team.\n\nResult: streamlined operations with better visibility and fewer errors."
@@ -200,7 +200,7 @@
         "Automated reports from multiple sources.",
         "Inventory sync across different systems."
       ],
-      "imagen": "/assets/servicios/integration.webp",
+      "imagen": "/assets/servicios/integracion_en.webp",
       "caso": {
         "titulo": "How we connected e-commerce with auto-invoicing",
         "contenido": "A client manually issued invoices from their tax system after online sales.\n\nWe integrated their e-commerce with invoicing to auto-generate/send invoices upon payment.\n\nResult: errors eliminated, hours saved, faster delivery."
@@ -229,7 +229,7 @@
         "AI automating meetings/reminders.",
         "CRM-integrated agent for client data."
       ],
-      "imagen": "/assets/servicios/ai-agents.webp",
+      "imagen": "/assets/servicios/agentes_en.webp",
       "caso": {
         "titulo": "How an AI chatbot cut repetitive queries by 60%",
         "contenido": "An e-commerce client faced repetitive support tickets.\n\nWe built a custom AI agent trained on FAQs and policies, connected to their site and WhatsApp.\n\nWithin a month, tickets dropped 60%, freeing the team to handle complex cases."
@@ -494,7 +494,7 @@
         "100% brand-aligned design.",
         "Real scalability for the future."
       ],
-      "imagen": "/assets/servicios/code-example.webp",
+      "imagen": "/assets/servicios/codigo-ejemplo.webp",
       "subtexto": "Handmade web with React + Tailwind. No WordPress. No templates."
     },
     "lighthouse": {
@@ -537,7 +537,7 @@
         "Keep you involved throughout.",
         "Deliver a solid, fast, scalable product."
       ],
-      "imagen": "/assets/servicios/process.webp"
+      "imagen": "/assets/servicios/metodo.webp"
     },
     "queNo": {
       "titulo": "What We Avoid",

@@ -18,11 +18,11 @@ import Footer from "./components/global/Footer";
 import WhatsAppButton from "./components/global/WhatsAppButton";
 import ScrollToTop from "./components/global/ScrollToTop";
 
-
-// Páginas públicas
+// Páginas estáticas
 import SobreNosotros from "./pages/SobreNosotros";
 import Contacto from "./pages/Contacto";
 
+// Lazy-loaded principales
 const Home = lazy(() => import("./pages/Home"));
 const Servicios = lazy(() => import("./pages/Servicios"));
 const Automatizacion = lazy(() => import("./pages/servicios/Automatizacion"));
@@ -34,6 +34,10 @@ const IntegracionApis = lazy(() => import("./pages/servicios/IntegracionApis"));
 const AgentesIA = lazy(() => import("./pages/servicios/AgentesIA"));
 const BusinessIntelligence = lazy(() => import("./pages/servicios/BusinessIntelligence"));
 const Chatbots = lazy(() => import("./pages/servicios/Chatbots"));
+
+// Blog
+const Blog = lazy(() => import("./blog/index"));
+const ComoMedirLighthouse = lazy(() => import("./blog/como-saber-si-una-web-es-buena-para-google"));
 
 function LayoutWrapper() {
   const { lang } = useParams();
@@ -84,9 +88,7 @@ function AppWrapper() {
           {/* Redirección inicial */}
           <Route path="/" element={<Navigate to={`/${initialLang}`} replace />} />
 
-        
-
-          {/* RUTAS PÚBLICAS MULTIIDIOMA */}
+          {/* RUTAS MULTIIDIOMA */}
           <Route path="/:lang" element={<LayoutWrapper />}>
             <Route index element={<Home />} />
             <Route path="servicios" element={<Servicios />} />
@@ -101,7 +103,10 @@ function AppWrapper() {
             <Route path="servicios/chatbots" element={<Chatbots />} />
             <Route path="nosotros" element={<SobreNosotros />} />
             <Route path="contacto" element={<Contacto />} />
-            
+
+            {/* BLOG */}
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/como-medir-lighthouse" element={<ComoMedirLighthouse />} />
           </Route>
         </Routes>
       </Suspense>

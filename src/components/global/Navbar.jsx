@@ -42,6 +42,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
   const isServiciosPage = location.pathname.includes("/servicios");
   const isNosotrosPage = location.pathname.includes("/nosotros");
   const isContactoPage = location.pathname.includes("/contacto");
+  const isBlogPage = location.pathname.includes("/blog");
   const isHomePage = location.pathname === `/${lang}` || location.pathname === "/";
 
   return (
@@ -73,7 +74,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
               ? isNosotrosPage
               : item === "contacto"
               ? isContactoPage
-              : location.pathname.includes("/blog");
+              : isBlogPage;
 
           const activeClass = isActive
             ? "text-[#1de9b6] font-semibold border-b-2 border-[#1de9b6] pb-1"
@@ -88,7 +89,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
             >
               {isLink ? (
                 <Link
-                  to={item === "blog" ? "#" : `/${lang}/${item}`}
+                  to={`/${lang}/${item}`}
                   className="bg-transparent border-none p-0 m-0 text-inherit font-inherit cursor-pointer"
                 >
                   {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -140,7 +141,7 @@ const Navbar = ({ activeSection, toggleLanguage, lang }) => {
             <div key={idx}>
               {["servicios", "nosotros", "contacto", "blog"].includes(item) ? (
                 <Link
-                  to={item === "blog" ? "#" : `/${lang}/${item}`}
+                  to={`/${lang}/${item}`}
                   onClick={() => setMenuOpen(false)}
                   className="block w-full text-left text-lg cursor-pointer"
                 >

@@ -364,7 +364,8 @@
 
 "tituloNosotros": "Sobre Nosotros",
 "nosotros": {
-  "descripcion": "Creamos tecnología digital hecha a medida para tu negocio. En Zennith combinamos innovación, código propio y enfoque estratégico para ayudarte a escalar, automatizar y destacarte online.",
+  "descripcion": "Creamos tecnología digital hecha a medida para tu negocio. En Zennith combinamos innovación, código propio y enfoque estratégico para ayudarte a escalar, automatizar y destacarte online. ",
+   "motivacion": "No construimos páginas web. Construimos herramientas digitales que hacen crecer negocios.",
   "item1": {
     "titulo": "Innovación y eficiencia",
     "texto": "Aplicamos automatización e IA para resolver problemas reales, optimizando procesos y aumentando la productividad."
@@ -515,11 +516,13 @@
 "sobreNosotros": {
   "meta": {
     "title": "Sobre Nosotros - Zennith",
+
+    
     "description": "Descubre la filosofía, el stack y la forma de trabajo detrás de Zennith. Código 100% artesanal, sin WordPress ni plantillas. Totalmente a medida."
   },
   "titulo": "Sobre Nosotros",
   "descripcion": "Zennith no es una agencia cualquiera. Aquí el código es artesanal, pensado, optimizado y diseñado para ti. No usamos plantillas, ni WordPress, ni soluciones prefabricadas. Todo lo que ves fue hecho a mano.",
-
+  
   "frase": "El futuro no se construye con plantillas. Se codifica a mano, línea por línea.",
 
   "filosofia": {

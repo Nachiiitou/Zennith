@@ -52,6 +52,20 @@ const SobreNosotros = () => {
           {textoDividido[1]}
         </p>
 
+        {/* Frase motivacional destacada */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center max-w-3xl mx-auto text-lg text-[#1de9b6] italic mb-16"
+        >
+          <span className="block border-l-4 border-[#1de9b6] pl-4 text-left text-white/90">
+            <strong className="text-[#1de9b6] font-semibold mr-2">→</strong>
+            {t("nosotros.motivacion")}
+          </span>
+        </motion.div>
+
         <div className="grid md:grid-cols-3 gap-10 text-left max-w-6xl mx-auto">
           {beneficios.map((b, i) => (
             <div key={i} className="group">

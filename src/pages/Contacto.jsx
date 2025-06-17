@@ -28,7 +28,7 @@ const Contacto = () => {
       if (res.ok) {
         setEnviado(true);
         form.reset();
-        setTimeout(() => setEnviado(false), 4000); // Oculta el mensaje en 4s
+        setTimeout(() => setEnviado(false), 4000);
       } else {
         alert("Hubo un error al enviar. Intenta de nuevo.");
       }
@@ -70,25 +70,25 @@ const Contacto = () => {
             name="name"
             placeholder={t("contacto.nombre")}
             required
-            className="p-4 bg-transparent border border-[#1de9b6] rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1de9b6]"
+            className="p-4 bg-transparent border border-[#1de9b6] rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1de9b6] transition"
           />
           <input
             type="email"
             name="email"
             placeholder={t("contacto.email")}
             required
-            className="p-4 bg-transparent border border-[#1de9b6] rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1de9b6]"
+            className="p-4 bg-transparent border border-[#1de9b6] rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1de9b6] transition"
           />
           <textarea
             name="message"
             rows="5"
             placeholder={t("contacto.mensaje")}
             required
-            className="p-4 bg-transparent border border-[#1de9b6] rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1de9b6]"
+            className="p-4 bg-transparent border border-[#1de9b6] rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1de9b6] transition resize-none"
           />
           <button
             type="submit"
-            className="bg-[#1de9b6] text-black font-semibold py-3 rounded-md hover:scale-105 transition cursor-pointer"
+            className="bg-[#1de9b6] text-black font-semibold py-3 rounded-md hover:scale-105 transition"
           >
             {t("contacto.enviar")}
           </button>
@@ -97,19 +97,22 @@ const Contacto = () => {
         {/* Contacto directo y redes */}
         <div className="mt-10 text-center space-y-4">
           <a
-            href="https://wa.me/56962341655"
+            href="https://wa.me/56923901646?text=Hola!%20Estoy%20interesado%20en%20los%20servicios%20de%20Zennith"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-lg hover:text-[#1de9b6] transition"
+            className="inline-flex items-center gap-2 text-lg text-[#1de9b6] hover:text-white transition"
+            aria-label="Contacto por WhatsApp"
+            title="Enviar mensaje por WhatsApp"
           >
-            <MessageCircle /> {t("contacto.whatsapp")}
+            <MessageCircle className="w-5 h-5" /> Enviar mensaje por WhatsApp
           </a>
 
           <a
             href={`mailto:${t("contacto.correo")}`}
             className="flex justify-center items-center gap-2 text-gray-300 hover:text-[#1de9b6] transition"
+            aria-label="Correo electrónico"
           >
-            <Mail /> {t("contacto.correo")}
+            <Mail className="w-5 h-5" /> {t("contacto.correo")}
           </a>
 
           <div className="flex justify-center gap-6 text-2xl pt-4">
@@ -118,6 +121,7 @@ const Contacto = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-[#e1306c]"
+              aria-label="Instagram"
             >
               <Instagram />
             </a>
@@ -126,6 +130,7 @@ const Contacto = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-[#0077b5]"
+              aria-label="LinkedIn"
             >
               <Linkedin />
             </a>
