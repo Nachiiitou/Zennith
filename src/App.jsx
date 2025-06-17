@@ -106,7 +106,7 @@ function AppWrapper() {
 
             {/* BLOG */}
             <Route path="blog" element={<Blog />} />
-            <Route path="blog/como-medir-lighthouse" element={<ComoMedirLighthouse />} />
+            <Route path="blog/como-saber-si-tu-web-es-buena" element={<ComoMedirLighthouse />} />
           </Route>
         </Routes>
       </Suspense>
