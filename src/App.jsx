@@ -10,6 +10,8 @@ import {
   Outlet,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { HelmetProvider } from "react-helmet-async"; // ✅ Añadido
+
 import "./i18n";
 
 // Componentes globales
@@ -37,7 +39,9 @@ const Chatbots = lazy(() => import("./pages/servicios/Chatbots"));
 
 // Blog
 const Blog = lazy(() => import("./blog/index"));
-const ComoMedirLighthouse = lazy(() => import("./blog/como-saber-si-una-web-es-buena-para-google"));
+const ComoMedirLighthouse = lazy(() =>
+  import("./blog/como-saber-si-una-web-es-buena-para-google")
+);
 
 function LayoutWrapper() {
   const { lang } = useParams();
@@ -111,9 +115,11 @@ function AppWrapper() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppWrapper />
-    </BrowserRouter>
+    <HelmetProvider> {/* ✅ Contexto necesario para <Helmet> */}
+      <BrowserRouter>
+        <AppWrapper />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
