@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet';
-
+import { Helmet } from "react-helmet";
 import { meta } from "./meta/como-saber-si-una-web-es-buena";
 
 export default function ComoMedirLighthouse() {
