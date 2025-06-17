@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { meta as lighthouse } from "./como-saber-si-una-web-es-buena-para-google";
+import { motion } from "framer-motion";
 
 export default function BlogHome() {
   const { lang } = useParams();
@@ -26,12 +27,17 @@ export default function BlogHome() {
         to={post.link}
         className="block group overflow-hidden rounded-xl hover:shadow-xl transition duration-300 bg-white border border-neutral-200"
       >
-        {/* Imagen en tamaño natural */}
-        <img
-          src={post.imagen}
-          alt={post.titulo}
-          className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.01]"
-        />
+        {/* Imagen con relación de aspecto y animación */}
+        <div className="aspect-[16/9] w-full overflow-hidden">
+          <motion.img
+            src={post.imagen}
+            alt={post.titulo}
+            initial={{ opacity: 0, scale: 1.01 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         {/* Contenido */}
         <div className="px-4 py-5">
