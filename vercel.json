@@ -1,9 +1,14 @@
 {
-    "rewrites": [
-      { "source": "/es", "destination": "/" },
-      { "source": "/en", "destination": "/" },
-      { "source": "/es/:path*", "destination": "/" },
-      { "source": "/en/:path*", "destination": "/" }
-    ]
-  }
-  
+  "redirects": [
+    { "source": "/servicios", "destination": "/es/servicios", "permanent": true },
+    { "source": "/nosotros", "destination": "/es/nosotros", "permanent": true },
+    { "source": "/contacto", "destination": "/es/contacto", "permanent": true },
+    { "source": "/blog", "destination": "/es/blog", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/es", "destination": "/" },
+    { "source": "/en", "destination": "/" },
+    { "source": "/es/:path*", "destination": "/" },
+    { "source": "/en/:path*", "destination": "/" }
+  ]
+}
