@@ -1,24 +1,16 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 import { meta } from "./meta/como-saber-si-una-web-es-buena";
 
 export default function ComoMedirLighthouse() {
   const canonicalUrl = `https://www.zennith.cl/es/blog/${meta.slug}`;
 
+  useEffect(() => {
+    document.title = `${meta.titulo} | Blog Zennith`;
+  }, []);
+
   return (
     <div className="bg-white text-neutral-900 pb-20">
-      {/* SEO Meta Tags */}
-      <Helmet>
-        <title>{meta.titulo} | Blog Zennith</title>
-        <meta name="description" content={meta.resumen} />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={meta.titulo} />
-        <meta property="og:description" content={meta.resumen} />
-        <meta property="og:image" content={`https://www.zennith.cl${meta.imagen}`} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-      </Helmet>
-
       {/* HERO */}
       <section className="px-6 md:px-12 pt-24 pb-10 max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight tracking-tight">
