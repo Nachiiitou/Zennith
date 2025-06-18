@@ -53,10 +53,10 @@ const Hero = ({ onClickContacto }) => {
           />
           <img
             src="/pc-800.webp"
+            loading="lazy" // ✅ Cambiado de decoding="async" a loading="lazy"
             alt="Mockup Zennith mostrando software"
             width="1200"
             height="800"
-            decoding="async"
             className="w-full object-contain rounded-2xl transition-transform duration-300"
           />
         </picture>

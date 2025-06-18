@@ -7,19 +7,21 @@ const SobreNosotros = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language || "es";
 
+  const iconClass = "w-5 h-5 text-[#1de9b6] transition-transform duration-300 group-hover:rotate-6";
+
   const beneficios = [
     {
-      icono: <Bot className="icono" />,
+      icono: <Bot className={iconClass} />,
       titulo: t("nosotros.item1.titulo"),
       texto: t("nosotros.item1.texto"),
     },
     {
-      icono: <Code className="icono" />,
+      icono: <Code className={iconClass} />,
       titulo: t("nosotros.item2.titulo"),
       texto: t("nosotros.item2.texto"),
     },
     {
-      icono: <Expand className="icono" />,
+      icono: <Expand className={iconClass} />,
       titulo: t("nosotros.item3.titulo"),
       texto: t("nosotros.item3.texto"),
     },
@@ -69,7 +71,8 @@ const SobreNosotros = () => {
         <div className="grid md:grid-cols-3 gap-10 text-left max-w-6xl mx-auto">
           {beneficios.map((b, i) => (
             <div key={i} className="group">
-              <div className="flex items-center gap-3 mb-2">{b.icono}
+              <div className="flex items-center gap-3 mb-2">
+                {b.icono}
                 <h4 className="font-semibold text-white text-base">{b.titulo}</h4>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">{b.texto}</p>
@@ -87,12 +90,6 @@ const SobreNosotros = () => {
           </Link>
         </div>
       </motion.div>
-
-      <style jsx>{`
-        .icono {
-          @apply w-5 h-5 text-[#1de9b6] transition-transform duration-300 group-hover:rotate-6;
-        }
-      `}</style>
     </section>
   );
 };

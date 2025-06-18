@@ -30,16 +30,19 @@ const ServiciosDestacados = ({ activo = [], setActivo }) => {
     "chatbots",
   ];
 
+  const iconClass =
+    "text-[#1de9b6] w-5 h-5 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110";
+
   const iconMap = {
-    "automatizacion": <Cpu className="icono" />,
-    "soporte-tecnico": <Wrench className="icono" />,
-    "desarrollo-web": <MonitorSmartphone className="icono" />,
-    "mantenimiento-web": <ShieldCheck className="icono" />,
-    "consultoria-tecnologica": <Lightbulb className="icono" />,
-    "integracion-apis": <Share2 className="icono" />,
-    "agentes-ia": <Bot className="icono" />,
-    "business-intelligence": <BarChart3 className="icono" />,
-    "chatbots": <MessageSquare className="icono" />,
+    "automatizacion": <Cpu className={iconClass} />,
+    "soporte-tecnico": <Wrench className={iconClass} />,
+    "desarrollo-web": <MonitorSmartphone className={iconClass} />,
+    "mantenimiento-web": <ShieldCheck className={iconClass} />,
+    "consultoria-tecnologica": <Lightbulb className={iconClass} />,
+    "integracion-apis": <Share2 className={iconClass} />,
+    "agentes-ia": <Bot className={iconClass} />,
+    "business-intelligence": <BarChart3 className={iconClass} />,
+    "chatbots": <MessageSquare className={iconClass} />,
   };
 
   const servicios = servicioKeys.map((key) => ({
@@ -134,12 +137,6 @@ const ServiciosDestacados = ({ activo = [], setActivo }) => {
           <ArrowRight size={18} />
         </Link>
       </div>
-
-      <style jsx>{`
-        .icono {
-          @apply text-[#1de9b6] w-5 h-5 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110;
-        }
-      `}</style>
     </section>
   );
 };
