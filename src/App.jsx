@@ -10,7 +10,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { HelmetProvider } from "react-helmet-async"; // ✅ Añadido
+import { HelmetProvider } from "react-helmet-async";
 
 import "./i18n";
 
@@ -42,7 +42,9 @@ const Blog = lazy(() => import("./blog/index"));
 const ComoMedirLighthouse = lazy(() =>
   import("./blog/como-saber-si-una-web-es-buena-para-google")
 );
+const SeoTecnico = lazy(() => import("./blog/seo-tecnico")); // ✅ Nuevo post del blog
 
+// Wrapper para layout general
 function LayoutWrapper() {
   const { lang } = useParams();
   const navigate = useNavigate();
@@ -75,6 +77,7 @@ function LayoutWrapper() {
   );
 }
 
+// Maneja rutas y lenguaje inicial
 function AppWrapper() {
   const getBrowserLang = () => {
     const navLang = navigator.language.slice(0, 2);
@@ -104,8 +107,17 @@ function AppWrapper() {
             <Route path="servicios/chatbots" element={<Chatbots />} />
             <Route path="nosotros" element={<SobreNosotros />} />
             <Route path="contacto" element={<Contacto />} />
+
+            {/* Blog */}
             <Route path="blog" element={<Blog />} />
-            <Route path="blog/como-saber-si-tu-web-es-buena" element={<ComoMedirLighthouse />} />
+            <Route
+              path="blog/como-saber-si-tu-web-es-buena"
+              element={<ComoMedirLighthouse />}
+            />
+            <Route
+              path="blog/seo-tecnico"
+              element={<SeoTecnico />}
+            />
           </Route>
         </Routes>
       </Suspense>
@@ -113,9 +125,10 @@ function AppWrapper() {
   );
 }
 
+// App principal con HelmetProvider para SEO
 function App() {
   return (
-    <HelmetProvider> {/* ✅ Contexto necesario para <Helmet> */}
+    <HelmetProvider>
       <BrowserRouter>
         <AppWrapper />
       </BrowserRouter>
